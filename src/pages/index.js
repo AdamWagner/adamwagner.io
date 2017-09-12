@@ -7,6 +7,7 @@ import _ from 'lodash'
 import Nav from "../components/LeftCol";
 import RightCol from "../components/RightCol";
 import Section from "../components/Section";
+import action from '../components/action.js';
 
 injectGlobal`
 
@@ -56,6 +57,40 @@ injectGlobal`
   .soft-right {
     padding-right: 3em;
   }
+
+  .transition-wrapper {
+    position: relative;
+    z-index: 1;
+    .transition-item {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .detail-page {
+    padding: 10px 10px;
+    background-color: red;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    a {
+      color: white;
+    }
+
+    &.transition-appear {
+      transition: transform 1s cubic-bezier(0.7, 0, 0.25, 1),
+        left 1s cubic-bezier(0.7, 0, 0.25, 1),
+        right 1s cubic-bezier(0.7, 0, 0.25, 1),
+        height 1s cubic-bezier(0.7, 0, 0.25, 1);
+    }
+
+    &.transition-appear.transition-appear-active {
+    }
+  }
+
 `;
 
 class IndexPage extends React.Component {
@@ -124,8 +159,19 @@ class IndexPage extends React.Component {
           <Section>
             <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('work')} />
 
-            <Link to="/badracket/">
-              <img className="project-image" src="/images/brv5-videos.png" />               
+            <Link
+              key={"badracket"}
+              className="list-item"
+              onClick={e => action.onNext({
+                name: 'CLICKED_ITEM_DATA',
+                data: {
+                  position: e.target.getBoundingClientRect(),
+                  color: item.color,
+                },
+              })}
+              to="/badracket/"
+            >
+              <img className="project-image" src="/images/brv5-videos.png" />
             </Link>
 
           </Section>

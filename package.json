@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "adamwagner.io",
+  "description": "Adam Wagner's Personal Site",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Adam Wagner",
   "dependencies": {
     "gatsby": "^1.9.17",
     "gatsby-link": "^1.6.15",
@@ -11,8 +11,10 @@
     "gatsby-plugin-styled-components": "^1.0.5",
     "lodash": "^4.17.4",
     "react-router-dom": "^4.2.2",
-    "react-transition-group": "^2.2.0",
-    "react-waypoint": "^7.1.0"
+    "react-router-page-transition": "^3.0.2",
+    "react-waypoint": "^7.1.0",
+    "rx": "^4.1.0",
+    "rx-react": "^0.3.0"
   },
   "keywords": [
     "gatsby"
