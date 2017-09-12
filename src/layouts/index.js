@@ -2,58 +2,53 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import withRouter from 'react-router-dom/withRouter'
 
-import './index.css'
-
-const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
-
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet
-      title="Gatsby Default Starter"
-      meta={[
+const titleText = "Adam Wagner"
+const metadata = [
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
+      ]
+
+import './animations.scss'
+
+
+
+class TransitionHandler extends React.Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props.location.pathname === window.location.pathname;
+  }
+
+  render() {
+    const {children} = this.props;
+    return (
+      <div className="transition-container">
+        {children}
+      </div>
+    );
+  }
+}
+
+
+const TemplateWrapper = ({ children }) => (
+  <div style={{width: '100%'}}>
+    <Helmet title={titleText} meta={metadata} >
+       <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet" />
+    </Helmet>
+
+    <TransitionGroup>
+      <CSSTransition key={location.pathname} classNames="example" timeout={{ enter: 3000, exit: 3000 }} >
+        <TransitionHandler location={location} >
+
+          <div>
+            {children()}
+          </div>
+
+        </TransitionHandler>
+      </CSSTransition>
+    </TransitionGroup>
+
   </div>
 )
 
@@ -61,4 +56,4 @@ TemplateWrapper.propTypes = {
   children: PropTypes.func,
 }
 
-export default TemplateWrapper
+export default withRouter(TemplateWrapper)

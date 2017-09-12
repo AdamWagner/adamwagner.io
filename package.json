@@ -6,7 +6,13 @@
   "dependencies": {
     "gatsby": "^1.9.17",
     "gatsby-link": "^1.6.15",
-    "gatsby-plugin-react-helmet": "^1.0.5"
+    "gatsby-plugin-react-helmet": "^1.0.5",
+    "gatsby-plugin-sass": "^1.0.10",
+    "gatsby-plugin-styled-components": "^1.0.5",
+    "lodash": "^4.17.4",
+    "react-router-dom": "^4.2.2",
+    "react-transition-group": "^2.2.0",
+    "react-waypoint": "^7.1.0"
   },
   "keywords": [
     "gatsby"
@@ -17,9 +23,11 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gatsby build && gh-pages -d public"
   },
   "devDependencies": {
+    "gh-pages": "^1.0.0",
     "prettier": "^1.6.1"
   }
 }
