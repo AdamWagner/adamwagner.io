@@ -7,7 +7,7 @@ import _ from 'lodash'
 import Nav from "../components/LeftCol";
 import RightCol from "../components/RightCol";
 import Section from "../components/Section";
-import action from '../components/action.js';
+import ProjectImage from "../components/ProjectImage";
 
 injectGlobal`
 
@@ -16,6 +16,10 @@ injectGlobal`
     padding: 0;
     margin: 0;
     font-family: lato, sans-serif;
+  }
+  ::-webkit-scrollbar {
+    ${'' /* display: none; // maybe revisit this for accessability reasons? */}
+    ${'' /* position:fixed; */}
   }
 
   *, *:before, *:after {
@@ -58,39 +62,6 @@ injectGlobal`
     padding-right: 3em;
   }
 
-  .transition-wrapper {
-    position: relative;
-    z-index: 1;
-    .transition-item {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
-  }
-
-  .detail-page {
-    padding: 10px 10px;
-    background-color: red;
-    height: 100vh;
-    box-sizing: border-box;
-    overflow: hidden;
-
-    a {
-      color: white;
-    }
-
-    &.transition-appear {
-      transition: transform 1s cubic-bezier(0.7, 0, 0.25, 1),
-        left 1s cubic-bezier(0.7, 0, 0.25, 1),
-        right 1s cubic-bezier(0.7, 0, 0.25, 1),
-        height 1s cubic-bezier(0.7, 0, 0.25, 1);
-    }
-
-    &.transition-appear.transition-appear-active {
-    }
-  }
-
 `;
 
 class IndexPage extends React.Component {
@@ -111,6 +82,10 @@ class IndexPage extends React.Component {
     let navItem = _.find(this.state.nav, (el) => el.name == activeItem)
     navItem.active = true
     this.forceUpdate()
+  }
+
+  onImageClick(e) {
+    console.log('image clicked', e);
   }
 
   render() {
@@ -158,23 +133,9 @@ class IndexPage extends React.Component {
 
           <Section>
             <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('work')} />
-
-            <Link
-              key={"badracket"}
-              className="list-item"
-              onClick={e => action.onNext({
-                name: 'CLICKED_ITEM_DATA',
-                data: {
-                  position: e.target.getBoundingClientRect(),
-                  color: item.color,
-                },
-              })}
-              to="/badracket/"
-            >
-              <img className="project-image" src="/images/brv5-videos.png" />
-            </Link>
-
+            <ProjectImage image="brv5-videos.png" path="/badracket/" pageColor="#E05952"/>
           </Section>
+
           <Section>
             {/* <p>Copilot</p> */}
             <img src="http://via.placeholder.com/900x500" />

@@ -6,9 +6,11 @@
   "dependencies": {
     "gatsby": "^1.9.17",
     "gatsby-link": "^1.6.15",
+    "gatsby-plugin-catch-links": "^1.0.8",
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-plugin-sass": "^1.0.10",
     "gatsby-plugin-styled-components": "^1.0.5",
+    "gsap": "^1.20.2",
     "lodash": "^4.17.4",
     "react-router-dom": "^4.2.2",
     "react-router-page-transition": "^3.0.2",
