@@ -3,11 +3,16 @@ import Link from "gatsby-link";
 import Waypoint from "react-waypoint";
 import { injectGlobal, styled } from "styled-components";
 import _ from 'lodash'
+import {TweenMax, Sine} from "gsap";
 
 import Nav from "../components/LeftCol";
 import RightCol from "../components/RightCol";
 import Section from "../components/Section";
 import ProjectImage from "../components/ProjectImage";
+
+import data from '../data'
+
+console.log(data);
 
 injectGlobal`
 
@@ -16,10 +21,6 @@ injectGlobal`
     padding: 0;
     margin: 0;
     font-family: lato, sans-serif;
-  }
-  ::-webkit-scrollbar {
-    ${'' /* display: none; // maybe revisit this for accessability reasons? */}
-    ${'' /* position:fixed; */}
   }
 
   *, *:before, *:after {
@@ -49,7 +50,7 @@ injectGlobal`
   }
 
   p {
-    font-size: 2.75vw;
+    font-size: 2vw;
     line-height: 1.45;
     opacity: 0.7;
   }
@@ -60,6 +61,16 @@ injectGlobal`
 
   .soft-right {
     padding-right: 3em;
+  }
+
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    pointer-events: none;
   }
 
 `;
@@ -73,8 +84,14 @@ class IndexPage extends React.Component {
         {name: 'work', active: false},
         {name: "let's get in touch", active: false},
         {name: 'experiments', active: false},
-      ]
+      ],
+      lastClickedProject: null
     };
+  }
+
+  componentDidMount() {
+    let els = [this.refs.nav, this.refs.about_text, this.refs.content]
+    TweenMax.fromTo(els, .4, {opacity:0}, {opacity: 1, delay:0.1}, Sine.easeIn, );
   }
 
   updateNav(activeItem) {
@@ -84,26 +101,23 @@ class IndexPage extends React.Component {
     this.forceUpdate()
   }
 
-  onImageClick(e) {
-    console.log('image clicked', e);
-  }
-
   render() {
     return (
-      <div>
-        <Nav>
-          {this.state.nav.map((el, idx) => (
-            <Link className={el.active && 'nav-active'} to={`#${el.name}`} key={idx}>{el.name}</Link>
-          ))}
-        </Nav>
-
+      <div ref="content">
+        <div ref="nav">
+          <Nav>
+            {this.state.nav.map((el, idx) => (
+              <Link className={el.active && 'nav-active'} to={`#${el.name}`} key={idx}>{el.name}</Link>
+            ))}
+          </Nav>
+        </div>
         <RightCol>
           <img className="headshot" src="images/headshot-2.png" alt="" />
           <Section color="rgba(0,0,0,0)" style={{ paddingTop: "1em" }}>
             <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('about')} />
             <h1 className="white">Hi, I'm Adam</h1>
 
-            <div className="soft-right">
+            <div className="soft-right" ref="about_text">
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
@@ -131,23 +145,15 @@ class IndexPage extends React.Component {
             </div>
           </Section>
 
-          <Section>
-            <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('work')} />
-            <ProjectImage image="brv5-videos.png" path="/badracket/" pageColor="#E05952"/>
-          </Section>
+          <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('work')} />
 
-          <Section>
-            {/* <p>Copilot</p> */}
-            <img src="http://via.placeholder.com/900x500" />
-          </Section>
-          <Section>
-            {/* <p>Copilot</p> */}
-            <img src="http://via.placeholder.com/900x500" />
-          </Section>
-          <Section>
-            <img src="http://via.placeholder.com/900x500" />
-            {/* <p>Copilot</p> */}
-          </Section>
+
+          {data.projects.map((p, idx) => (
+            <Section key={idx}>
+              <ProjectImage image={p.hero} path={p.path} pageColor={p.bgColor}/>
+            </Section>
+          ))}
+
 
 
           <Section>
@@ -172,6 +178,7 @@ class IndexPage extends React.Component {
 
 
         </RightCol>
+        <canvas id="canvas"></canvas>
       </div>
     );
   }

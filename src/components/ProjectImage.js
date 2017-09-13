@@ -2,7 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { injectGlobal, styled } from "styled-components";
 import { browserHistory } from 'react-router'
-import {TweenMax, TweenLite, Bezier, TimelineMax, Power1, Power3, Sine, Back, Elastic} from "gsap";
+import {TweenMax, Bezier, TimelineMax, Power3, Sine} from "gsap";
+import store from 'store'
+
+import ripple from  '../utils/splash'
 
 export default class ProjectImage extends React.Component {
 
@@ -22,7 +25,6 @@ export default class ProjectImage extends React.Component {
     duration = duration < .25 ? .25 : duration
     // set max value of .5
     duration = duration > .5 ? .5 : duration
-    console.log('duration', duration);
     return duration;
   }
 
@@ -45,25 +47,26 @@ export default class ProjectImage extends React.Component {
     // get mouse click coordinates
     let {clientY, clientX} = e;
 
+    // save original image coords for "going back" transition
+    store.set('lastClickedProject', {top, left, width, height})
+
     // create and append splash circle
-    let splash = document.createElement('div')
-    splash.style = `
-      border-radius:100%;
-      width: 50px;
-      height: 50px;
-      background: ${this.props.pageColor};
-      position: fixed;
-      top:${clientY}px;
-      left:${clientX}px;
-      z-index:100;
-      opacity: 0.75;
-    `
-    body.append(splash)
-
-    // animate splash
-    TweenMax.to(splash, .6,  {scale:80, opacity:1, transformOrigin: "50% 15%"}, Sine.easeIn);
-
-    let curve = 200
+    // let splash = document.createElement('div')
+    // splash.style = `
+    //   border-radius:100%;
+    //   width: 50px;
+    //   height: 50px;
+    //   background: ${this.props.pageColor};
+    //   position: fixed;
+    //   top:${clientY}px;
+    //   left:${clientX}px;
+    //   z-index:100;
+    //   opacity: 0.75;
+    // `
+    // body.append(splash)
+    //
+    // // animate splash
+    // TweenMax.to(splash, .6,  {scale:80, opacity:1, transformOrigin: "50% 15%"}, Sine.easeIn);
 
     // animate image to the hero position
     TweenMax.to(el, this.getDuration(0, top), {bezier:
@@ -71,7 +74,7 @@ export default class ProjectImage extends React.Component {
         {x:0, y:0, width:width, height: height},
         {x:-left, y:-(top/2.5), width: w, height: height+25},
         {x:-left, y:-top, width: w, height: height+100},
-    ]}, ease:Power3.easeOut});
+    ]}, ease:Power3.easeOut, autoRound:false});
 
     // animate image to the hero position without Bezier
     // TweenMax.to(el, 0.2, {width: w, x:-left}, Elastic.easeInOut );
@@ -81,7 +84,7 @@ export default class ProjectImage extends React.Component {
     // redirect to detail page
     setTimeout(() => {
       el.remove()
-      splash.remove()
+      // splash.remove()
       window.___navigateTo(this.props.path)
     }, (this.getDuration(0,top)*1000))
   }
@@ -89,12 +92,15 @@ export default class ProjectImage extends React.Component {
 
   render() {
 
+    console.log(ripple);
+    document.addEventListener('click', ripple)
+
     let style = {
       cursor:'pointer',
       width:'100%',
       height:'40vw',
       willChange:'width, transform',
-      backgroundImage:`url(/images/${this.props.image})`,
+      backgroundImage:`url(${this.props.image})`,
       backgroundPosition:'center',
       backgroundSize:'cover',
     }
