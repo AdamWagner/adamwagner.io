@@ -12,8 +12,6 @@ import ProjectImage from "../components/ProjectImage";
 
 import data from '../data'
 
-console.log(data);
-
 injectGlobal`
 
   body {

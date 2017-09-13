@@ -13,6 +13,7 @@
     "gatsby-source-filesystem": "^1.4.12",
     "gatsby-transformer-javascript-static-exports": "^1.3.5",
     "gsap": "^1.20.2",
+    "hyphenate": "^0.2.1",
     "lodash": "^4.17.4",
     "react-router-dom": "^4.2.2",
     "react-router-page-transition": "^3.0.2",
