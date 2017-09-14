@@ -1,12 +1,12 @@
 {
   "assetsByChunkName": {
     "component---src-pages-badracket-js": [
-      "component---src-pages-badracket-js-2d4dde5ddfa549c48af7.js",
-      "component---src-pages-badracket-js-2d4dde5ddfa549c48af7.js.map"
+      "component---src-pages-badracket-js-f968b95796211a827f8d.js",
+      "component---src-pages-badracket-js-f968b95796211a827f8d.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-c56f67609d3bbd101f6e.js",
-      "component---src-pages-index-js-c56f67609d3bbd101f6e.js.map"
+      "component---src-pages-index-js-022d1e49a424d93caaab.js",
+      "component---src-pages-index-js-022d1e49a424d93caaab.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -41,8 +41,8 @@
       "component---src-pages-page-2-js-075954cd9c4544c7dcd8.js.map"
     ],
     "app": [
-      "app-fb084fe3c805a85e84b3.js",
-      "app-fb084fe3c805a85e84b3.js.map"
+      "app-7c82b6cb802323f0bdae.js",
+      "app-7c82b6cb802323f0bdae.js.map"
     ],
     "path---badracket": [
       "path---badracket-a0e39f21c11f6a62c5ab.js",
