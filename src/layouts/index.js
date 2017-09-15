@@ -12,13 +12,24 @@ const metadata = [
 
 
 class TemplateWrapper extends React.Component {
-  render() {
 
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     pageName: null
+  //   };
+
+
+  componentDidMount() {
     let pageName = _.startCase(window.location.pathname).replace('/', '')
+    this.setState({pageName: pageName})
+  }
 
+  render() {
     return (
       <div style={{width: '100%'}}>
-        <Helmet title={pageName ? `${pageName} | ${titleText}` : titleText} meta={metadata} >
+        {/* <Helmet title={this.state.pageName ? `${this.state.pageName} | ${titleText}` : titleText} meta={metadata} > */}
+        <Helmet title={titleText} meta={metadata} >
           <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet" />
         </Helmet>
 

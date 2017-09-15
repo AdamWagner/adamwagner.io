@@ -67,8 +67,7 @@ injectGlobal`
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 200;
-    pointer-events: none;
+    z-index: 150;
   }
 
 `;
@@ -126,7 +125,7 @@ class IndexPage extends React.Component {
                 sed quia non numquam eius modi tempora incidunt ut labore et
                 dolore magnam <Link to="/page-2/">goto page 2</Link> aliquam quaerat voluptatem. Ut enim ad minima
                 veniam, quis nostrum exercitationem ullam corporis suscipit
-                laboriosam.
+                laboriosam.<Link to="/badracket/">test preloading</Link>
               </p>
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -176,7 +175,6 @@ class IndexPage extends React.Component {
 
 
         </RightCol>
-        <canvas id="canvas"></canvas>
       </div>
     );
   }
