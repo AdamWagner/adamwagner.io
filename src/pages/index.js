@@ -61,13 +61,22 @@ injectGlobal`
     padding-right: 3em;
   }
 
-  canvas {
+  ${'' /* canvas {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 150;
+  } */}
+
+  #canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    cursor: pointer;
+    z-index: 900;
   }
 
 `;

@@ -37,6 +37,8 @@ class TemplateWrapper extends React.Component {
             {this.props.children()}
           </div>
 
+      <canvas id="canvas"></canvas>
+
       </div>
     )
   }
