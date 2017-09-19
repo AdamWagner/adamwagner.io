@@ -61,22 +61,13 @@ injectGlobal`
     padding-right: 3em;
   }
 
-  ${'' /* canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 150;
-  } */}
-
   #canvas {
     position: fixed;
     top: 0;
     left: 0;
-    visibility: hidden;
     cursor: pointer;
     z-index: 900;
+    visibility: hidden;
   }
 
 `;
@@ -96,7 +87,7 @@ class IndexPage extends React.Component {
   }
 
   componentDidMount() {
-    let els = [this.refs.nav, this.refs.about_text, this.refs.content]
+    let els = [this.refs.nav, this.refs.about_text]
     TweenMax.fromTo(els, .4, {opacity:0}, {opacity: 1, delay:0.1}, Sine.easeIn, );
   }
 

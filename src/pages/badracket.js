@@ -2,21 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Link from "gatsby-link";
 import styled from "styled-components";
-import {
-  TweenMax,
-  Bezier,
-  TweenLite,
-  Power3,
-  Sine,
-  ScrollToPlugin
-} from "gsap";
 import store from "store";
 import smoothScroll from "smoothscroll";
 
-import ripple from "../utils/splash";
+import {transition} from '../utils/transitionAnimation'
+// import ripple from "../utils/splash";
 import getDuration from "../utils/getDuration";
 import Section from "../components/Section";
 import data from "../data";
+
 
 let br = data.projects[0];
 
@@ -34,82 +28,55 @@ const HeroImage = styled.div`
   visibility: ${props => (props.inTransition ? "hidden" : "visible")};
 `;
 
+
 class BadRacket extends React.Component {
   constructor() {
     super();
     this.state = {
-      inTransition: false
+      inTransition: false,
+      transition: null
     };
   }
 
-  componentDidMount() {
-    let el = this.refs.content;
-    TweenMax.fromTo(
-      el,
-      0.6,
-      { opacity: 0 },
-      { opacity: 1, delay: 0.2 },
-      Sine.easeIn
-    );
+  componentDidMount = () => {
+    let content = this.refs.content;
+    TweenMax.fromTo(content, .4, {opacity:0}, {opacity: 1, delay:0.1}, Sine.easeIn, );
+
+    let {path, pageColor} = this.props
+    let origBoundingBox = store.get("lastClickedProject");
+
+    // create image element for canvas texture in transition
+    let oImg = document.createElement('img')
+    oImg.setAttribute('src', br.hero)
+
+    this.setState(
+      // transition (path='/', pageColor='#96D2E0', image=null, imageContainer=null, boundingBox=null, reversed=false) {
+      {transition: new transition(path, pageColor, oImg, null, origBoundingBox, true)},
+      () => {
+        this.state.transition.init()
+      }
+    )
+  }
+
+  componentWillUnmount = () => {
+    this.state.transition.clean()
   }
 
   animateBack = e => {
     console.log('animate back called');
-    let body = document.body;
-    let { top, left, width, height } = store.get("lastClickedProject");
-    let hero_original = ReactDOM.findDOMNode(this.refs.hero);
-    let {
-      top: t,
-      left: l,
-      width: w,
-      height: h
-    } = hero_original.getBoundingClientRect();
-    let el = hero_original.cloneNode();
-    el.style.cssText = `z-index:200; position: fixed; top:${t}px; left:${l}px; width:${w}px; height:${h}px;`;
-    body.append(el);
-
-    // only set original element to 'visibility: hidden' once the clone has been made
-    this.setState({ inTransition: true });
-
-    let duration = getDuration(t, top);
-    ripple(e, duration, "#96D2E0");
-
-    TweenMax.to(el, duration, {
-      bezier: {
-        curviness: 0.25,
-        values: [
-          { x: l, y: t, width: w, height: h },
-          { x: left / 1.5, y: top, width: width + 100, height: height + 50 },
-          { x: left, y: top, width: width, height: height }
-        ]
-      },
-      ease: Sine.easeInOut,
-      autoRound: false
-    });
-
-    // redirect to home page
-    setTimeout(() => {
-      window.history.back();
-      setTimeout(function() {
-        el.remove();
-      }, 1000);
-    }, duration * 1000);
-  };
+    this.state.transition.toggleAnimation()
+  }
 
   back = e => {
-    if (window.scrollY > 0) {
-      let scrollDuration =  getDuration(0, window.scrollY)
-      console.log('scroll duration', scrollDuration);
-      smoothScroll(0, scrollDuration*1000, ()=>{this.animateBack(e)});
-    } else {
-      this.animateBack(e);
-    }
-  };
+    this.setState({inTransition:true})
+    this.animateBack()
+  }
+
 
   render() {
     return (
       <div style={{ backgroundColor: br.bgColor }}>
-        <HeroImage ref="hero" inTransition={this.state.inTransition} />
+        <HeroImage inTransition={this.state.inTransition} />
 
         <div onClick={this.back}>Back</div>
 

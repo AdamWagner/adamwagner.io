@@ -1,10 +1,6 @@
 import React from "react";
-import { injectGlobal, styled } from "styled-components";
-import { TweenMax, Bezier, Power3, Sine, Stepped} from "gsap";
 import store from "store";
-import ripple from "../utils/splash";
 import getDuration from '../utils/getDuration'
-
 import {transition} from '../utils/transitionAnimation'
 
 export default class ProjectImage extends React.Component {
@@ -28,6 +24,10 @@ export default class ProjectImage extends React.Component {
     )
   }
 
+  componentWillUnmount() {
+    this.state.transition.clean()
+  }
+
   onImageClick = e => {
     let { top, left, width, height } = this.refs.image_container.getBoundingClientRect();
     // save original image coords for "going back" transition
@@ -35,6 +35,7 @@ export default class ProjectImage extends React.Component {
 
     // start the transition animation
     this.state.transition.toggleAnimation();
+
   };
 
   render() {
