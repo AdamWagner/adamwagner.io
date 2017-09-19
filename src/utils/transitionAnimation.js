@@ -26,13 +26,6 @@ export function transition (path='/', pageColor='#96D2E0', image=null, imageCont
     y: 0,
   };
 
-  console.log({
-    image: image,
-    boundingBox: boundingBox,
-    reversed: reversed,
-    imageContainer: imageContainer
-  });
-
   const sprite = {
     buffer: document.createElement("canvas"),
     texture: image,
@@ -142,7 +135,12 @@ export function transition (path='/', pageColor='#96D2E0', image=null, imageCont
       .to(ripple, duration, { bezier: bezier2, ease }, 0)
       .to(ripple, duration * 0.8, { alpha: 1, radius, ease }, 0)
       .progress(progress)
+
+    // This changes route 90% into transition preventing flash.
+    // It does seem to add a stutter to the animation, though.
+    tl.addCallback(preComplete, (duration*0.95))
   }
+
 
   //
   // GET BEZIER
@@ -194,19 +192,15 @@ export function transition (path='/', pageColor='#96D2E0', image=null, imageCont
 
   function onStart() {
     image.style.visibility  = "hidden";
-    TweenMax.to(canvas, 0, {autoAlpha: 1})
+    canvas.style.visibility = "visible"
+  }
+
+  function preComplete(){
+    reversed ? window.history.back() : navigateTo(path)
   }
 
   function onComplete() {
-    if (reversed) {
-      window.history.back()
-      setTimeout(function () {
-        canvas.style.visibility = 'hidden'
-      }, 100);
-    } else {
-      navigateTo(path);
-      canvas.style.visibility = 'hidden'
-    }
+    canvas.style.visibility = 'hidden'
   }
 
   function clean() {

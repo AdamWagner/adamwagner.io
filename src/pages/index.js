@@ -104,7 +104,7 @@ class IndexPage extends React.Component {
         <div ref="nav">
           <Nav>
             {this.state.nav.map((el, idx) => (
-              <Link className={el.active && 'nav-active'} to={`#${el.name}`} key={idx}>{el.name}</Link>
+              <Link className={(el.active && 'nav-active').toString()} to={`#${el.name}`} key={idx}>{el.name}</Link>
             ))}
           </Nav>
         </div>

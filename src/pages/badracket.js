@@ -11,12 +11,9 @@ import getDuration from "../utils/getDuration";
 import Section from "../components/Section";
 import data from "../data";
 
-
+// TODO: get this programatically
 let br = data.projects[0];
 
-function roundTwo(num) {
-  return num.toFixed(2)
-}
 
 const HeroImage = styled.div`
   background-image: url(${br.hero});
@@ -50,7 +47,6 @@ class BadRacket extends React.Component {
     oImg.setAttribute('src', br.hero)
 
     this.setState(
-      // transition (path='/', pageColor='#96D2E0', image=null, imageContainer=null, boundingBox=null, reversed=false) {
       {transition: new transition(path, pageColor, oImg, null, origBoundingBox, true)},
       () => {
         this.state.transition.init()
@@ -63,11 +59,11 @@ class BadRacket extends React.Component {
   }
 
   animateBack = e => {
-    console.log('animate back called');
     this.state.transition.toggleAnimation()
   }
 
   back = e => {
+    // TODO : add scroll up if needed
     this.setState({inTransition:true})
     this.animateBack()
   }
