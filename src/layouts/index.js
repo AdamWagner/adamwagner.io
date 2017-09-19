@@ -33,11 +33,11 @@ class TemplateWrapper extends React.Component {
           <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet" />
         </Helmet>
 
+          <canvas id="canvas"></canvas>
           <div>
             {this.props.children()}
           </div>
 
-      <canvas id="canvas"></canvas>
 
       </div>
     )

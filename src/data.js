@@ -3,7 +3,7 @@ const data = {
   projects: [
     {
       title: 'Bad Racket',
-      hero: '/images/badracket-hero.webp',
+      hero: '/images/badracket-hero.jpg',
       bgColor: '#E05952',
       path: '/badracket/'
     },

@@ -134,9 +134,6 @@ export function transition (path='/', pageColor='#96D2E0', image=null, imageCont
     const bezier2 = getBezier(ripple.x, ripple.y, x, y);
 
     if (reversed) {
-      // swap radius start and end sizes
-      // [radius, ripple.radius] = [ripple.radius, radius]
-      // set target w, h to original bounding rect
       w = rect.width
       h = rect.height
     }
@@ -201,14 +198,15 @@ export function transition (path='/', pageColor='#96D2E0', image=null, imageCont
   }
 
   function onComplete() {
-      reversed ? window.history.back() : navigateTo(path);
-      if (reversed) {
-        // prevents flicker during detail > home
-        TweenMax.to(canvas, 0.2, {autoAlpha: 0})
-      } else {
-        // prevents flicker during home > detail. Odd.
+    if (reversed) {
+      window.history.back()
+      setTimeout(function () {
         canvas.style.visibility = 'hidden'
-      }
+      }, 100);
+    } else {
+      navigateTo(path);
+      canvas.style.visibility = 'hidden'
+    }
   }
 
   function clean() {
@@ -217,7 +215,6 @@ export function transition (path='/', pageColor='#96D2E0', image=null, imageCont
   }
 
   function toggleAnimation() {
-    console.log('toggled');
     tl.play()
   }
 

@@ -109,7 +109,7 @@ class IndexPage extends React.Component {
           </Nav>
         </div>
         <RightCol>
-          <img className="headshot" src="images/headshot-2.png" alt="" />
+          <img className="headshot" src="images/headshot-2.jpg" alt="" />
           <Section color="rgba(0,0,0,0)" style={{ paddingTop: "1em" }}>
             <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('about')} />
             <h1 className="white">Hi, I'm Adam</h1>
