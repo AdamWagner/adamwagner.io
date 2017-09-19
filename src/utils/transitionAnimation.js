@@ -1,3 +1,5 @@
+// import _ from lodash
+
 export function transition (path, pageColor, image, imageContainer, reversed=true) {
 
   const tau = Math.PI * 2;
@@ -182,7 +184,10 @@ export function transition (path, pageColor, image, imageContainer, reversed=tru
 
   function onComplete() {
       canvas.style.visibility = "hidden";
-      window.___navigateTo(path);
+      setTimeout(function () {
+        window.___navigateTo(path);
+      }, 1000);
+      console.log('completed');
   }
 
   function onReverseComplete() {

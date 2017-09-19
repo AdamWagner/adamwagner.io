@@ -29,21 +29,15 @@ export default class ProjectImage extends React.Component {
   }
 
   onImageClick = e => {
+    let { top, left, width, height } = this.refs.image_container.getBoundingClientRect();
+    // save original image coords for "going back" transition
+    store.set("lastClickedProject", { top, left, width, height });
+
+    // start the transition animation
     this.state.transition.toggleAnimation();
   };
 
   render() {
-    let style = {
-      cursor: "pointer",
-      width: "100%",
-      height: "40vw",
-      willChange: "width, transform",
-      backgroundImage: `url(${this.props.image})`,
-      backgroundPosition: "center",
-      backgroundSize: "cover",
-      visibility: this.state.inTransition ? "hidden" : "visible"
-    };
-
     return (
       <div className="image-container" ref="image_container">
         <img className="image" src={this.props.image} alt="" onClick={this.onImageClick} ref="project_image"/>
