@@ -1,24 +1,23 @@
-export function transition () {
+export function transition (path, pageColor, image, imageContainer, reversed=true) {
+
   const tau = Math.PI * 2;
   const kappa = 0.551915024494;
-
-  const imageContainer = document.querySelector(".image-container");
-  const image = document.querySelector(".image");
   const canvas = document.querySelector("#canvas");
   const context = canvas.getContext("2d");
 
-  let vw = canvas.width  = window.innerWidth;
+  let vw = canvas.width  = document.body.clientWidth;
   let vh = canvas.height = window.innerHeight;
 
   const tl = new TimelineMax({
     paused: true,
+    onComplete,
     onReverseComplete,
     onStart,
     onUpdate
   });
 
   const ripple = {
-    color: "#673ab7",
+    color: pageColor,
     alpha: 0,
     radius: 0,
     x: 0,
@@ -36,21 +35,17 @@ export function transition () {
     y: 0
   };
 
-  window.addEventListener("load", onLoad);
 
   //
-  // ON LOAD
+  // Init
   // ============================================================================
-  function onLoad() {
-
-    createAnimation(0, true);
+  function init() {
+    createAnimation(0, true); // args = progress, reversed
     onUpdate();
     tl.paused(false);
 
     window.addEventListener("resize", onResize);
-    window.onscroll = onResize;
-    image.addEventListener("click", toggleAnimation);
-    canvas.addEventListener("click", toggleAnimation);
+    window.addEventListener("scroll", onResize);
   }
 
   //
@@ -101,7 +96,7 @@ export function transition () {
 
     tl.seek(0).clear();
 
-    const duration = .45;
+    const duration = 0.5;
     const ease = Sine.easeOut;
 
     const rect = imageContainer.getBoundingClientRect();
@@ -174,7 +169,7 @@ export function transition () {
     const progress = tl.progress();
     const reversed = tl.reversed();
 
-    vw = canvas.width  = window.innerWidth;
+    vw = canvas.width  = document.body.clientWidth;
     vh = canvas.height = window.innerHeight;
 
     createAnimation(progress, reversed);
@@ -185,6 +180,11 @@ export function transition () {
     canvas.style.visibility = "visible";
   }
 
+  function onComplete() {
+      canvas.style.visibility = "hidden";
+      window.___navigateTo(path);
+  }
+
   function onReverseComplete() {
     image.style.visibility  = "visible";
     canvas.style.visibility = "hidden";
@@ -193,4 +193,10 @@ export function transition () {
   function toggleAnimation() {
     tl.reversed(!tl.reversed());
   }
+
+  return {
+    toggleAnimation,
+    init
+  }
+
 }

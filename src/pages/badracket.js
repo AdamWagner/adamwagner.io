@@ -20,11 +20,15 @@ import data from "../data";
 
 let br = data.projects[0];
 
+function roundTwo(num) {
+  return num.toFixed(2)
+}
+
 const HeroImage = styled.div`
   background-image: url(${br.hero});
   background-size: cover;
   background-position: center;
-  height: calc(40vw + 100px);
+  height: 68vh;
   position: relative;
   z-index: 200;
   visibility: ${props => (props.inTransition ? "hidden" : "visible")};

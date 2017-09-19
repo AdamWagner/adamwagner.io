@@ -11,29 +11,25 @@ export default class ProjectImage extends React.Component {
   constructor() {
     super();
     this.state = {
-      inTransition: false
+      transition: null
     };
   }
 
   componentDidMount() {
-    transition();
+    let {path,pageColor} = this.props
+    let image = this.refs.project_image
+    let imageContainer = this.refs.image_container
+
+    this.setState(
+      {transition: new transition(path, pageColor, image, imageContainer)},
+      () => {
+        this.state.transition.init()
+      }
+    )
   }
 
-
   onImageClick = e => {
-
-    // toggleAnimation();
-
-
-
-    // redirect to detail page
-    // setTimeout(() => {
-      // window.___navigateTo(this.props.path);
-      // setTimeout(function () {
-        // el.remove()
-        // console.log('el removed now, mothafucka!');
-      // }, 250);
-    // }, duration * 1000);
+    this.state.transition.toggleAnimation();
   };
 
   render() {
@@ -49,10 +45,8 @@ export default class ProjectImage extends React.Component {
     };
 
     return (
-      // <div className='project-image' onClick={this.onImageClick} style={style} ref="project_image" />
-
-      <div className="image-container">
-        <img className="image" src={this.props.image} alt=""/>
+      <div className="image-container" ref="image_container">
+        <img className="image" src={this.props.image} alt="" onClick={this.onImageClick} ref="project_image"/>
       </div>
     );
   }
