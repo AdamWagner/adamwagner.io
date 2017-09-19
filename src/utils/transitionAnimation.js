@@ -1,6 +1,17 @@
 import { TweenMax, Bezier, Sine} from "gsap";
 import { navigateTo } from "gatsby-link"
 
+/*
+The foundation for the transition function below was very generously provided by
+@OSUblake in the thread https://greensock.com/forums/topic/17128-performance-issues-page-transition/.
+
+You can find him online here:
+GH: https://github.com/OSUblake
+Twitter: https://twitter.com/OSUbowen
+
+*/
+
+
 export function transition (path='/', pageColor='#96D2E0', image=null, imageContainer=null, boundingBox=null, reversed=false) {
 
   const tau = Math.PI * 2;
