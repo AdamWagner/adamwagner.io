@@ -6,17 +6,16 @@ import store from "store";
 import smoothScroll from "smoothscroll";
 
 import {transition} from '../utils/transitionAnimation'
-// import ripple from "../utils/splash";
-import getDuration from "../utils/getDuration";
+import getDuration from '../utils/getDuration';
+import {getProject, projectsExcept} from '../utils/dataUtils'
 import Section from "../components/Section";
-import data from "../data";
+import ProjectImage from "../components/ProjectImage";
 
-// TODO: get this programatically
-let br = data.projects[0];
 
+const project = getProject('badracket')
 
 const HeroImage = styled.div`
-  background-image: url(${br.hero});
+  background-image: url(${project.hero});
   background-size: cover;
   background-position: center;
   height: 68vh;
@@ -25,29 +24,32 @@ const HeroImage = styled.div`
   visibility: ${props => (props.inTransition ? "hidden" : "visible")};
 `;
 
+const projectName = 'badracket'
 
 class BadRacket extends React.Component {
   constructor() {
     super();
     this.state = {
       inTransition: false,
-      transition: null
+      transition: null,
+      otherProjects:projectsExcept(projectName),
+      project:getProject(projectName),
     };
   }
 
   componentDidMount = () => {
     let content = this.refs.content;
-    TweenMax.fromTo(content, .4, {opacity:0}, {opacity: 1, delay:0.1}, Sine.easeIn, );
-
-    let {path, pageColor} = this.props
     let origBoundingBox = store.get("lastClickedProject");
+
+    // fade in content
+    TweenMax.fromTo(content, 0.4, {opacity:0}, {opacity: 1, delay:0.1}, Sine.easeIn, );
 
     // create image element for canvas texture in transition
     let oImg = document.createElement('img')
-    oImg.setAttribute('src', br.hero)
+    oImg.setAttribute('src', project.hero)
 
     this.setState(
-      {transition: new transition(path, pageColor, oImg, null, origBoundingBox, true)},
+      { transition: new transition(undefined, undefined, oImg, undefined, origBoundingBox, true) },
       () => {
         this.state.transition.init()
       }
@@ -58,20 +60,24 @@ class BadRacket extends React.Component {
     this.state.transition.clean()
   }
 
-  animateBack = e => {
+  animateBack = () => {
+    this.setState({inTransition:true})
     this.state.transition.toggleAnimation()
   }
 
-  back = e => {
-    // TODO : add scroll up if needed
-    this.setState({inTransition:true})
-    this.animateBack()
+  back = () => {
+    let s = window.scrollY
+    if (s > 0) {
+      let scrollDuration = getDuration(0, s)
+      smoothScroll(0, scrollDuration*1000, ()=>{this.animateBack()})
+    } else {
+      this.animateBack();
+    }
   }
-
 
   render() {
     return (
-      <div style={{ backgroundColor: br.bgColor }}>
+      <div style={{ backgroundColor: project.bgColor }}>
         <HeroImage inTransition={this.state.inTransition} />
 
         <div onClick={this.back}>Back</div>
@@ -141,6 +147,14 @@ class BadRacket extends React.Component {
               </p>
             </div>
           </Section>
+
+          {this.state.otherProjects.map((p, idx) => (
+            <Section key={idx}>
+              <ProjectImage image={p.hero} path={p.path} pageColor={p.bgColor}/>
+            </Section>
+            )
+          )}
+
         </div>
       </div>
     );

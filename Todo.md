@@ -2,7 +2,15 @@
 
 
 Detail Page
-x Migrate "splash" to canvas
+x migrate "splash" to canvas
 x add "back" transition. Could scroll back to top before putting it back.
-- Use simpler layout for project detail pages - they don't need the nav to load. The "for each" seems to be taking a lot of time there. EDIT: hmm, actually this doesn't seem to be happening.
-- add prev / next at bottom of page
+x migrate image to canvas
+x programatically get project from detail page
+x add scroll up if needed
+x remove rightCol component - totally unnecessary
+
+x add prev / next at bottom of page
+
+- move to CSS Modules
+- responsive type system
+- explore new layout options

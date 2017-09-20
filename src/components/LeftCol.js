@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 
 class NavComponent extends React.Component {
     render() {
-        return ( 
+        return (
             <div className={this.props.className}>
             {this.props.children}
             </div>
@@ -33,7 +33,4 @@ const Nav = styled(NavComponent)`
         opacity: 0.7;
     }
 `
-
-
-  export default Nav
-  
+export default Nav

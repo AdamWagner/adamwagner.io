@@ -6,7 +6,6 @@ import _ from 'lodash'
 import {TweenMax, Sine} from "gsap";
 
 import Nav from "../components/LeftCol";
-import RightCol from "../components/RightCol";
 import Section from "../components/Section";
 import ProjectImage from "../components/ProjectImage";
 
@@ -108,7 +107,6 @@ class IndexPage extends React.Component {
             ))}
           </Nav>
         </div>
-        <RightCol>
           <img className="headshot" src="images/headshot-2.jpg" alt="" />
           <Section color="rgba(0,0,0,0)" style={{ paddingTop: "1em" }}>
             <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('about')} />
@@ -174,7 +172,6 @@ class IndexPage extends React.Component {
 
 
 
-        </RightCol>
       </div>
     );
   }
