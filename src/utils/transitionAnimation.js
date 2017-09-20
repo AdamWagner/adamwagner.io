@@ -40,10 +40,10 @@ export function transition (path='/', pageColor='#96D2E0', image=null, imageCont
   const sprite = {
     buffer: document.createElement("canvas"),
     texture: image,
-    origWidth: 1280,
-    origHeight: 720,
-    width: 1280,
-    height: 720,
+    origWidth: image.naturalWidth,
+    origHeight: image.naturalHeight,
+    width: image.naturalWidth,
+    height: image.naturalHeight,
     x: 0,
     y: 0
   };
@@ -58,10 +58,6 @@ export function transition (path='/', pageColor='#96D2E0', image=null, imageCont
 
     window.addEventListener("resize", onResize);
     window.addEventListener("scroll", onResize);
-  }
-
-  function setBoundingBox(boundingBox) {
-    boundingBox = boundingBox
   }
 
   //
