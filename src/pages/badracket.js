@@ -44,15 +44,8 @@ class BadRacket extends React.Component {
     // fade in content
     TweenMax.fromTo(content, 0.4, {opacity:0}, {opacity: 1, delay:0.1}, Sine.easeIn, );
 
-    // create image element for canvas texture in transition
-    let oImg = document.createElement('img')
-    oImg.setAttribute('src', project.hero)
-
     this.setState(
-      { transition: new transition(undefined, undefined, oImg, undefined, origBoundingBox, true) },
-      () => {
-        this.state.transition.init()
-      }
+      { transition: new transition(undefined, undefined, project.hero, undefined, origBoundingBox, true) },
     )
   }
 

@@ -10,7 +10,7 @@ x add scroll up if needed
 x remove rightCol component - totally unnecessary
 x add prev / next at bottom of page
 x move to CSS Modules
+x programmatically get image dimensions
 
-- programmatically get image dimensions
 - responsive type system
 - explore new layout options

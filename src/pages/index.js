@@ -42,16 +42,17 @@ class IndexPage extends React.Component {
   render() {
     return (
       <div ref="content">
-        <div ref="nav">
-          <Nav>
-            {this.state.nav.map((el, idx) => (
-              <Link className={(el.active && 'nav-active').toString()} to={`#${el.name}`} key={idx}>{el.name}</Link>
-            ))}
-          </Nav>
-        </div>
+
+        {/* <Nav>
+          {this.state.nav.map((el, idx) => (
+            <Link className={(el.active && 'nav-active').toString()} to={`#${el.name}`} key={idx}>{el.name}</Link>
+          ))}
+        </Nav>
+         */}
+
           <img className={s.headshot} src="images/headshot-2.jpg" alt="" />
           <Section color="rgba(0,0,0,0)" style={{ paddingTop: "1em" }}>
-            <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('about')} />
+            {/* <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('about')} /> */}
             <h1 className={s.white}>Hi, I'm Adam</h1>
 
             <div className={s.softRight} ref="about_text">
@@ -82,19 +83,19 @@ class IndexPage extends React.Component {
             </div>
           </Section>
 
-          <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('work')} />
+          {/* <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('work')} /> */}
 
 
-          {data.projects.map((p, idx) => (
-            <Section key={idx}>
-              <ProjectImage image={p.hero} path={p.path} pageColor={p.bgColor}/>
-            </Section>
-          ))}
+          <Section>
+            {data.projects.map((p, idx) => (
+                <ProjectImage key={idx} image={p.hero} path={p.path} pageColor={p.bgColor}/>
+            ))}
+          </Section>
 
 
 
           <Section>
-            <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('contact')} />
+            {/* <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('contact')} /> */}
             <p>Contact</p>
             <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem

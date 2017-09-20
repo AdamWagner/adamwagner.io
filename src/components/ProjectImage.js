@@ -7,15 +7,12 @@ import s from './projectImage.module.styl'
 export default class ProjectImage extends React.Component {
 
   componentDidMount() {
-    let {path,pageColor} = this.props
-    let image = this.refs.project_image
+    let {path, pageColor, image} = this.props
+    // let image = this.refs.project_image
     let imageContainer = this.refs.image_container
 
     this.setState(
-      {transition: new transition(path, pageColor, image, imageContainer)},
-      () => {
-        this.state.transition.init()
-      }
+      {transition: new transition(path, pageColor, image, imageContainer)}
     )
   }
 

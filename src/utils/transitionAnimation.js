@@ -12,7 +12,7 @@ Twitter: https://twitter.com/OSUbowen
 */
 
 
-export function transition (path='/', pageColor='#96D2E0', image=null, imageContainer=null, boundingBox=null, reversed=false) {
+export function transition (path='/', pageColor='#96D2E0', imageUrl=null, imageContainer=null, boundingBox=null, reversed=false) {
 
   const tau = Math.PI * 2;
   const kappa = 0.551915024494;
@@ -21,6 +21,12 @@ export function transition (path='/', pageColor='#96D2E0', image=null, imageCont
 
   let vw = canvas.width  = document.body.clientWidth;
   let vh = canvas.height = window.innerHeight;
+
+  // create image element for canvas texture in transition
+  let img = document.createElement('img')
+  img.addEventListener('load', setSprite)
+  img.addEventListener('load', init)
+  img.setAttribute('src', imageUrl)
 
   const tl = new TimelineMax({
     paused: true,
@@ -37,16 +43,22 @@ export function transition (path='/', pageColor='#96D2E0', image=null, imageCont
     y: 0,
   };
 
-  const sprite = {
+  let sprite = {
     buffer: document.createElement("canvas"),
-    texture: image,
-    origWidth: image.naturalWidth,
-    origHeight: image.naturalHeight,
-    width: image.naturalWidth,
-    height: image.naturalHeight,
     x: 0,
     y: 0
   };
+
+  function setSprite() {
+    console.log('image loaded', this);
+    Object.assign(sprite, {
+      texture: this,
+      origWidth: this.naturalWidth,
+      origHeight: this.naturalHeight,
+      width: this.naturalWidth,
+      height: this.naturalHeight,
+    })
+  }
 
 
   //
@@ -198,11 +210,12 @@ export function transition (path='/', pageColor='#96D2E0', image=null, imageCont
   }
 
   function onStart() {
-    image.style.visibility  = "hidden";
+    img.style.visibility  = "hidden";
     canvas.style.visibility = "visible"
   }
 
   function preComplete(){
+    // history.scrollRestoration = 'auto';
     reversed ? window.history.back() : navigateTo(path)
   }
 
