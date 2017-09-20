@@ -2,14 +2,9 @@ import React from "react";
 import store from "store";
 import getDuration from '../utils/getDuration'
 import {transition} from '../utils/transitionAnimation'
+import s from './projectImage.module.styl'
 
 export default class ProjectImage extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      transition: null
-    };
-  }
 
   componentDidMount() {
     let {path,pageColor} = this.props
@@ -40,8 +35,8 @@ export default class ProjectImage extends React.Component {
 
   render() {
     return (
-      <div className="image-container" ref="image_container">
-        <img className="image" src={this.props.image} alt="" onClick={this.onImageClick} ref="project_image"/>
+      <div ref="image_container" className={s.projectImage}>
+        <img src={this.props.image} alt="" onClick={this.onImageClick} ref="project_image"/>
       </div>
     );
   }

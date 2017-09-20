@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import _ from 'lodash'
+import s from './index.module.styl'
 
 const titleText = "Adam Wagner"
 const metadata = [
@@ -26,7 +27,7 @@ class TemplateWrapper extends React.Component {
           <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet" />
         </Helmet>
 
-          <canvas id="canvas"></canvas>
+          <canvas className={s.canvas} id="canvas"></canvas>
           <div>
             {this.props.children()}
           </div>

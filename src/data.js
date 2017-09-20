@@ -10,7 +10,8 @@ const data = {
     {
       title: 'Copilot',
       hero: '/images/copilot-logo.png',
-      bgColor: '#39BAD5',
+      // bgColor: '#39BAD5',
+      bgColor: 'red',
       path: '/copilot/'
     },
     {

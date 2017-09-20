@@ -5,71 +5,13 @@ import { injectGlobal, styled } from "styled-components";
 import _ from 'lodash'
 import {TweenMax, Sine} from "gsap";
 
-import Nav from "../components/LeftCol";
+import Nav from "../components/Nav";
 import Section from "../components/Section";
 import ProjectImage from "../components/ProjectImage";
 
 import data from '../data'
+import s from "./index.module.styl"
 
-injectGlobal`
-
-  body {
-    background-color: #96D2E0;
-    padding: 0;
-    margin: 0;
-    font-family: lato, sans-serif;
-  }
-
-  *, *:before, *:after {
-    box-sizing: border-box;
-  }
-
-  .flex {
-    display: flex;
-  }
-
-  img {
-    width: 100%;
-    display: block;
-  }
-
-  .headshot {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index:0;
-    width:90%;
-    opacity:0.9;
-  }
-
-  .white {
-    color:white;
-  }
-
-  p {
-    font-size: 2vw;
-    line-height: 1.45;
-    opacity: 0.7;
-  }
-
-  .soft {
-    padding: 1em;
-  }
-
-  .soft-right {
-    padding-right: 3em;
-  }
-
-  #canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-    z-index: 900;
-    visibility: hidden;
-  }
-
-`;
 
 class IndexPage extends React.Component {
   constructor() {
@@ -107,12 +49,12 @@ class IndexPage extends React.Component {
             ))}
           </Nav>
         </div>
-          <img className="headshot" src="images/headshot-2.jpg" alt="" />
+          <img className={s.headshot} src="images/headshot-2.jpg" alt="" />
           <Section color="rgba(0,0,0,0)" style={{ paddingTop: "1em" }}>
             <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('about')} />
-            <h1 className="white">Hi, I'm Adam</h1>
+            <h1 className={s.white}>Hi, I'm Adam</h1>
 
-            <div className="soft-right" ref="about_text">
+            <div className={s.softRight} ref="about_text">
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
