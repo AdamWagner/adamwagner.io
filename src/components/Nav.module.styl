@@ -1,21 +1,23 @@
 @require '../styles/global.styl'
 
 .nav
-  width: 32.8vw
-  height: 100vh
-  padding: 1em
-  position: fixed
-  z-index: 200
+  // width: 32.8vw
+  // height: 100vh
+  // padding: 1em
+  // position: fixed
+  // z-index: 200
   font-weight: 700
 
+  flex: 50px 0 2
+  margin-top: auto
+
   a
+    color: white
     display: block
     text-decoration: none
-    line-height: 3
-    color: black
-    font-size: 3vw
+    line-height: 1.4
+    font-size: 2vw
     opacity: 0.2
 
-
-  a.active 
-    opacity: 0.7
+    &.active
+      opacity: 1

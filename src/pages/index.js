@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import NavItem from "../components/NavItem";
 import Waypoint from "react-waypoint";
 import { injectGlobal, styled } from "styled-components";
 import _ from 'lodash'
@@ -18,9 +18,9 @@ class IndexPage extends React.Component {
     super();
     this.state = {
       nav : [
-        {name: 'about', active: true},
-        {name: 'work', active: false},
-        {name: "let's get in touch", active: false},
+        {name: 'work', active: true},
+        {name: 'experience', active: false},
+        {name: "contact", active: false},
         {name: 'experiments', active: false},
       ],
       lastClickedProject: null
@@ -28,7 +28,7 @@ class IndexPage extends React.Component {
   }
 
   componentDidMount() {
-    let els = [this.refs.nav, this.refs.about_text]
+    let els = [this.refs.nav]
     TweenMax.fromTo(els, .4, {opacity:0}, {opacity: 1, delay:0.1}, Sine.easeIn, );
   }
 
@@ -43,76 +43,50 @@ class IndexPage extends React.Component {
     return (
       <div ref="content">
 
-        {/* <Nav>
-          {this.state.nav.map((el, idx) => (
-            <Link className={(el.active && 'nav-active').toString()} to={`#${el.name}`} key={idx}>{el.name}</Link>
-          ))}
-        </Nav>
-         */}
-
-          <img className={s.headshot} src="images/headshot-2.jpg" alt="" />
-          <Section color="rgba(0,0,0,0)" style={{ paddingTop: "1em" }}>
-            {/* <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('about')} /> */}
-            <h1 className={s.white}>Hi, I'm Adam</h1>
-
-            <div className={s.softRight} ref="about_text">
-              <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit. Neque porro quisquam est, qui
-                dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                sed quia non numquam eius modi tempora incidunt ut labore et
-                dolore magnam <Link to="/page-2/">goto page 2</Link> aliquam quaerat voluptatem. Ut enim ad minima
-                veniam, quis nostrum exercitationem ullam corporis suscipit
-                laboriosam.<Link to="/badracket/">test preloading</Link>
-              </p>
-              <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit. Neque porro quisquam est, qui
-                dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                sed quia non numquam eius modi tempora incidunt ut labore et
-                dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-                veniam, quis nostrum exercitationem ullam corporis suscipit
-                laboriosam.
-              </p>
-            </div>
-          </Section>
-
-          {/* <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('work')} /> */}
 
 
-          <Section>
-            {data.projects.map((p, idx) => (
-                <ProjectImage key={idx} image={p.hero} path={p.path} pageColor={p.bgColor}/>
+        {/* <Section narrow color="#96D2E0" style={{ paddingTop: "1em" }}> */}
+        <Section chapter style={{ paddingTop: "1em" }}>
+          {/* <video width="100%" height="100%" src="images/dust-2.mp4" autoplay="autoplay" loop="true"></video> */}
+          {/* <video className={s.inverted} width="100%" height="100%" src="images/dust-2.mp4" autoplay="autoplay" loop="true"></video> */}
+          <h1 className={s.title}>
+            Hi, I'm Adam. <br/>
+            I design and manage products for companies big and small.
+          </h1>
+          {/* <img className={s.headshot} src="images/headshot-2.jpg" alt="" /> */}
+          {/* <video width="100%" height="100%" src="images/light.mp4" autoplay="autoplay" loop="true"></video> */}
+
+          <div ref="about_text" style={{opacity: 0.5}}>
+            <p>For more than ten years, I've been designing, building, and managing products at agencies, startups, and global companies.</p>
+            <p>It'd be great to work together to bring your idea to life. Let's chat.</p>
+          </div>
+
+
+          <Nav>
+            {this.state.nav.map((el, idx) => (
+              <NavItem active={el.active} to={`#${el.name}`} idx={idx} name={el.name} />
             ))}
-          </Section>
+          </Nav>
 
 
+        </Section>
 
-          <Section>
-            {/* <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('contact')} /> */}
-            <p>Contact</p>
-            <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit. Neque porro quisquam est, qui
-                dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                sed quia non numquam eius modi tempora incidunt ut labore et
-                dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-                veniam, quis nostrum exercitationem ullam corporis suscipit
-                laboriosam.
-
-            </p>
-          </Section>
+        <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('work')} />
 
 
+        <Section chapterContent>
+          {data.projects.map((p, idx) => (
+              <ProjectImage key={idx} image={p.hero} path={p.path} pageColor={p.bgColor}/>
+          ))}
+        </Section>
+
+        <Waypoint bottomOffset="50%" onEnter={() => this.updateNav('contact')} />
+        <Section chapterContent>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dolores corrupti sint ab maiores, ipsam optio ipsum magnam eius assumenda perferendis, facere sed corporis, dignissimos doloribus officiis. Doloremque, impedit ratione.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dolores corrupti sint ab maiores, ipsam optio ipsum magnam eius assumenda perferendis, facere sed corporis, dignissimos doloribus officiis. Doloremque, impedit ratione.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dolores corrupti sint ab maiores, ipsam optio ipsum magnam eius assumenda perferendis, facere sed corporis, dignissimos doloribus officiis. Doloremque, impedit ratione.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dolores corrupti sint ab maiores, ipsam optio ipsum magnam eius assumenda perferendis, facere sed corporis, dignissimos doloribus officiis. Doloremque, impedit ratione.</p>
+        </Section>
 
 
       </div>

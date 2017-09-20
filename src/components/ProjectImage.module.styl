@@ -1,6 +1,73 @@
 @require '../styles/global.styl'
 
-.projectImage
-  cursor: pointer
 
-  // flex: 50% 0 0 
+.imageWrapper
+  overflow: hidden
+  position: relative
+  // height: 30vw
+  flex: 100% 0 0
+
+  .projectImage
+    cursor: pointer
+    height: 80vh
+    width: 100%
+    background-size: cover
+    background-position: center
+    position: relative
+
+    +above(screens.big)
+      flex: 33% 0 0
+
+    +below(screens.mobile)
+      flex: 100% 0 0
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      background black
+      display: block
+      width: 100%
+      height: 100%
+      opacity: 0
+      transition:opacity 1s
+
+    &:hover:before
+        opacity: 0.4
+
+    transition: transform 15s linear
+
+    &:hover
+      transform: scale(1.2)
+
+
+  .metaWrapper
+    padding: 3vw
+    align-self: center
+    position: absolute
+    top: 3vh
+    left: 0
+    z-index: 500
+    pointer-events: none;
+    // height: 60%
+
+  .title, .description
+    transition: opacity 1s
+    display: block
+    // text-align: center
+
+  .title
+    font-size: 3vw
+    letter-spacing: 3px
+    font-weight: 800
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5)
+    text-transform: uppercase;
+
+  .description
+    opacity: 0
+    font-size: calc(0.5em + 0.75vw)
+
+  &:hover
+    .title, .description
+      opacity: 1

@@ -1,12 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
-import Link from 'gatsby-link'
 import s from './Nav.module.styl'
 
 class Nav extends React.Component {
     render() {
+      let active = this.props.active ? s.active : ''
       return (
-        <div className={s.nav}>
+        <div className={[s.nav, active].join(' ')}>
           {this.props.children}
         </div>
       );

@@ -10,6 +10,7 @@ import getDuration from '../utils/getDuration';
 import {getProject, projectsExcept} from '../utils/dataUtils'
 import Section from "../components/Section";
 import ProjectImage from "../components/ProjectImage";
+import Back from '../components/Back'
 
 
 const project = getProject('badracket')
@@ -59,6 +60,7 @@ class BadRacket extends React.Component {
   }
 
   back = () => {
+    console.log('back clicked');
     let s = window.scrollY
     if (s > 0) {
       let scrollDuration = getDuration(0, s)
@@ -73,10 +75,10 @@ class BadRacket extends React.Component {
       <div style={{ backgroundColor: project.bgColor }}>
         <HeroImage inTransition={this.state.inTransition} />
 
-        <div onClick={this.back}>Back</div>
+        <Back onClick={this.back} />
 
         <div ref="content">
-          <Section>
+          <Section narrow>
             <div className="soft-right">
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -92,7 +94,7 @@ class BadRacket extends React.Component {
               </p>
             </div>
           </Section>
-          <Section color="darkgray">
+          <Section narrow color="darkgray">
             <div className="soft-right">
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -108,7 +110,7 @@ class BadRacket extends React.Component {
               </p>
             </div>
           </Section>
-          <Section color="gray">
+          <Section narrow color="gray">
             <div className="soft-right">
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -124,7 +126,7 @@ class BadRacket extends React.Component {
               </p>
             </div>
           </Section>
-          <Section color="darkgray">
+          <Section narrow color="darkgray">
             <div className="soft-right">
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -141,12 +143,12 @@ class BadRacket extends React.Component {
             </div>
           </Section>
 
-          {this.state.otherProjects.map((p, idx) => (
-            <Section key={idx}>
-              <ProjectImage image={p.hero} path={p.path} pageColor={p.bgColor}/>
-            </Section>
-            )
-          )}
+          <Section>
+            {this.state.otherProjects.map((p, idx) => (
+                <ProjectImage key={idx} className="endNote" image={p.hero} path={p.path} pageColor={p.bgColor}/>
+              )
+            )}
+          </Section>
 
         </div>
       </div>

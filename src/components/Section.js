@@ -1,19 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
-import s from './Section.module.styl'
-
+import React from "react";
+import PropTypes from "prop-types";
+import Link from "gatsby-link";
+import s from "./Section.module.styl";
 
 class Section extends React.Component {
-    render() {
-        return (
-          <div className={s.section}>
-              <div className={s.wrapper}>
-                {this.props.children}
-              </div>
-          </div>
-        );
-    }
+  render() {
+    let narrow = this.props.narrow ? s.narrow : "";
+    let chapter = this.props.chapter ? s.chapter : "";
+    let chapterContent = this.props.chapterContent ? s.chapterContent : "";
+    return (
+      <div
+        className={[s.section, narrow, chapter, chapterContent].join(" ")}
+        style={Object.assign({ backgroundColor: this.props.color }, this.props.style)}
+      >
+        {this.props.children}
+      </div>
+    );
   }
+}
 
-export default Section
+export default Section;

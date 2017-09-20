@@ -1,20 +1,32 @@
 @require '../styles/global.styl'
 
 .section
-  position: relative
   z-index: 100
+  // flex: 50% 0 0
 
   // display: flex
+  // flex-flow: row wrap
+  // overflow: hidden
 
-  .wrapper
-    padding: 0 20% 0 20%
+  &.narrow
+    padding: 3vw
 
-  h1
-    font-size: 5vw
-    font-weight: 700
-    text-transform: uppercase
-    margin-bottom:8em
+  +below(screens.tablet)
+    padding: 1em
 
-  &:first-child
-    padding-top: 1em
-    padding-bottom: 1em
+  &.chapter
+    position: fixed
+    width: 50%
+    text-align: right
+    padding: 4vw
+    height: 100vh
+
+    display: flex
+    flex-direction: column
+    align-content: flex-end
+
+
+  &.chapterContent
+    position: relative
+    width: 50%
+    left: 50%

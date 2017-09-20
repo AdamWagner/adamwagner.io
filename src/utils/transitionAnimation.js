@@ -12,7 +12,7 @@ Twitter: https://twitter.com/OSUbowen
 */
 
 
-export function transition (path='/', pageColor='#96D2E0', imageUrl=null, imageContainer=null, boundingBox=null, reversed=false) {
+export function transition (path='/', pageColor='#222', imageUrl=null, imageContainer=null, boundingBox=null, reversed=false) {
 
   const tau = Math.PI * 2;
   const kappa = 0.551915024494;
@@ -50,7 +50,6 @@ export function transition (path='/', pageColor='#96D2E0', imageUrl=null, imageC
   };
 
   function setSprite() {
-    console.log('image loaded', this);
     Object.assign(sprite, {
       texture: this,
       origWidth: this.naturalWidth,
@@ -119,7 +118,7 @@ export function transition (path='/', pageColor='#96D2E0', imageUrl=null, imageC
 
     tl.seek(0).clear();
 
-    const duration = 0.5;
+    const duration = 0.4;
     const ease = Sine.easeOut;
     const rect = boundingBox || imageContainer.getBoundingClientRect();
 

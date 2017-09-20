@@ -5,5 +5,54 @@
   top: 0
   right: 0
   z-index:0
-  width:90%
-  opacity:0.9
+  width:55%
+  // opacity:0.9
+  filter: grayscale(100%)
+  // mix-blend-mode: multiply;
+  opacity: 0.5
+  mask-image: linear-gradient(to left, black 20%, transparent 100%);
+
+
+video
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  z-index: 999
+  transform: scale(1.4)
+  mix-blend-mode: screen;
+  object-fit: cover
+  // filter: invert();
+  opacity: 0.3
+
+
+.inverted
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  z-index: 999
+  transform: scale(1.4) scaleX(-1)
+  mix-blend-mode: multiply;
+  object-fit: cover
+  filter: invert();
+
+
+.title // h1
+  font-size: 4vw
+  line-height: 1.4
+  font-weight: 700
+  text-align: right
+  margin-bottom:2em
+  // text-transform: uppercase
+  // z-index: 10
+  // width: 80%
+  // text-align: center;
+  // mix-blend-mode: multiply;
+
+.name
+  position: fixed
+  top: 2vw
+  left: 2vw
+  z-index: 900
+  color: white

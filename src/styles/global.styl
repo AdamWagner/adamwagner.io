@@ -1,6 +1,15 @@
+// @require('./reset')
+@require './vars'
+@require './breakpoints'
+
+html
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
 
 body
   background-color: #96D2E0
+  background-color: asphalt
+  color: darken(white, 4%)
   padding: 0
   margin: 0
   font-family: lato, sans-serif
@@ -19,9 +28,9 @@ img
   color:white
 
 p
-  font-size: 2vw
+  font-size: calc(0.75em + 0.75vw)
   line-height: 1.45
-  opacity: 0.7
+  // text-align: center;
 
 .soft
   padding: 1em

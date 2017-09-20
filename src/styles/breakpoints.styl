@@ -1,0 +1,60 @@
+/* --------------------------------------------------------------------------------------- *\
+ Breakpoints
+ Use like this:
+
+ body
+   background: red
+   +above(1200px)
+     background: blue
+
+   +above(1920px)
+     background: orange
+
+/* --------------------------------------------------------------------------------------- */
+
+below(num)
+  condition = 'screen and (max-width: '+num+')'
+  @media condition
+    {block}
+
+above(num)
+  condition = 'screen and (min-width: '+num+')'
+  @media condition
+    {block}
+
+
+.hide--mobile
+  +below(screens.mobile)
+    display: none!important
+
+.show--mobile
+  display: block
+  +above(screens.mobile)
+    display: none
+
+.hide--tablet
+  +below(screens.tablet)
+    display: none!important
+
+.show--tablet
+  display: block
+  +above(screens.tablet)
+    display: none!important
+
+.hide--desk
+  +below(screens.desk)
+    display: none!important
+
+.show--desk
+  display: block
+  +above(screens.desk)
+    display: none!important
+
+.hide--huge
+  +below(screens.huge)
+    display: none!important
+
+.show--huge
+  display: block
+  +above(screens.huge)
+    display: none!important
