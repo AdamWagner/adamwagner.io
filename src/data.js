@@ -3,7 +3,7 @@ const data = {
   projects: [
     {
       title: 'Bad Racket',
-      description: `Produces independent records in an inviting performance space.`,
+      description: `Invites musicians to produce their best work in a natural performance and recording space.`,
       hero: '/images/badracket-hero.jpg',
       bgColor: '#E05952',
       path: '/badracket/'

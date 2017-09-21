@@ -12,6 +12,7 @@ class Section extends React.Component {
       <div
         className={[s.section, narrow, chapter, chapterContent].join(" ")}
         style={Object.assign({ backgroundColor: this.props.color }, this.props.style)}
+        ref={this.props.innerRef}
       >
         {this.props.children}
       </div>

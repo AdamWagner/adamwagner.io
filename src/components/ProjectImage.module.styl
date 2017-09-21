@@ -34,11 +34,12 @@
       transition:opacity 1s
 
     &:hover:before
-        opacity: 0.4
+        opacity: 0.3
 
-    transition: transform 15s linear
+    transition: transform 1s linear
 
     &:hover
+      transition: transform 10s linear
       transform: scale(1.2)
 
 
@@ -50,12 +51,10 @@
     left: 0
     z-index: 500
     pointer-events: none;
-    // height: 60%
 
   .title, .description
     transition: opacity 1s
     display: block
-    // text-align: center
 
   .title
     font-size: 3vw
