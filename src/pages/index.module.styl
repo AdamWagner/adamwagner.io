@@ -1,19 +1,15 @@
 @require '../styles/global.styl'
 
 .headshot
-  // position: absolute
-  // top: 0
-  // right: 0
-  // z-index:0
   background-image: url('../../static/images/headshot-2.jpg')
   background-size: cover
   background-position: right
   height: 80vh
-  // opacity:0.9
-  // filter: grayscale(100%)
-  // mix-blend-mode: multiply;
-  // opacity: 0.5
-  // mask-image: linear-gradient(to left, black 20%, transparent 100%);
+  // filter: grayscale()
+  // opacity: 0.7
+
+  +below(screens.mobile)
+    height: 30vh
 
 
 video
@@ -47,11 +43,10 @@ video
   font-weight: 700
   text-align: right
   margin-bottom:2em
-  // text-transform: uppercase
-  // z-index: 10
-  // width: 80%
-  // text-align: center;
-  // mix-blend-mode: multiply;
+
+  +below(screens.mobile)
+    text-align: left
+
 
 .name
   position: fixed

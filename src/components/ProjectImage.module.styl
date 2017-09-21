@@ -20,6 +20,10 @@
 
     +below(screens.mobile)
       flex: 100% 0 0
+      height: 68vh
+      margin-bottom: 1.4em
+      box-shadow: 0 1px 10px rgba(0,0,0,0.3)
+      border-radius: 5px
 
     &:before
       content: ''
@@ -57,7 +61,7 @@
     display: block
 
   .title
-    font-size: 3vw
+    font-size: calc(0.75em + 2vw)
     letter-spacing: 3px
     font-weight: 800
     text-shadow: 0 2px 5px rgba(0,0,0,0.5)
@@ -65,7 +69,10 @@
 
   .description
     opacity: 0
-    font-size: calc(0.5em + 0.75vw)
+    font-size: calc(0.75em + 0.75vw)
+
+    +below(screens.mobile)
+      opacity: 1
 
   &:hover
     .title, .description

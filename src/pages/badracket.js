@@ -60,7 +60,6 @@ class BadRacket extends React.Component {
   }
 
   back = () => {
-    console.log('back clicked');
     let s = window.scrollY
     if (s > 0) {
       let scrollDuration = getDuration(0, s)

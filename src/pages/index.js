@@ -145,7 +145,6 @@ class IndexPage extends React.Component {
           </Section>
         </Waypoint>
 
-        {/* // <div style={{ height: "200px" }} /> */}
 
         <Waypoint
           bottomOffset="50%"

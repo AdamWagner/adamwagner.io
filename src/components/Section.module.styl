@@ -25,8 +25,18 @@
     flex-direction: column
     align-content: flex-end
 
+    +below(screens.mobile)
+      width: auto
+      position: relative
+      text-align: left
+      height: auto
+
 
   &.chapterContent
     position: relative
     width: 50%
     left: 50%
+
+    +below(screens.mobile)
+      width: auto
+      left: auto
