@@ -34,15 +34,9 @@ export default class ProjectImage extends React.Component {
       height
     } = this.refs.image_container.getBoundingClientRect();
 
-    let manualBox = document.querySelector('.src-components----projectImage-module---projectImage---189ai').getBoundingClientRect()
-    console.log('manual box', manualBox);
 
     // save original image coords for "going back" transition
     store.set("lastClickedProject", { top, left, width, height });
-
-
-    let test = store.get('lastClickedProject')
-    console.log('testing bounding box', test);
 
     // start the transition animation
     this.state.transition.toggleAnimation();

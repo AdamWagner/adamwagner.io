@@ -3,7 +3,7 @@ import NavItem from "../components/NavItem";
 import Waypoint from "react-waypoint";
 import { injectGlobal, styled } from "styled-components";
 import _ from "lodash";
-import { TimelineMax, TweenMax, Sine } from "gsap";
+import { TweenMax, Sine } from "gsap";
 
 import Nav from "../components/Nav";
 import Section from "../components/Section";
@@ -17,36 +17,8 @@ class IndexPage extends React.Component {
   constructor() {
     super();
     this.state = {
-      nav: [
-        {
-          name: "about",
-          active: true,
-          titleText: `Hi, I'm Adam. \n I design and manage products.`,
-          copyText: `Over the last ten years, I've had the pleasure of building effective product experiences at an agency, a startup, a large organization, and my own side projects.`
-        },
-        {
-          name: "work",
-          active: false,
-          titleText: `Why don't you check out some of my work? \n ↳`,
-          copyText: `Although I've built some consumer-focsed side projects, I'm most passionate about improving the nature of work. You'll find a healthy selection of products aimed at small business owners, designers, and musicians.`
-        },
-        {
-          name: "experience",
-          active: false,
-          titleText: `Let's work together.`
-        },
-        {
-          name: "contact",
-          active: false,
-          titleText: `Let's work together.`,
-          copyText: `Let's make your idea a reality. Let's see it move. See it function. It'll be beautiful.`
-        },
-        {
-          name: "experiments",
-          active: false
-        }
-      ],
-      lastClickedProject: null
+      nav: data.nav,
+      mobile: false
     };
   }
 
@@ -55,23 +27,23 @@ class IndexPage extends React.Component {
     let navItem = _.find(this.state.nav, el => el.name == activeItem);
 
     if (currActive.name != navItem.name) {
-      // console.log(currActive.name, navItem.name);
       this.state.nav.forEach(el => (el.active = false));
       navItem.active = true;
       this.animateOut();
       setTimeout(() => {
         this.forceUpdate();
-      }, 400);
+      }, 300);
     }
   }
 
   animateOut = () => {
     let els = [this.refs.about_text, this.refs.title];
+    // TweenMax.killAll();
     TweenMax.fromTo(
       els,
-      0.4,
+      0.3,
       { opacity: 1, y: 0 },
-      { opacity: 0, y: -20 },
+      { opacity: 0, y: -10 },
       Sine.easeIn
     );
   };
@@ -83,18 +55,20 @@ class IndexPage extends React.Component {
     let title = [this.refs.title];
     let about = [this.refs.about_text];
 
+    // TweenMax.killAll();
+
     TweenMax.fromTo(
       title,
-      0.4,
-      { opacity: 0, y: -20 },
+      0.35,
+      { opacity: 0, y: -8 },
       { opacity: 1, y: 0, delay: 0.1 },
       Sine.easeIn
     );
     TweenMax.fromTo(
       about,
-      0.8,
+      0.9,
       { opacity: 0, y: -20 },
-      { opacity: 0.7, y: 0, delay: 0.5 },
+      { opacity: 0.7, y: 0, delay: 0.6 },
       Sine.easeIn
     );
 
@@ -102,55 +76,55 @@ class IndexPage extends React.Component {
       _.debounce(this.updateNav, 500, { trailing: true }),
       this
     );
-    // let debounced_updateNav = _.bind(this.updateNav, this)
 
     return (
       <div>
         <Section chapter style={{ paddingTop: "1em" }}>
-          {/* <video width="100%" height="100%" src="images/dust-2.mp4" autoplay="autoplay" loop="true"></video> */}
-          {/* <video className={s.inverted} width="100%" height="100%" src="images/dust-2.mp4" autoplay="autoplay" loop="true"></video> */}
-          <h1 ref="title" className={s.title}>
-            {titleText}
-          </h1>
-          {/* <video width="100%" height="100%" src="images/light.mp4" autoplay="autoplay" loop="true"></video> */}
 
-          <div ref="about_text" style={{ opacity: 0.5 }}>
-            <p>{copyText}</p>{" "}
+          <div>
+            <h1 ref="title" className={s.title}>
+              {titleText}
+            </h1>
+
+            <div ref="about_text" style={{ opacity: 0.5 }}>
+              <p>{copyText}</p>
+            </div>
           </div>
+
+        </Section>
+
+          <Waypoint
+            topOffset="-50%"
+            onEnter={() => debounced_updateNav("about")}
+          />
+
+        <Section chapterContent>
+          <div className={s.headshot} />
         </Section>
 
         <Waypoint
           bottomOffset="50%"
-          onEnter={() => debounced_updateNav("about")}
-        >
-          <Section chapterContent>
-            <div className={s.headshot} />
-          </Section>
-        </Waypoint>
-
-        <Waypoint
-          bottomOffset="50%"
-          onEnter={() => {debounced_updateNav("work")}}
-          onLeave={() => {debounced_updateNav('about')}}
-        >
-          <Section chapterContent>
-            {data.projects.map((p, idx) => (
-              <ProjectImage
-                key={idx}
-                image={p.hero}
-                path={p.path}
-                pageColor={p.bgColor}
-              />
-            ))}
-          </Section>
-        </Waypoint>
-
-
-        <Waypoint
-          bottomOffset="50%"
-          onEnter={() => debounced_updateNav("contact")}
-          onLeave={() => debounced_updateNav("work")}
+          onEnter={() => {
+            debounced_updateNav("work");
+          }}
         />
+
+        <Section chapterContent>
+          {data.projects.map((p, idx) => (
+            <ProjectImage
+              key={idx}
+              image={p.hero}
+              path={p.path}
+              pageColor={p.bgColor}
+            />
+          ))}
+        </Section>
+
+          <Waypoint
+            bottomOffset="50%"
+            onEnter={() => debounced_updateNav("contact")}
+            onLeave={() => debounced_updateNav("work")}
+          />
 
         <Section chapterContent>
           <p>

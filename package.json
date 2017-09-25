@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Adam Wagner",
   "dependencies": {
+    "enquire.js": "^2.1.6",
     "gatsby": "^1.9.39",
     "gatsby-link": "^1.6.15",
     "gatsby-plugin-catch-links": "^1.0.8",
