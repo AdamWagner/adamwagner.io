@@ -5,8 +5,12 @@
 .imageWrapper
   overflow: hidden
   position: relative
-  // height: 30vw
   flex: 100% 0 0
+
+  +below(screens.mobile)
+    box-shadow: 0 1px 10px rgba(0,0,0,0.3)
+    border-radius: 5px
+    margin-bottom: 1.4em
 
   .projectImage
     cursor: pointer
@@ -15,6 +19,7 @@
     background-size: cover
     background-position: center
     position: relative
+    transition: transform 1s linear
 
     +above(screens.big)
       flex: 33% 0 0
@@ -22,10 +27,11 @@
     +below(screens.mobile)
       flex: 100% 0 0
       height: 68vh
-      margin-bottom: 1.4em
-      box-shadow: 0 1px 10px rgba(0,0,0,0.3)
-      border-radius: 5px
 
+    &.endNote
+      height: 350px
+
+    // dark tint to be activated on hover
     &:before
       content: ''
       position: absolute
@@ -38,14 +44,13 @@
       opacity: 0
       transition:opacity 1s
 
-    &:hover:before
-        opacity: 0.3
-
-    transition: transform 1s linear
-
     &:hover
-      transition: transform 10s linear
-      transform: scale(1.2)
+      +above(screens.mobile)
+        transition: transform 10s linear
+        transform: scale(1.2)
+        &:before
+          opacity: 0.3
+
 
 
   .metaWrapper
