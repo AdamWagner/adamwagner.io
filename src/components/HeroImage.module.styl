@@ -1,0 +1,24 @@
+@require '../styles/vars'
+
+
+@keyframes imageZoom
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.24);
+  }
+
+
+.heroImage
+  background-size: cover
+  background-position: center
+  height: 68vh
+  position: relative
+  z-index: 200
+  transform-origin: 50% 80%
+  animation: imageZoom linear 50s
+
+
+.heroWrapper
+  overflow:hidden

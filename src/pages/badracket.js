@@ -11,20 +11,9 @@ import {getProject, projectsExcept} from '../utils/dataUtils'
 import Section from "../components/Section";
 import ProjectImage from "../components/ProjectImage";
 import Back from '../components/Back'
-
+import HeroImage from '../components/HeroImage'
 
 const project = getProject('badracket')
-
-const HeroImage = styled.div`
-  background-image: url(${project.hero});
-  background-size: cover;
-  background-position: center;
-  height: 68vh;
-  position: relative;
-  z-index: 200;
-  visibility: ${props => (props.inTransition ? "hidden" : "visible")};
-`;
-
 const projectName = 'badracket'
 
 class BadRacket extends React.Component {
@@ -72,7 +61,7 @@ class BadRacket extends React.Component {
   render() {
     return (
       <div style={{ backgroundColor: project.bgColor }}>
-        <HeroImage inTransition={this.state.inTransition} />
+        <HeroImage src={this.state.project.hero} inTransition={this.state.inTransition} />
 
         <Back onClick={this.back} />
 
