@@ -38,7 +38,10 @@ class IndexPage extends React.Component {
 
   animateOut = () => {
     let els = [this.refs.about_text, this.refs.title];
-    // TweenMax.killAll();
+
+    // reduces flicker when scrolling quickly
+    TweenMax.killTweensOf(els)
+
     TweenMax.fromTo(
       els,
       0.3,
@@ -55,7 +58,8 @@ class IndexPage extends React.Component {
     let title = [this.refs.title];
     let about = [this.refs.about_text];
 
-    // TweenMax.killAll();
+    // reduces flicker when scrolling quickly
+    TweenMax.killTweensOf([title,about])
 
     TweenMax.fromTo(
       title,
