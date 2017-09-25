@@ -11,6 +11,13 @@ x remove rightCol component - totally unnecessary
 x add prev / next at bottom of page
 x move to CSS Modules
 x programmatically get image dimensions
+x explore new layout options
 
+General
 - responsive type system
-- explore new layout options
+- Alt design for my photo
+x Flexible box component for layout
+
+Maybes
+- [maybe] custom 'in viewport' controller for displaying home page text
+- [maybe] fixed left vertical nav

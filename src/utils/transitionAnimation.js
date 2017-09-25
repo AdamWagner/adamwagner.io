@@ -123,7 +123,7 @@ export function transition (path='/', pageColor='#222', imageUrl=null, imageCont
     const rect = boundingBox || imageContainer.getBoundingClientRect();
 
     let w = vw;
-    let h = vh * 0.68;
+    let h = vh * 0.80;
     const x = w / 2;
     const y = h / 2;
     const w2 = rect.width  / 2;

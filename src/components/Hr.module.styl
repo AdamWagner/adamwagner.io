@@ -1,7 +1,7 @@
-@require '../styles/vars'
+vars = json('../styles/vars.json', {hash:true})
 
 
 .hr
   width: 100%
   height: 1px
-  border-bottom: solid 2px lighten(asphalt, 10%)
+  border-bottom: solid 2px lighten(vars.colors.asphalt, 10%)

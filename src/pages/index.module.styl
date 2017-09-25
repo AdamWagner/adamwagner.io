@@ -1,4 +1,4 @@
-@require '../styles/vars'
+vars = json('../styles/vars.json', {hash:true})
 @require '../styles/breakpoints'
 
 .headshot
@@ -9,7 +9,7 @@
   // filter: grayscale()
   // opacity: 0.7
 
-  +below(screens.mobile)
+  +below(vars.screens.mobile)
     height: 30vh
 
 
@@ -45,7 +45,7 @@ video
   text-align: right
   margin-bottom:2em
 
-  +below(screens.mobile)
+  +below(vars.screens.mobile)
     text-align: left
 
 

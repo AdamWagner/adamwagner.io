@@ -1,3 +1,5 @@
+vars = json('./vars.json', {hash:true})
+
 /* --------------------------------------------------------------------------------------- *\
  Breakpoints
  Use like this:
@@ -24,37 +26,37 @@ above(num)
 
 
 .hide--mobile
-  +below(screens.mobile)
+  +below(vars.screens.mobile)
     display: none!important
 
 .show--mobile
   display: block
-  +above(screens.mobile)
+  +above(vars.screens.mobile)
     display: none
 
 .hide--tablet
-  +below(screens.tablet)
+  +below(vars.screens.tablet)
     display: none!important
 
 .show--tablet
   display: block
-  +above(screens.tablet)
+  +above(vars.screens.tablet)
     display: none!important
 
 .hide--desk
-  +below(screens.desk)
+  +below(vars.screens.desk)
     display: none!important
 
 .show--desk
   display: block
-  +above(screens.desk)
+  +above(vars.screens.desk)
     display: none!important
 
 .hide--huge
-  +below(screens.huge)
+  +below(vars.screens.huge)
     display: none!important
 
 .show--huge
   display: block
-  +above(screens.huge)
+  +above(vars.screens.huge)
     display: none!important

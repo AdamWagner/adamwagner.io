@@ -1,22 +1,12 @@
-@require '../styles/vars'
+@require '../styles/global'
+vars = json('../styles/vars.json', {hash:true})
 @require '../styles/breakpoints'
 
 .section
   z-index: 100
-  // flex: 50% 0 0
-
-  // display: flex
-  // flex-flow: row wrap
-  // overflow: hidden
-
-  &.narrow
-    padding: 3vw
 
   &.flex
     display: flex
-
-  +below(screens.tablet)
-    padding: 1em
 
   &.chapter
     position: fixed
@@ -29,7 +19,7 @@
     flex-direction: column
     align-content: flex-end
 
-    +below(screens.mobile)
+    +below(vars.screens.mobile)
       width: auto
       position: relative
       text-align: left
@@ -41,6 +31,6 @@
     width: 50%
     left: 50%
 
-    +below(screens.mobile)
+    +below(vars.screens.mobile)
       width: auto
       left: auto

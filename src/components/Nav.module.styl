@@ -1,4 +1,4 @@
-@require '../styles/vars'
+vars = json('../styles/vars.json', {hash:true})
 
 .nav
   // width: 32.8vw
@@ -11,5 +11,5 @@
   height: 16vh
   flex: 0 0 2
   margin-top: auto
-  border-top: solid 2px lighten(asphalt, 20%)
+  border-top: solid 2px lighten(vars.colors.asphalt, 20%)
   padding-top: 6vh

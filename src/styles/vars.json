@@ -1,0 +1,22 @@
+{
+  "colors": {
+    "concrete": "#D7D9E0",
+    "cloud": "#F0F1F5",
+    "asphalt": "#3b4046",
+    "white": "#fff"
+
+  },
+
+  "screens": {
+    "mobile": "500px",
+    "tablet": "769px",
+    "desk": "1024px",
+    "big": "1600px",
+    "huge": "1920px"
+  },
+
+  "space": {
+    "baseSpace": 1,
+    "room": "1em"
+  }
+}

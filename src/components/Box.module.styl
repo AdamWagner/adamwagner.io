@@ -1,0 +1,41 @@
+vars = json('../styles/vars.json', {hash:true})
+@require '../styles/breakpoints'
+
+// Box Component
+.container
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: stretch
+  align-content: stretch
+  flex-wrap: nowrap
+
+  +below(vars.screens.tablet)
+    display: block
+
+.box
+  padding: room
+  flex: 1 0 0
+
+.half
+  flex: 50% 0 0
+
+  +below(vars.screens.mobile)
+    flex: 100% 0 0
+
+.third
+  flex: 33% 0 0
+
+.hard
+  padding: 0!important
+
+
+// Wrapper Component
+.wrapper
+  width: 80vw
+  margin: auto
+  max-width: 1200px
+  display: inherit
+
+  +below(vars.screens.mobile)
+    width: 100%

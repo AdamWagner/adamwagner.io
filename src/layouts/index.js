@@ -25,6 +25,15 @@ class TemplateWrapper extends React.Component {
       <div style={{width: '100%'}}>
         <Helmet title={titleText} meta={metadata} >
           <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet" />
+          <style type="text/css">{`
+            .react-layout-components--box {
+              display: -webkit-box;
+              display: -moz-box;
+              display: -ms-flexbox;
+              display: -webkit-flex;
+              display: flex;
+            }
+          `}</style>
         </Helmet>
 
           <canvas className={s.canvas} id="canvas"></canvas>

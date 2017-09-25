@@ -1,4 +1,4 @@
-@require '../styles/vars'
+vars = json('../styles/vars.json', {hash:true})
 @require '../styles/breakpoints'
 
 
@@ -7,7 +7,7 @@
   position: relative
   flex: 100% 0 0
 
-  +below(screens.mobile)
+  +below(vars.screens.mobile)
     box-shadow: 0 1px 10px rgba(0,0,0,0.3)
     border-radius: 5px
     margin-bottom: 1.4em
@@ -21,10 +21,10 @@
     position: relative
     transition: transform 1s linear
 
-    +above(screens.big)
+    +above(vars.screens.big)
       flex: 33% 0 0
 
-    +below(screens.mobile)
+    +below(vars.screens.mobile)
       flex: 100% 0 0
       height: 68vh
 
@@ -45,7 +45,7 @@
       transition:opacity 1s
 
     &:hover
-      +above(screens.mobile)
+      +above(vars.screens.mobile)
         transition: transform 10s linear
         transform: scale(1.2)
         &:before
@@ -77,7 +77,7 @@
     opacity: 0
     font-size: calc(0.75em + 0.75vw)
 
-    +below(screens.mobile)
+    +below(vars.screens.mobile)
       opacity: 1
 
   &:hover

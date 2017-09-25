@@ -19,6 +19,7 @@
     "lodash": "^4.17.4",
     "react": "^16.0.0-rc.3",
     "react-dom": "^16.0.0-rc.3",
+    "react-layout-components": "^3.0.6",
     "react-router-dom": "^4.2.2",
     "react-waypoint": "^7.1.0",
     "rx": "^4.1.0",

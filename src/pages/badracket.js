@@ -1,78 +1,72 @@
 import React from "react";
 import Link from "gatsby-link";
+import Box from "../components/Box";
 
 import Section from "../components/Section";
 import ProjectDetail from "../components/ProjectDetail";
 
+import sky from '../styles/vars.styl'
+
 class BadRacket extends React.Component {
   render() {
+    console.log(sky);
     return (
       <ProjectDetail projectName="badracket">
         <div ref="content">
-          <Section narrow>
-            <div className="soft-right">
-              <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit. Neque porro quisquam est, qui
-                dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                sed quia non numquam eius modi tempora incidunt ut labore et
-                dolore magnam <Link to="/page-2/">goto page 2</Link> aliquam
-                quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-                exercitationem ullam corporis suscipit laboriosam.
-              </p>
-            </div>
+          <Section>
+            <Box container>
+              <Box half>
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Illum facere nesciunt officia, debitis assumenda iusto,
+                    laudantium possimus accusamus sapiente aliquam saepe ipsam
+                    quos, molestias omnis sit ipsa? Adipisci, distinctio,
+                    quibusdam.
+                  </p>
+                  <p>Another thing I've been meaning to say</p>
+                </div>
+              </Box>
+              <Box half>
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Illum facere nesciunt officia, debitis assumenda iusto,
+                    laudantium possimus accusamus sapiente aliquam saepe ipsam
+                    quos, molestias omnis sit ipsa? Adipisci, distinctio,
+                    quibusdam.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Illum facere nesciunt officia, debitis assumenda iusto,
+                    laudantium possimus accusamus sapiente aliquam saepe ipsam
+                    quos, molestias omnis sit ipsa? Adipisci, distinctio,
+                    quibusdam.
+                  </p>
+                </div>
+              </Box>
+            </Box>
           </Section>
-          <Section narrow color="darkgray">
-            <div className="soft-right">
-              <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit. Neque porro quisquam est, qui
-                dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                sed quia non numquam eius modi tempora incidunt ut labore et
-                dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-                veniam, quis nostrum exercitationem ullam corporis suscipit
-                laboriosam.
-              </p>
-            </div>
+
+          <Section color="blue">
+            <Box container>
+              <Box third>
+                <p>Lorem</p>
+              </Box>
+              <Box third>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo neque, repellat quaerat illum, sapiente at harum placeat aliquam odit voluptatibus maiores repellendus praesentium officia ex perspiciatis eveniet laudantium odio inventore? </p>
+              </Box>
+              <Box third>
+                <p>Some more stuff</p>
+              </Box>
+            </Box>
           </Section>
-          <Section narrow color="gray">
-            <div className="soft-right">
-              <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit. Neque porro quisquam est, qui
-                dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                sed quia non numquam eius modi tempora incidunt ut labore et
-                dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-                veniam, quis nostrum exercitationem ullam corporis suscipit
-                laboriosam.
-              </p>
-            </div>
-          </Section>
-          <Section narrow color="darkgray">
-            <div className="soft-right">
-              <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit. Neque porro quisquam est, qui
-                dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                sed quia non numquam eius modi tempora incidunt ut labore et
-                dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-                veniam, quis nostrum exercitationem ullam corporis suscipit
-                laboriosam.
-              </p>
-            </div>
-          </Section>
+
+
+
+
+
+
         </div>
       </ProjectDetail>
     );
