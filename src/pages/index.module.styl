@@ -27,10 +27,9 @@ vars = json('../styles/vars.json', {hash:true})
   background-size: cover
   background-position: right
 
-  // transform: scaleX(-1)
-
   height: 100vh
 
+  // transform: scaleX(-1)
   // width: 450px
   // height: 450px
   // border-radius: 100%
@@ -73,6 +72,7 @@ video
 
 .title, .about
   will-change: transform, opacity
+  margin-top: -5vh
 
 
 .title // h1
@@ -80,7 +80,7 @@ video
   line-height: 1.2
   font-weight: 700
   text-align: right
-  margin-bottom:7vh
+  margin-bottom:8vh
 
   +below(vars.screens.mobile)
     text-align: left
