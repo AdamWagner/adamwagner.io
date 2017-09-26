@@ -1,0 +1,32 @@
+vars = json('../styles/vars.json', {hash:true})
+
+
+.navHelper
+  flex: 100%
+  color: vars.colors.asphalt
+  min-height: 3em
+  padding: 0.5em 0
+  transition: color .2s
+
+  > span
+    display: block
+    cursor: pointer
+
+  &:hover, &.active
+    color: darken(vars.colors.asphalt, 0%)
+    .arrowKey
+      background: vars.colors.asphalt
+      color: vars.colors.red
+
+  .arrowKey
+    display: inline-block
+    padding: 0.4em 0.55em
+    margin-right: 0.5em
+    border: solid 1px vars.colors.asphalt
+    line-height: 1
+    border-radius: 5px
+    transition: background .2s, color, .2s
+
+    ^[0]:hover &
+      background: vars.colors.asphalt
+      color: vars.colors.red

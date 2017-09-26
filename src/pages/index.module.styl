@@ -3,6 +3,14 @@ vars = json('../styles/vars.json', {hash:true})
 
 
 
+.flexInherit
+  display: inherit
+  flex-flow: inherit
+  align-content: inherit
+
+  display: flex
+  flex-flow: row wrap
+  align-content: space-between
 
 
 
@@ -69,10 +77,10 @@ video
 
 .title // h1
   font-size: 6vw
-  line-height: 1.4
+  line-height: 1.2
   font-weight: 700
   text-align: right
-  margin-bottom:1em
+  margin-bottom:7vh
 
   +below(vars.screens.mobile)
     text-align: left

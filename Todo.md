@@ -14,7 +14,9 @@ x programmatically get image dimensions
 x explore new layout options
 
 General
-- cleanup pages>index.js
+x cleanup pages>index.js
+x keyboard controls
+- factor out components in pages > index.js
 - Typography styles
 - Responsive type rhythm system
 x Alt design for my photo
