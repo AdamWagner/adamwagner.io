@@ -45,7 +45,6 @@ export default class ProjectImage extends React.Component {
     let title = this.state.project && this.state.project.title;
     let description = this.state.project && this.state.project.description;
     let endNote = this.props.endNote ? s.endNote : "";
-    console.log(endNote);
 
     return (
       <div className={s.imageWrapper} ref="image_container">

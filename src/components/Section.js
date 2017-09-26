@@ -34,6 +34,7 @@ class Section extends React.Component {
           chapter,
           chapterContent
         ].join(" ")}
+        id={this.props.id}
         style={Object.assign(
           {
             backgroundColor: p.color,

@@ -6,7 +6,7 @@ const data = {
       name: "about",
       active: true,
       titleText: `Hi, I'm \n Adam Wagner.`,
-      copyText: `I'm a Product Manager & Designer with more than a decade of experience designing effective product experiences—leading products through concept development, prototyping, branding, visual design and front-end development.`
+      copyText: `I'm a Product Manager & Designer with more than a decade of experience designing effective product experiences—leading products through concept development, prototyping, visual design and execution.`
     },
     {
       name: "work",
@@ -14,21 +14,21 @@ const data = {
       titleText: `Case studies \n ↳`,
       copyText: `Although I've built some consumer-focsed side projects, I'm most passionate about improving the nature of work. You'll find a healthy selection of products aimed at small business owners, designers, and musicians.`
     },
-    {
-      name: "experience",
-      active: false,
-      titleText: `Let's work together.`
-    },
+    // {
+    //   name: "experience",
+    //   active: false,
+    //   titleText: `Let's work together.`
+    // },
     {
       name: "contact",
       active: false,
       titleText: `Let's work together.`,
       copyText: `Let's make your idea a reality. Let's see it move. See it function. It'll be beautiful.`
     },
-    {
-      name: "experiments",
-      active: false
-    }
+    // {
+    //   name: "experiments",
+    //   active: false
+    // }
   ],
   projects: [
     {
