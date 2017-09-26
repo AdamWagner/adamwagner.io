@@ -10,12 +10,26 @@ vars = json('../styles/vars.json', {hash:true})
   align-content: stretch
   flex-wrap: nowrap
 
-  +below(vars.screens.tablet)
-    display: block
+
+.wrap
+  flex-flow: wrap
+
+.textCenter
+  text-align: center
+
+.textRight
+  text-align: right
+
+.alignBaseline
+  align-items: baseline
+
 
 .box
   padding: room
   flex: 1 0 0
+
+.full
+  flex: 100% 0 0
 
 .half
   flex: 50% 0 0
@@ -25,6 +39,9 @@ vars = json('../styles/vars.json', {hash:true})
 
 .third
   flex: 33% 0 0
+
+.twoThird
+  flex: 66% 0 0
 
 .hard
   padding: 0!important
@@ -36,6 +53,8 @@ vars = json('../styles/vars.json', {hash:true})
   margin: auto
   max-width: 1200px
   display: inherit
+  flex-flow: inherit
+  align-items: inherit
 
   +below(vars.screens.mobile)
     width: 100%

@@ -11,6 +11,7 @@ import ProjectImage from "../components/ProjectImage";
 import Back from "../components/Back";
 import HeroImage from "../components/HeroImage";
 import MoreProjects from "../components/MoreProjects";
+import Footer from "../components/Footer";
 
 class ProjectDetail extends React.Component {
   constructor(props) {
@@ -83,6 +84,7 @@ class ProjectDetail extends React.Component {
             {this.props.children}
             <MoreProjects projects={this.state.otherProjects}/>
           </div>
+          <Footer/>
         </div>
     );
   }

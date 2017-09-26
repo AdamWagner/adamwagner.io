@@ -8,6 +8,7 @@ class Section extends React.Component {
     let p = this.props;
 
     let narrow = p.narrow ? s.narrow : "";
+    let wrap = p.wrap ? s.wrap : "";
     let flex = p.flex ? s.flex : "";
     let chapter = p.chapter ? s.chapter : "";
     let chapterContent = p.chapterContent ? s.chapterContent : "";
@@ -25,8 +26,24 @@ class Section extends React.Component {
 
     return (
       <div
-        className={[s.section, narrow, flex, chapter, chapterContent].join(" ")}
-        style={Object.assign({ backgroundColor: p.color }, p.style, gradient)}
+        className={[
+          s.section,
+          narrow,
+          wrap,
+          flex,
+          chapter,
+          chapterContent
+        ].join(" ")}
+        style={Object.assign(
+          {
+            backgroundColor: p.color,
+            color: p.textColor,
+            paddingTop: p.softTop,
+            paddingBottom: p.softBottom
+          },
+          p.style,
+          gradient
+        )}
         ref={p.innerRef}
       >
         {p.children}

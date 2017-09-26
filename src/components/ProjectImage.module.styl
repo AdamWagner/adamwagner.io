@@ -29,7 +29,11 @@ vars = json('../styles/vars.json', {hash:true})
       height: 68vh
 
     &.endNote
-      height: 350px
+      height: 30vw
+      max-height: 500px
+
+      +below(vars.screens.mobile)
+        height: 200px
 
     // dark tint to be activated on hover
     &:before

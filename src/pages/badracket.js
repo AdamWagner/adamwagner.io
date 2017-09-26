@@ -5,15 +5,14 @@ import Box from "../components/Box";
 import Section from "../components/Section";
 import ProjectDetail from "../components/ProjectDetail";
 
-import sky from '../styles/vars.styl'
+import { colors } from "../styles/vars.json";
 
 class BadRacket extends React.Component {
   render() {
-    console.log(sky);
     return (
       <ProjectDetail projectName="badracket">
         <div ref="content">
-          <Section>
+          <Section textColor={colors.concrete} softTop={'5em'}>
             <Box container>
               <Box half>
                 <div>
@@ -48,25 +47,24 @@ class BadRacket extends React.Component {
             </Box>
           </Section>
 
-          <Section color="blue">
+          <Section color={colors.asphalt}>
             <Box container>
               <Box third>
                 <p>Lorem</p>
               </Box>
               <Box third>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo neque, repellat quaerat illum, sapiente at harum placeat aliquam odit voluptatibus maiores repellendus praesentium officia ex perspiciatis eveniet laudantium odio inventore? </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo
+                  neque, repellat quaerat illum, sapiente at harum placeat
+                  aliquam odit voluptatibus maiores repellendus praesentium
+                  officia ex perspiciatis eveniet laudantium odio inventore?
+                </p>
               </Box>
               <Box third>
                 <p>Some more stuff</p>
               </Box>
             </Box>
           </Section>
-
-
-
-
-
-
         </div>
       </ProjectDetail>
     );
