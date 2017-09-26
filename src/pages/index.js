@@ -114,12 +114,12 @@ class IndexPage extends React.Component {
     );
 
     var tl = new TimelineMax();
-    tl.to(hand, 1, { transform: "rotate(0deg)" })
-      .to(hand, 0.6, { transform: "rotate(-20deg)" })
-      .to(hand, 0.5, { transform: "rotate(20deg)" })
-      .to(hand, 0.4, { transform: "rotate(-20deg)" })
-      .to(hand, 0.4, { transform: "rotate(20deg)" })
-      .to(hand, 0.4, { transform: "rotate(0deg)" });
+    tl.to(hand, 1, { transform: "rotate(0deg)", transformOrigin:"center bottom"} )
+      .to(hand, 0.6, { transform: "rotate(-20deg)", transformOrigin:"center bottom" })
+      .to(hand, 0.5, { transform: "rotate(20deg)", transformOrigin:"center bottom" })
+      .to(hand, 0.4, { transform: "rotate(-20deg)", transformOrigin:"center bottom" })
+      .to(hand, 0.4, { transform: "rotate(20deg)", transformOrigin:"center bottom" })
+      .to(hand, 0.4, { transform: "rotate(0deg)", transformOrigin:"center bottom" })
 
     let debounced_updateNav = _.bind(
       _.debounce(this.updateNav, 500, { trailing: true }),

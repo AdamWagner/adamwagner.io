@@ -14,9 +14,10 @@ x programmatically get image dimensions
 x explore new layout options
 
 General
+- cleanup pages>index.js
 - Typography styles
 - Responsive type rhythm system
-- Alt design for my photo
+x Alt design for my photo
 x Flexible box component for layout
 
 Maybes
