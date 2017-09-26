@@ -15,7 +15,7 @@ export default class MoreProjects extends React.Component {
           </Box>
 
           {this.props.projects.map((p, idx) => (
-            <Box half key={idx}>
+            <Box half hard key={idx}>
               <ProjectImage
                 endNote
                 image={p.hero}

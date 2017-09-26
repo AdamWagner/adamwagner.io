@@ -41,7 +41,7 @@ export default class Box extends React.Component {
           twoThird,
           hard,
           textCenter,
-          textRight
+          textRight,
         ].join(" ")}
         style={{paddingTop: p.softTop, paddingBottom:p.softBottom}}
       >

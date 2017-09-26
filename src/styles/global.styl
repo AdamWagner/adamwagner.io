@@ -7,7 +7,14 @@ html
   // -moz-osx-font-smoothing: grayscale;
 
 body
-  background-color: vars.colors.asphalt
+  // background-color: vars.colors.asphalt
+
+  // this is really unfortunate,
+  // but it's due to a Chrome bug that renders innacurate colors
+  // that appear as flickers during hardware accelerated transitions.
+  background: url('../../static/images/bg-color.png')
+  background-repeat: repeat
+
   color: darken(white, 4%)
   padding: 0
   margin: 0
@@ -29,6 +36,7 @@ img
 p
   font-size: calc(0.75em + 0.75vw)
   line-height: 1.45
+  -webkit-font-smoothing: antialiased
 
 .soft
   padding: 1em

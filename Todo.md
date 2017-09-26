@@ -14,7 +14,8 @@ x programmatically get image dimensions
 x explore new layout options
 
 General
-- responsive type system
+- Typography styles
+- Responsive type rhythm system
 - Alt design for my photo
 x Flexible box component for layout
 

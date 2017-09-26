@@ -1,11 +1,36 @@
 vars = json('../styles/vars.json', {hash:true})
 @require '../styles/breakpoints'
 
+
+
+
+
+
+.headshotWrapper
+  height: 100vh
+
+
+
 .headshot
-  background-image: url('../../static/images/headshot-2.jpg')
+  // background-image: url('../../static/images/headshot-2-gray.jpg')
+  background-image: url('../../static/images/headshot-4.jpg')
   background-size: cover
   background-position: right
-  height: 80vh
+
+  height: 100vh
+
+  // width: 450px
+  // height: 450px
+  // border-radius: 100%
+  // margin: auto
+  // position: relative
+  // top: 15%
+  // overflow: hidden
+  // height: 68vh
+
+
+
+
   // filter: grayscale()
   // opacity: 0.7
 
@@ -38,12 +63,16 @@ video
   filter: invert();
 
 
+.title, .about
+  will-change: transform, opacity
+
+
 .title // h1
-  font-size: 4vw
+  font-size: 6vw
   line-height: 1.4
   font-weight: 700
   text-align: right
-  margin-bottom:2em
+  margin-bottom:1em
 
   +below(vars.screens.mobile)
     text-align: left

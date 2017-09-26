@@ -5,8 +5,8 @@ const data = {
     {
       name: "about",
       active: true,
-      titleText: `Hi, I'm Adam. \n I design and manage products.`,
-      copyText: `Over the last ten years, I've had the pleasure of building effective product experiences at an agency, a startup, a large organization, and my own side projects.`
+      titleText: `Hi, I'm \n Adam Wagner.`,
+      copyText: `I'm a Product Manager & Designer with more than a decade of experience designing effective product experiences—leading products through concept development, prototyping, branding, visual design and front-end development.`
     },
     {
       name: "work",
@@ -35,8 +35,8 @@ const data = {
       title: "Bad Racket",
       description: `Invites musicians to produce their best work in a natural performance and recording space.`,
       hero: "/images/badracket-hero.jpg",
-      // bgColor: "#E05952",
-      bgColor: "white",
+      bgColor: "#E05952",
+      // bgColor: "white",
       path: "/badracket/"
     },
     {

@@ -7,12 +7,20 @@ import ProjectDetail from "../components/ProjectDetail";
 
 import { colors } from "../styles/vars.json";
 
+
+/*
+New BadRacket videos
+https://newbadracket-wpengine.netdna-ssl.com/wp-content/uploads/2015/08/Cleveland-Recording-Studio.webm
+https://newbadracket-wpengine.netdna-ssl.com/wp-content/uploads/2015/08/Cleveland-Recording-Studio.oggtheora.ogv
+https://newbadracket-wpengine.netdna-ssl.com/wp-content/uploads/2015/08/Cleveland-Recording-Studio.mp4.mp4
+*/
+
 class BadRacket extends React.Component {
   render() {
     return (
       <ProjectDetail projectName="badracket">
         <div ref="content">
-          <Section textColor={colors.concrete} softTop={'5em'}>
+          <Section textColor={colors.concrete} softTop={'5em'} softBottom={'4em'}>
             <Box container>
               <Box half>
                 <div>

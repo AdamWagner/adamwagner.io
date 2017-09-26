@@ -87,10 +87,12 @@ class IndexPage extends React.Component {
 
           <div>
             <h1 ref="title" className={s.title}>
-              {titleText}
+              {titleText.split('\n').map((item, key) => {
+                return <span key={key}>{item}<br/></span>
+              })}
             </h1>
 
-            <div ref="about_text" style={{ opacity: 0.5 }}>
+            <div ref="about_text" className={s.about} style={{ opacity: 0.5 }}>
               <p>{copyText}</p>
             </div>
           </div>
@@ -103,7 +105,9 @@ class IndexPage extends React.Component {
           />
 
         <Section chapterContent>
-          <div className={s.headshot} />
+          <div className={s.headshotWrapper}>
+            <div className={s.headshot} />
+          </div>
         </Section>
 
         <Waypoint

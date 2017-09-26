@@ -73,13 +73,14 @@ vars = json('../styles/vars.json', {hash:true})
   .title
     font-size: calc(0.75em + 2vw)
     letter-spacing: 3px
-    font-weight: 800
+    font-weight: 700
     text-shadow: 0 2px 5px rgba(0,0,0,0.5)
     text-transform: uppercase;
 
   .description
     opacity: 0
     font-size: calc(0.75em + 0.75vw)
+    -webkit-font-smoothing: antialiased
 
     +below(vars.screens.mobile)
       opacity: 1
