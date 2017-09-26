@@ -11,7 +11,7 @@ const data = {
     {
       name: "work",
       active: false,
-      titleText: `Why don't you check out some of my work? \n ↳`,
+      titleText: `Case studies \n ↳`,
       copyText: `Although I've built some consumer-focsed side projects, I'm most passionate about improving the nature of work. You'll find a healthy selection of products aimed at small business owners, designers, and musicians.`
     },
     {

@@ -9,9 +9,11 @@ import Nav from "../components/Nav";
 import Section from "../components/Section";
 import ProjectImage from "../components/ProjectImage";
 import Hr from "../components/Hr";
+import Box from "../components/Box";
 
 import data from "../data";
 import s from "./index.module.styl";
+import {colors} from "../styles/vars.json"
 
 class IndexPage extends React.Component {
   constructor() {
@@ -83,7 +85,8 @@ class IndexPage extends React.Component {
 
     return (
       <div>
-        <Section chapter style={{ paddingTop: "1em" }}>
+        <Section chapter style={{ paddingTop: "1em", backgroundColor: colors.red }}>
+        {/* <Section chapter style={{ paddingTop: "1em"}}> */}
 
           <div>
             <h1 ref="title" className={s.title}>
@@ -115,8 +118,7 @@ class IndexPage extends React.Component {
           onEnter={() => {
             debounced_updateNav("work");
           }}
-        />
-
+        >
         <Section chapterContent>
           {data.projects.map((p, idx) => (
             <ProjectImage
@@ -127,14 +129,16 @@ class IndexPage extends React.Component {
             />
           ))}
         </Section>
+      </Waypoint>
 
           <Waypoint
             bottomOffset="50%"
             onEnter={() => debounced_updateNav("contact")}
             onLeave={() => debounced_updateNav("work")}
-          />
+          >
 
-        <Section chapterContent>
+        <Section chapterContent style={{height:'100vh'}}>
+          <div style={{padding:'2em 4vw'}}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos
             dolores corrupti sint ab maiores, ipsam optio ipsum magnam eius
@@ -159,7 +163,9 @@ class IndexPage extends React.Component {
             assumenda perferendis, facere sed corporis, dignissimos doloribus
             officiis. Doloremque, impedit ratione.
           </p>
+        </div>
         </Section>
+      </Waypoint>
       </div>
     );
   }
