@@ -9,8 +9,8 @@ import { colors } from "../styles/vars.json";
 export default class MoreProjects extends React.Component {
   render() {
     return (
-      <Section flex wrap color={colors.asphalt} softTop={'4em'}>
-          <Box full textCenter softBottom={'1em'}>
+      <Section flex wrap color={colors.white} textColor={colors.asphalt} softTop={'6em'}>
+          <Box full textCenter softBottom={'3em'}>
             <p>More Projects</p>
           </Box>
 

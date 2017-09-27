@@ -23,6 +23,7 @@ export default class Box extends React.Component {
 
     let hard = p.hard ? s.hard : "";
 
+    let center = p.center ? s.center : ""
     let textCenter = p.textCenter ? s.textCenter : "";
     let textRight = p.textRight ? s.textRight : "";
 
@@ -40,10 +41,11 @@ export default class Box extends React.Component {
           third,
           twoThird,
           hard,
+          center,
           textCenter,
           textRight,
         ].join(" ")}
-        style={{paddingTop: p.softTop, paddingBottom:p.softBottom}}
+        style={{paddingTop: p.softTop, paddingBottom:p.softBottom, paddingRight: p.softRight}}
       >
         {p.container ? (
           <Wrapper>{p.children}</Wrapper>

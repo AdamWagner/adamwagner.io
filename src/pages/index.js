@@ -133,7 +133,7 @@ class IndexPage extends React.Component {
       about,
       0.9,
       { opacity: 0, y: -20 },
-      { opacity: 0.7, y: 0, delay: 0.6 },
+      { opacity: 0.7, y: 0, delay: 0.35 },
       Sine.easeIn
     );
 
@@ -162,9 +162,10 @@ class IndexPage extends React.Component {
                 })}
               </h1>
 
-              <div ref="about_text" className={s.about} >
+              <div ref="about_text" className={s.about}>
                 <p>{copyText}</p>
               </div>
+
             </div>
 
             <NavHelper target={next} direction="next" />

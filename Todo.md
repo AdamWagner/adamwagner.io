@@ -16,11 +16,16 @@ x explore new layout options
 General
 x cleanup pages>index.js
 x keyboard controls
-- factor out components in pages > index.js
-- Typography styles
-- Responsive type rhythm system
 x Alt design for my photo
 x Flexible box component for layout
+x factor out components in pages > index.js
+
+- Case study components
+- OpenTable case study
+- Case study images
+- Typography styles
+- Responsive type rhythm system
+- change "last clicked item" to become an array that pushes & pops for multiple "back" animations
 
 Maybes
 - [maybe] custom 'in viewport' controller for displaying home page text

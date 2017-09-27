@@ -1,11 +1,13 @@
 {
   "colors": {
     "concrete": "#D7D9E0",
+    "offWhite": "#ECECEC",
     "cloud": "#F0F1F5",
     "asphalt": "#3b4046",
     "white": "#fff",
     "blue": "#60B2D0",
-    "red": "#e04247"
+    "red": "#e04247",
+    "brGreen": "#438774"
 
   },
 
