@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-pages-badracket-js": [
-      "component---src-pages-badracket-js-73136319cab2c0ac71d8.js",
-      "component---src-pages-badracket-js-73136319cab2c0ac71d8.js.map"
+      "component---src-pages-badracket-js-eef2918cd10358c8b663.js",
+      "component---src-pages-badracket-js-eef2918cd10358c8b663.js.map"
     ],
     "path---copilot": [
       "path---copilot-a0e39f21c11f6a62c5ab.js",
@@ -21,8 +21,8 @@
       "component---src-pages-copilot-js-fa4e338e064cd0e55601.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-f9d7d4b8f3e8b7c546f5.js",
-      "component---src-layouts-index-js-f9d7d4b8f3e8b7c546f5.js.map"
+      "component---src-layouts-index-js-3c71854ea2d5ace6a9fc.js",
+      "component---src-layouts-index-js-3c71854ea2d5ace6a9fc.js.map"
     ],
     "path---sounds-just-like": [
       "path---sounds-just-like-a0e39f21c11f6a62c5ab.js",
@@ -45,9 +45,9 @@
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js.map"
     ],
     "commons": [
-      "commons-c3abd6d008431c8b948c.js",
+      "commons-da4c6c44cc6797ee2cf7.js",
       "build-js-styles.css",
-      "commons-c3abd6d008431c8b948c.js.map",
+      "commons-da4c6c44cc6797ee2cf7.js.map",
       "build-js-styles.css.map"
     ],
     "path---404-html": [
