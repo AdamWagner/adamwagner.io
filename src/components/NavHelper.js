@@ -1,6 +1,5 @@
 import React from 'react'
 import { TweenMax, Sine } from "gsap";
-
 import s from './NavHelper.module.styl'
 
 
@@ -22,7 +21,7 @@ export default class NavHelper extends React.Component {
     return (
       <div ref="navHelper" className={s.navHelper}>
         {target && (
-          <span onClick={() => { this.scrollTo(target.name); }} >
+          <span onClick={() => { this.props.handler(target.name); }} >
             <span className={s.arrowKey}>{arrow}</span>
             {target.name}
           </span>

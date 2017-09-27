@@ -147,7 +147,7 @@ class IndexPage extends React.Component {
         <Section chapter color={colors.red}>
           <div ref="chapterContent" className={s.flexInherit}>
 
-            <NavHelper target={prev} direction="prev" />
+            <NavHelper target={prev} direction="prev" handler={this.scrollTo} />
 
             <div>
               <h1 ref="title" className={s.title}>
@@ -168,7 +168,7 @@ class IndexPage extends React.Component {
 
             </div>
 
-            <NavHelper target={next} direction="next" />
+            <NavHelper target={next} direction="next" handler={this.scrollTo} />
           </div>
         </Section>
 
