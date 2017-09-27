@@ -1,24 +1,40 @@
 {
   "assetsByChunkName": {
     "component---src-pages-badracket-js": [
-      "component---src-pages-badracket-js-005bcaf010b61a4f5fc3.js",
-      "component---src-pages-badracket-js-005bcaf010b61a4f5fc3.js.map"
+      "component---src-pages-badracket-js-73136319cab2c0ac71d8.js",
+      "component---src-pages-badracket-js-73136319cab2c0ac71d8.js.map"
+    ],
+    "path---copilot": [
+      "path---copilot-a0e39f21c11f6a62c5ab.js",
+      "path---copilot-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-adf5fbc079f3b86ddbbb.js",
-      "component---src-pages-index-js-adf5fbc079f3b86ddbbb.js.map"
+      "component---src-pages-index-js-e254fc69b78eea5dbbda.js",
+      "component---src-pages-index-js-e254fc69b78eea5dbbda.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
     ],
+    "component---src-pages-copilot-js": [
+      "component---src-pages-copilot-js-fa4e338e064cd0e55601.js",
+      "component---src-pages-copilot-js-fa4e338e064cd0e55601.js.map"
+    ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-e5c2071ee02962d62c84.js",
-      "component---src-layouts-index-js-e5c2071ee02962d62c84.js.map"
+      "component---src-layouts-index-js-f9d7d4b8f3e8b7c546f5.js",
+      "component---src-layouts-index-js-f9d7d4b8f3e8b7c546f5.js.map"
+    ],
+    "path---sounds-just-like": [
+      "path---sounds-just-like-a0e39f21c11f6a62c5ab.js",
+      "path---sounds-just-like-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---page-2": [
       "path---page-2-a0e39f21c11f6a62c5ab.js",
       "path---page-2-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-sounds-just-like-js": [
+      "component---src-pages-sounds-just-like-js-c5f36b91a1823c61f128.js",
+      "component---src-pages-sounds-just-like-js-c5f36b91a1823c61f128.js.map"
     ],
     "path---index": [
       "path---index-a0e39f21c11f6a62c5ab.js",
@@ -29,9 +45,9 @@
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js.map"
     ],
     "commons": [
-      "commons-8d145159f7343c20ad07.js",
+      "commons-c3abd6d008431c8b948c.js",
       "build-js-styles.css",
-      "commons-8d145159f7343c20ad07.js.map",
+      "commons-c3abd6d008431c8b948c.js.map",
       "build-js-styles.css.map"
     ],
     "path---404-html": [
@@ -43,9 +59,9 @@
       "component---src-pages-page-2-js-075954cd9c4544c7dcd8.js.map"
     ],
     "app": [
-      "app-c3b0803ae661ede03c84.js",
+      "app-bdc77003dd0db56f1f7c.js",
       "build-js-styles.css",
-      "app-c3b0803ae661ede03c84.js.map",
+      "app-bdc77003dd0db56f1f7c.js.map",
       "build-js-styles.css.map"
     ],
     "path---badracket": [
