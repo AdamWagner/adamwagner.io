@@ -9,9 +9,10 @@ import ProjectDetail from "../components/ProjectDetail";
 import { colors } from "../styles/vars.json";
 
 import wireframe from "./brv5-wireframe.png"
-import v1 from "./badracket.com v1.png"
-import v4 from "./badracket.com v4.png"
-import mobileWireframe from "./brv5-mobile-wireframe.png"
+import v1 from "./badracket.com-v1.jpg"
+import v4 from "./badracket.com-v4.jpg"
+import possible from "./brv5-possible.gif"
+import mobileWireframe from "./brv5-mobile-wireframe.jpg"
 import visuals1 from "./brv5-visual-draft-0.jpg"
 import visuals2 from "./brv5-final-desktop-mockup.jpg"
 import interview from "./brv5-final-interview.png"
@@ -62,18 +63,54 @@ class BadRacket extends React.Component {
           <Section softTop='5em' softBottom='5em' color={colors.white} textColor={colors.asphalt}>
 
             <Box container>
-              <Box twoThird softRight="10%">
-                <h2>Reviewing past versions</h2>
-                <img src={v1} alt=""/>
-                <img src={v4} alt=""/>
+              <Box><h2>Reviewing past versions</h2></Box>
+            </Box>
 
+
+            <Box container softBottom="0.5em">
+              <Box third>
+                <img src={v1} alt=""/>
               </Box>
               <Box third>
-                <h2>Redesign Goals</h2>
-                <List title="Create community" items={['Social login', 'Gust posts', 'Band interviews', 'Local show listings']}/>
-                <List title="Increase interactivity" items={['Global music player', 'Integrated payments', 'Strong mobile experience']}/>
+                <img src={v4} alt=""/>
+              </Box>
+              <Box third>
+                <img src={possible} alt=""/>
               </Box>
             </Box>
+
+            <Box container softBottom="3em">
+              <Box third>
+                <p style={{fontSize:'1em'}}>The first version of badracket.com established the color palette and visual aesthetic, but was slow and disorganized.</p>
+              </Box>
+              <Box third>
+                <p style={{fontSize:'1em'}}>By version 4, hierarchy and layout had improved, but the site was still text-heavy and performed poorly on mobile devices.</p>
+              </Box>
+              <Box third>
+                <p style={{fontSize:'1em'}}>What would version 5 need to do?</p>
+              </Box>
+            </Box>
+
+
+
+
+
+              <Box container>
+                <Box full>
+                  <h2>Redesign Goals</h2>
+                </Box>
+              </Box>
+
+              <Box container>
+                <Box half>
+                  <List title="Create community" items={['Social login', 'Gust posts', 'Band interviews', 'Local show listings']}/>
+                </Box>
+
+                <Box half>
+                  <List title="Increase interactivity" items={['Global music player', 'Integrated payments', 'Strong mobile experience']}/>
+                </Box>
+              </Box>
+
           </Section>
 
           <Section softTop='5em' softBottom='2em' textColor={colors.asphalt} color={colors.offWhite}>
@@ -88,7 +125,7 @@ class BadRacket extends React.Component {
           <Section softBottom='5em' textColor={colors.asphalt} color={colors.offWhite}>
             <Box container>
               <Box half center textCenter>
-                <p>We needed a vastly superior mobile experience compared to previous
+                <p>Bad Racket needed a vastly superior mobile experience compared to previous
                   versions of the site, so this was a focus early on.</p>
               </Box>
             </Box>
