@@ -4,6 +4,7 @@ import Link from "gatsby-link";
 import s from "./Section.module.styl";
 
 class Section extends React.Component {
+  
   render() {
     let p = this.props;
 
@@ -18,14 +19,9 @@ class Section extends React.Component {
       let key = kv[0]
       let val = kv[1]
       if (key.includes('soft')) {
-        if (key.includes('Sides')) {
-          console.log(key,val);
-        }
         softClasses.push(s[key+val])
       }
     })
-
-    console.log(softClasses);
 
     let gradient =
       p.top && p.bottom

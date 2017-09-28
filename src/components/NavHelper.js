@@ -9,6 +9,8 @@ export default class NavHelper extends React.Component {
     let arrow = direction == "prev" ? "↑" : "↓";
     let vMove = this.props.direction == "prev" ? -20 : 20;
 
+    TweenMax.killTweensOf(this.refs.navHelper);
+
     TweenMax.fromTo(
       [this.refs.navHelper],
       1,
