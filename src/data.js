@@ -33,7 +33,7 @@ const data = {
   projects: [
     {
       title: "Book the bar with OpenTable",
-      description: `Offers guests a unique dining experience at hot restaurants, and increases occupancy and check average for restaurant owners.`,
+      description: `Offers guests a unique dining experience at hot restaurants, and increases the value of bar seats for restaurant owners.`,
       hero: "/images/opentable-hero.jpg",
       // bgColor: '#39BAD5',
       bgColor: "red",

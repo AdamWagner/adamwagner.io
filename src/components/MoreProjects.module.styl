@@ -1,5 +1,10 @@
 vars = json('../styles/vars.json', {hash:true})
+@require '../styles/breakpoints'
 
+.moreProjects
+  +below(vars.screens.mobile)
+    padding-left: 0.75em
+    padding-right: 0.75em
 
 .flexContainer
   display: flex

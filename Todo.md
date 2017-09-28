@@ -25,7 +25,7 @@ x Case study images
 
 x BR Case study mobile image
 x Better hero images for Sounds Just Like, Copilot, OpenTable
-- Rethink Section "Soft" attrs for better mobile styling later
+x Rethink Section "Soft" attrs for better mobile styling later
 
 - OpenTable case study
 - Copilot case study
