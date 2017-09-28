@@ -17,8 +17,8 @@
       "path----557518bd178906f8d58a.js.map"
     ],
     "component---src-pages-copilot-js": [
-      "component---src-pages-copilot-js-6a90d56089ea01b8a32c.js",
-      "component---src-pages-copilot-js-6a90d56089ea01b8a32c.js.map"
+      "component---src-pages-copilot-js-6f14c436a12efced97bc.js",
+      "component---src-pages-copilot-js-6f14c436a12efced97bc.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-3c71854ea2d5ace6a9fc.js",
@@ -45,9 +45,9 @@
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js.map"
     ],
     "commons": [
-      "commons-0e54d0faab89004a20f1.js",
+      "commons-fafd21ddfbf3e7ce5424.js",
       "build-js-styles.css",
-      "commons-0e54d0faab89004a20f1.js.map",
+      "commons-fafd21ddfbf3e7ce5424.js.map",
       "build-js-styles.css.map"
     ],
     "path---404-html": [
@@ -63,9 +63,9 @@
       "component---src-pages-page-2-js-075954cd9c4544c7dcd8.js.map"
     ],
     "app": [
-      "app-f3bdb7c9eeaabded60e2.js",
+      "app-8abc1311c848ce1e96c5.js",
       "build-js-styles.css",
-      "app-f3bdb7c9eeaabded60e2.js.map",
+      "app-8abc1311c848ce1e96c5.js.map",
       "build-js-styles.css.map"
     ],
     "path---badracket": [
