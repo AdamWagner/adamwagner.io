@@ -13,6 +13,7 @@ import Hr from "../components/Hr";
 import Box from "../components/Box";
 import NavHelper from "../components/NavHelper";
 import HandSvg from "../components/HandSvg";
+import Footer from "../components/Footer";
 
 import data from "../data";
 import s from "./index.module.styl";
@@ -236,6 +237,7 @@ class IndexPage extends React.Component {
             </div>
           </Section>
         </Waypoint>
+        <Footer/>
       </div>
     );
   }

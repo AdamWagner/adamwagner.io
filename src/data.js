@@ -1,3 +1,5 @@
+import { colors } from "./styles/vars.json";
+
 const data = {
 
   // TODO: don't have a default true item, but run search on render load
@@ -35,8 +37,7 @@ const data = {
       title: "Book the bar with OpenTable",
       description: `Offers guests a unique dining experience at hot restaurants, and increases the value of bar seats for restaurant owners.`,
       hero: "/images/opentable-hero.jpg",
-      // bgColor: '#39BAD5',
-      bgColor: "red",
+      bgColor: colors.red,
       path: "/opentable/"
     },
     {

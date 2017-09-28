@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "gatsby-link";
+
 import Section from "../components/Section";
 import Box from "../components/Box";
 import ProjectImage from "../components/ProjectImage";
@@ -22,6 +24,21 @@ export default class Footer extends React.Component {
               <li>LinkedIn</li>
               <li>Github</li>
               <li>Dribbble</li>
+            </ul>
+
+            <ul className={s.listHorizontal}>
+              <li>
+                <Link to="/opentable">OpenTable</Link>
+              </li>
+              <li>
+                <Link to="/copilot">Copilot</Link>
+              </li>
+              <li>
+                <Link to="sounds-just-like">Sounds Just Like</Link>
+              </li>
+              <li>
+                <Link to="/badracket">Bad Racket</Link>
+              </li>
             </ul>
 
           </Box>
