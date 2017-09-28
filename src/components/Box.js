@@ -29,6 +29,16 @@ export default class Box extends React.Component {
 
     let alignBaseline = p.alignBaseline ? s.alignBaseline : "";
 
+
+    let softClasses = []
+    Object.entries(p).map((kv) => {
+      let key = kv[0]
+      let val = kv[1]
+      if (key.includes('soft')) {
+        softClasses.push(s[key+val])
+      }
+    })
+
     return (
       <div
         className={[
@@ -44,8 +54,9 @@ export default class Box extends React.Component {
           center,
           textCenter,
           textRight,
+          ...softClasses
         ].join(" ")}
-        style={{paddingTop: p.softTop, paddingBottom:p.softBottom, paddingRight: p.softRight}}
+        style={p.style}
       >
         {p.container ? (
           <Wrapper>{p.children}</Wrapper>

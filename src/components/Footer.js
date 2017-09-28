@@ -9,7 +9,7 @@ import { colors } from "../styles/vars.json";
 export default class Footer extends React.Component {
   render() {
     return (
-      <Section flex wrap color={colors.asphalt} softTop={'5em'} softBottom={'2em'}>
+      <Section flex wrap color={colors.white} textColor={colors.asphalt} softTop={'5em'} softBottom={'2em'}>
           <Box container wrap full alignBaseline>
           <Box full>
             <p>Let's chat.</p>

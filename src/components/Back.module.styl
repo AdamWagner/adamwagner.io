@@ -1,23 +1,32 @@
 vars = json('../styles/vars.json', {hash:true})
+mobile = vars.screens.mobile
+@require '../styles/breakpoints'
+
+
+size = 50px
+thickness = 0.5vw
 
 .backButton
   position: fixed
   z-index: 1000
+
   top: 2vw
   right: 4vw
+
+  +below(mobile)
+    top:1em
+    right: 2em
+
+
 
   width: 2vw
   height: 2vw
 
   cursor: pointer
-
-
-  size = 50px
-  thickness = 0.5vw
   height: size
   width: size
-  box-sizing: border-box
   line-height: size
+  box-sizing: border-box
   display: inline-block
 
   &:before, &:after

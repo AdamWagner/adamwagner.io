@@ -32,28 +32,35 @@ const data = {
   ],
   projects: [
     {
-      title: "Bad Racket",
-      description: `Invites musicians to produce their best work in a natural performance and recording space.`,
-      hero: "/images/badracket-hero.jpg",
-      bgColor: "#E05952",
-      // bgColor: "white",
-      path: "/badracket/"
+      title: "Book the bar with OpenTable",
+      description: `Offers guests a unique dining experience at hot restaurants, and increases occupancy and check average for restaurant owners.`,
+      hero: "/images/opentable-hero.jpg",
+      // bgColor: '#39BAD5',
+      bgColor: "red",
+      path: "/opentable/"
     },
     {
       title: "Copilot",
       description: `Empowers restaurant owners to make data-driven revenue management decisions.`,
-      hero: "/images/copilot-logo.png",
-      // bgColor: '#39BAD5',
-      bgColor: "red",
+      hero: "/images/copilot-hero.jpg",
+      bgColor: '#39BAD5',
       path: "/copilot/"
     },
     {
       title: "Sounds Just Like",
-      description: `Catalogs more than 50,000 soundalike tunes submitted by music fans.`,
-      hero: "/images/sjl-logo.png",
+      description: `Satisfies the nagging feeling that you've heard a song before via a database of 50,000 soundalikes submitted by music fans.`,
+      hero: "/images/sjl-hero.jpg",
       bgColor: "#FFE086",
       path: "/sounds-just-like/"
-    }
+    },
+    {
+      title: "Bad Racket",
+      description: `Invites musicians to produce their best work in a natural performance and recording space.`,
+      hero: "/images/badracket-hero2.jpg",
+      bgColor: "#E05952",
+      // bgColor: "white",
+      path: "/badracket/"
+    },
   ]
 };
 

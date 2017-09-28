@@ -13,6 +13,20 @@ class Section extends React.Component {
     let chapter = p.chapter ? s.chapter : "";
     let chapterContent = p.chapterContent ? s.chapterContent : "";
 
+    let softClasses = []
+    Object.entries(p).map((kv) => {
+      let key = kv[0]
+      let val = kv[1]
+      if (key.includes('soft')) {
+        if (key.includes('Sides')) {
+          console.log(key,val);
+        }
+        softClasses.push(s[key+val])
+      }
+    })
+
+    console.log(softClasses);
+
     let gradient =
       p.top && p.bottom
         ? {
@@ -32,15 +46,15 @@ class Section extends React.Component {
           wrap,
           flex,
           chapter,
-          chapterContent
+          chapterContent,
+          this.props.className,
+          ...softClasses
         ].join(" ")}
         id={this.props.id}
         style={Object.assign(
           {
             backgroundColor: p.color,
             color: p.textColor,
-            paddingTop: p.softTop,
-            paddingBottom: p.softBottom
           },
           p.style,
           gradient

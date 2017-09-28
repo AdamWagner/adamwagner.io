@@ -82,7 +82,7 @@ class ProjectDetail extends React.Component {
           <Back onClick={this.back} />
           <div ref="content">
             {this.props.children}
-            <MoreProjects projects={this.state.otherProjects}/>
+            <MoreProjects projects={this.state.otherProjects.slice(0,2)}/>
           </div>
           <Footer/>
         </div>

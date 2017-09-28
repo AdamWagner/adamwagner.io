@@ -47,7 +47,7 @@ export default class ProjectImage extends React.Component {
     let endNote = this.props.endNote ? s.endNote : "";
 
     return (
-      <div className={s.imageWrapper} ref="image_container">
+      <div className={[s.imageWrapper, endNote].join(' ')} ref="image_container">
         <div className={s.metaWrapper}>
           <span className={s.title}>{title}</span>
           <span className={s.description}>{description}</span>
@@ -55,7 +55,7 @@ export default class ProjectImage extends React.Component {
 
         <div
           style={{ backgroundImage: `url(${this.props.image})` }}
-          className={[s.projectImage, endNote].join(' ')}
+          className={s.projectImage}
           onClick={this.onImageClick}
         />
       </div>

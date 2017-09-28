@@ -1,5 +1,6 @@
 @require '../styles/global'
 vars = json('../styles/vars.json', {hash:true})
+mobile = vars.screens.mobile
 @require '../styles/breakpoints'
 
 .section
@@ -37,3 +38,50 @@ vars = json('../styles/vars.json', {hash:true})
     +below(vars.screens.mobile)
       width: auto
       left: auto
+
+
+.softSides075em
+  padding-left: 0.75em
+  padding-right: 0.75em
+
+
+// padding top classes
+.softTop6em
+  padding-top: 5em
+  +below(mobile)
+    padding-top: 1em
+
+.softTop5em
+  padding-top: 5em
+  +below(mobile)
+    padding-top: 1em
+
+.softTop3em
+  padding-top: 3em
+  +below(mobile)
+    padding-top: 1em
+
+// padding bottom classes
+
+.softBottom5em
+  padding-bottom: 5em
+  +below(mobile)
+    padding-bottom: 1em
+
+.softBottom4em
+  padding-bottom: 4em
+  +below(mobile)
+    padding-bottom: 1em
+
+.softBottom3em
+  padding-bottom: 3em
+  +below(mobile)
+    padding-bottom: 1em
+
+.softBottom2em
+  padding-bottom: 2em
+  +below(mobile)
+    padding-bottom: 1em
+
+.softBottom0.5em
+  padding-bottom: 0.5em

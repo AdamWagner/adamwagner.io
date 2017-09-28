@@ -19,13 +19,32 @@ x keyboard controls
 x Alt design for my photo
 x Flexible box component for layout
 x factor out components in pages > index.js
+x Case study components
+x Case study images
 
-- Case study components
+
+x BR Case study mobile image
+x Better hero images for Sounds Just Like, Copilot, OpenTable
+- Rethink Section "Soft" attrs for better mobile styling later
+
 - OpenTable case study
-- Case study images
-- Typography styles
-- Responsive type rhythm system
+- Copilot case study
+- Sounds Just Like case study
+
+
+- Typography styles. Try https://kyleamathews.github.io/typography.js/
+- Mobile styles
 - change "last clicked item" to become an array that pushes & pops for multiple "back" animations
+- Redesign "Process" graphic to avoid copying Peter Tait
+
+- Lazy load images https://github.com/sergiodxa/react-lazy-image
+  also look at:
+      https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/
+      https://www.gatsbyjs.org/packages/gatsby-transformer-sharp/
+
+- Add Google Analytics Gatsby plugin https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-google-analytics
+
+
 
 Maybes
 - [maybe] custom 'in viewport' controller for displaying home page text

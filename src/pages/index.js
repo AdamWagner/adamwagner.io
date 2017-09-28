@@ -34,6 +34,7 @@ class IndexPage extends React.Component {
   };
 
   componentDidMount = () => {
+
     document.addEventListener("keydown", event => {
       let c = event.code;
       if (c == "ArrowDown" || c == "KeyJ" || c == "Space") {

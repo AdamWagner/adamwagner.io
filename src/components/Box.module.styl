@@ -10,13 +10,16 @@ vars = json('../styles/vars.json', {hash:true})
   align-content: stretch
   flex-wrap: nowrap
 
+  +below(vars.screens.mobile)
+    padding: 0.75em!important
+    flex-wrap: wrap
 
 .wrap
   flex-flow: wrap
 
 .center
   margin: auto
-  
+
 .textCenter
   text-align: center
 
@@ -26,26 +29,31 @@ vars = json('../styles/vars.json', {hash:true})
 .alignBaseline
   align-items: baseline
 
-
 .box
   padding: room
   flex: 1 0 0
   padding-right: 1em
+
+  +below(vars.screens.mobile)
+    padding: 0
 
 .full
   flex: 100% 0 0
 
 .half
   flex: 50% 0 0
-
   +below(vars.screens.mobile)
     flex: 100% 0 0
 
 .third
   flex: 33% 0 0
+  +below(vars.screens.mobile)
+    flex: 100% 0 0
 
 .twoThird
   flex: 66% 0 0
+  +below(vars.screens.mobile)
+    flex: 100% 0 0
 
 .hard
   padding: 0!important
@@ -62,3 +70,46 @@ vars = json('../styles/vars.json', {hash:true})
 
   +below(vars.screens.mobile)
     width: 100%
+
+
+// padding top classes
+.softTop6em
+  padding-top: 5em
+
+.softTop5em
+  padding-top: 5em
+
+.softTop3em
+  padding-top: 3em
+
+.softTop2em
+  padding-top: 2em
+
+// padding bottom classes
+
+.softBottom5em
+  padding-bottom: 5em
+
+.softBottom4em
+  padding-bottom: 4em
+
+.softBottom3em
+  padding-bottom: 3em
+
+.softBottom2em
+  padding-bottom: 2em
+
+.softBottom05em
+  padding-bottom: 0.5em
+
+
+// padding right classes
+.softRight10p
+  padding-right: 10%
+  +below(vars.screens.mobile)
+    padding-right: 0
+
+.softRight20p
+  padding-right: 20%
+  +below(vars.screens.mobile)
+    padding-right: 0

@@ -1,0 +1,14 @@
+
+vars = json('./vars.json', {hash:true})
+
+.textSecondary
+  font-size: 1.075em
+  color: lighten(vars.colors.asphalt, 20%)
+
+.textSecondaryBold
+  @extend .textSecondary
+  font-weight: 700
+  
+
+.textBold
+  font-weight: 700
