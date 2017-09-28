@@ -44,7 +44,7 @@ const data = {
       title: "Copilot",
       description: `Empowers restaurant owners to make data-driven revenue management decisions.`,
       hero: "/images/copilot-hero.jpg",
-      bgColor: '#39BAD5',
+      bgColor: '#28a4bd',
       path: "/copilot/"
     },
     {

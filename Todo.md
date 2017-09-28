@@ -31,6 +31,8 @@ x Rethink Section "Soft" attrs for better mobile styling later
 - Copilot case study
 - Sounds Just Like case study
 
+- Add "more projects" section indicating some can't be shared due to NDA. Basically another "contact" section.
+
 
 - Typography styles. Try https://kyleamathews.github.io/typography.js/
 - Mobile styles

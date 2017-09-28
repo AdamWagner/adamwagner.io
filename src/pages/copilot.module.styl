@@ -1,0 +1,73 @@
+@require '../styles/text'
+@require '../styles/breakpoints'
+vars = json('./vars.json', {hash:true})
+
+
+
+.grayscale
+  filter: grayscale(100%);
+  opacity: 0.5
+  transition: filter .2s, opacity .2s
+
+  &:hover
+    filter: none
+    opacity: 1
+
+  +below(vars.screens.tablet)
+    filter: none
+    opacity: 1
+
+.processContainer
+  position: relative
+  overflow: hidden
+  background-color: darken(vars.colors.asphalt, 30%)
+
+  &:before
+    content: ''
+    background-image: url('./brv5-final-desktop-mockup.jpg')
+    filter: grayscale()
+    opacity: 0.05
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background-position: center
+    transform: rotate(10deg) scale(2)
+
+    +below(vars.screens.tablet)
+      filter: none // don't grayscale images
+
+.process
+  border: solid 2px lighten(vars.colors.asphalt, 8%)
+  padding: 2em
+  display: flex
+  flex-flow: row wrap
+  align-content: space-around
+
+  .processItem
+    margin-top: 2em
+    padding-top: 2em
+    padding-right: 1em
+    border-top: solid 2px lighten(vars.colors.asphalt, 8%)
+    flex: 1 0 0
+    position: relative
+    min-width: 150px
+
+    +below(vars.screens.desk)
+      flex: 50% 0 0
+
+    +below(vars.screens.mobile)
+      flex: 100% 0 0
+
+    p
+      margin-bottom: 0.4em
+
+    &:before
+      content: ''
+      position: absolute;
+      width: 1em
+      height: 1em
+      background: white
+      transform: rotate(45deg)
+      top: -0.5em
