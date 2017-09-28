@@ -7,7 +7,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-stylus`,
     `gatsby-plugin-catch-links`, // prevents hard refresh on route changes
-    `gatsby-plugin-offline`, // creates service worker so site works offline
+    // `gatsby-plugin-offline`, // creates service worker so site works offline
   ],
 }
 
