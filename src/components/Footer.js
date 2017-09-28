@@ -28,16 +28,16 @@ export default class Footer extends React.Component {
 
             <ul className={s.listHorizontal}>
               <li>
-                <Link to="/opentable">OpenTable</Link>
+                <Link to="/opentable/">OpenTable</Link>
               </li>
               <li>
-                <Link to="/copilot">Copilot</Link>
+                <Link to="/copilot/">Copilot</Link>
               </li>
               <li>
-                <Link to="sounds-just-like">Sounds Just Like</Link>
+                <Link to="sounds-just-like/">Sounds Just Like</Link>
               </li>
               <li>
-                <Link to="/badracket">Bad Racket</Link>
+                <Link to="/badracket/">Bad Racket</Link>
               </li>
             </ul>
 

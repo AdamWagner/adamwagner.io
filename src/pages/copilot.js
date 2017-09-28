@@ -183,7 +183,7 @@ class Copilot extends React.Component {
 
             <Box container>
               <Box twoThird>
-                <h2 style={{color: colors.copilotBlue}}>3. Defining potential solutions</h2>
+                <h2 style={{color: colors.copilotBlue}}>3. Define potential solutions</h2>
                 <p>
                   Initial wireframes took a page from Spotify by putting content
                   consumption front and center.
