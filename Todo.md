@@ -1,6 +1,19 @@
 
 
 
+
+
+
+
+Amy's notes
+- Make case studies shorter. Try to focus on 3 main points
+- For case studies that don't suit themselves to a process infographic, show timeline
+- Should be able to read the case study by reading the headers *only*
+- Put SJL hero image on a laptop. Otherwise feels too repetitive
+-
+
+
+
 Detail Page
 x migrate "splash" to canvas
 x add "back" transition. Could scroll back to top before putting it back.
@@ -27,11 +40,21 @@ x BR Case study mobile image
 x Better hero images for Sounds Just Like, Copilot, OpenTable
 x Rethink Section "Soft" attrs for better mobile styling later
 
-- OpenTable case study
 - Copilot case study
+  x Comment out lingo section
+  x Update headlines to be readable as outline
+  x Add product development timeline
+  - Update movie
+  - add cardsort
+
+
+
+
+- OpenTable case study
 - Sounds Just Like case study
 
 - Add "more projects" section indicating some can't be shared due to NDA. Basically another "contact" section.
+- Add "passion projects" section. Include Bad Racket and SJL
 
 
 - Typography styles. Try https://kyleamathews.github.io/typography.js/

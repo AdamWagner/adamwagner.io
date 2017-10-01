@@ -25,6 +25,7 @@ class TemplateWrapper extends React.Component {
       <div style={{width: '100%'}}>
         <Helmet title={titleText} meta={metadata} >
           <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" />
           <style type="text/css">{`
             .react-layout-components--box {
               display: -webkit-box;

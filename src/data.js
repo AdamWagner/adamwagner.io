@@ -50,7 +50,7 @@ const data = {
     {
       title: "Sounds Just Like",
       description: `Satisfies the nagging feeling that you've heard a song before via a database of 50,000 soundalikes submitted by music fans.`,
-      hero: "/images/sjl-hero.jpg",
+      hero: "/images/sjl-hero-2.jpg",
       bgColor: "#FFE086",
       path: "/sounds-just-like/"
     },

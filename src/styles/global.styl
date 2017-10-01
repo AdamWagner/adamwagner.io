@@ -2,6 +2,10 @@
 vars = json('./vars.json', {hash:true})
 @require './breakpoints'
 
+grayText = lighten(vars.colors.asphalt, 15%)
+
+
+
 html
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
@@ -37,9 +41,20 @@ img
 a
   color: inherit
 
-h1, h2, h3, h4, h5, h6, p, span, li
+h1, h2, h3, h4, h5, h6, p, span, li, dt, dd, blockquote
   margin-top: 0
+  // font-family: 'PT Serif'
+  // font-weight: 500
 
+
+dt
+  font-weight: bold
+
+dd
+  margin: 0
+  margin-bottom: 1.4em
+  font-size: calc(1em + 0.25vw)!important
+  color: grayText
 
 h1
   font-size: calc(1.1em + 1.4vw)
@@ -48,7 +63,7 @@ h1
 h2
   font-size: calc(1em + 1.2vw)
 
-p, span, li
+p, span, li, dt, dd, blockquote
   font-size: calc(1em + 0.5vw)
   min-font-size: 1em
   line-height: 1.45
@@ -57,6 +72,15 @@ p, span, li
 
   &.small
     font-size: 1em
+
+blockquote
+  font-size: calc(1em + 0.25vw)!important
+  line-height: 1.6
+  color: grayText
+  font-style: italic
+
+
+
 
 .soft
   padding: 1em

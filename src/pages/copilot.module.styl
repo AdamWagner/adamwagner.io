@@ -39,8 +39,8 @@ vars = json('./vars.json', {hash:true})
       filter: none // don't grayscale images
 
 .process
-  border: solid 2px lighten(vars.colors.asphalt, 8%)
-  padding: 2em
+  // border: solid 2px lighten(vars.colors.asphalt, 8%)
+  // padding: 2em
   display: flex
   flex-flow: row wrap
   align-content: space-around
@@ -71,3 +71,7 @@ vars = json('./vars.json', {hash:true})
       background: white
       transform: rotate(45deg)
       top: -0.5em
+
+.textList
+  li
+    margin-bottom: 0.7em
