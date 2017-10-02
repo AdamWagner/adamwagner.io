@@ -92,7 +92,7 @@ class Copilot extends React.Component {
           <Section softTop="5em" softBottom="5em" className={s.processContainer}>
             <Box container>
               <Box>
-                <h2>Product Development Timeline</h2>
+                <h2 className="test-class">Product Development Timeline</h2>
 
                 <div className={s.process}>
 

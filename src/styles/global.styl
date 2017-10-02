@@ -64,11 +64,13 @@ h2
   font-size: calc(1em + 1.2vw)
 
 p, span, li, dt, dd, blockquote
-  font-size: calc(1em + 0.5vw)
+  font-size: calc(1em + 0.333vw)
   min-font-size: 1em
   line-height: 1.45
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale;
+
+  column: 2 
 
   &.small
     font-size: 1em
@@ -81,9 +83,7 @@ blockquote
 
 
 
+:global
 
-.soft
-  padding: 1em
-
-.softRight
-  padding-right: 3em
+  .test-class
+    background: red
