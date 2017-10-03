@@ -44,14 +44,14 @@ class Copilot extends React.Component {
                 </h1>
               </GridItem>
 
-              <div style={{gridColumn: '1 / span 3', height: '6.666px', background:'rgba(255,255,255,0.5)'}} />
+              <div style={{gridColumn: '1 / span 2', height: '6.666px', background:'rgba(255,255,255,0.5)'}} />
 
               <br/>
               <br/>
 
 
               <GridItem leftOne className="hideMobile">
-                <p><strong>Overview</strong></p>
+                <p className="projectSectionMarker" style={{textAlign:'left'}}>Overview</p>
               </GridItem>
 
               <GridItem centerTwo>
