@@ -53,6 +53,7 @@ x Copilot case study
 # STYLING
 x Typography styles. Try https://kyleamathews.github.io/typography.js/
 - Redesign "Process" graphic to avoid copying Peter Tait
+- Footer cleanup. Watch out for page link visibility breaking pre-loading.
 
 # CONTENT
 - Contact section

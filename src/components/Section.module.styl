@@ -3,6 +3,10 @@ vars = json('../styles/vars.json', {hash:true})
 mobile = vars.screens.mobile
 @require '../styles/breakpoints'
 
+
+chapterHeight = 30vh
+
+
 .section
   z-index: 100
   padding: 8vw 0
@@ -36,10 +40,14 @@ mobile = vars.screens.mobile
     align-content: space-between
 
     +below(mobile)
-      width: auto
-      position: relative
+      position: fixed
+      top:0
+      left: 0
+      right: 0
+      z-index:200
       text-align: left
-      height: auto
+      height: chapterHeight
+      width: 100%
       padding: 1.5em
 
 
@@ -52,6 +60,8 @@ mobile = vars.screens.mobile
     +below(vars.screens.mobile)
       width: auto
       left: auto
+      &[id*="about"] // moves headshot out of the way of the fixed section
+        margin-top: chapterHeight
 
 
 .softSides075em

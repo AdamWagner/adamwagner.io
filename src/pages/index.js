@@ -167,7 +167,7 @@ class IndexPage extends React.Component {
                 })}
               </h1>
 
-              <div ref="about_text" className={s.about}>
+              <div ref="about_text" className={[s.about, 'hideMobile'].join(' ')}>
                 <p>{copyText}</p>
               </div>
 
