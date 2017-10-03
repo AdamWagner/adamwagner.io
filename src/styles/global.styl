@@ -23,14 +23,7 @@ html
     font-size: 75%
 
 body
-  // background-color: vars.colors.asphalt
-
-  // this is really unfortunate,
-  // but it's due to a Chrome bug that renders innacurate colors
-  // that appear as flickers during hardware accelerated transitions.
-  background: url('../../static/images/bg-color.png')
-  background-repeat: repeat
-
+  background-color: vars.colors.asphalt
   color: lighten(vars.colors.asphalt, 15%)
   padding: 0
   margin: 0
@@ -55,7 +48,7 @@ a
   color: inherit
 
 h1, h2, h3, h4, h5, h6
-  font-family: 'Fakt Pro SmBd'
+  font-family: vars.fonts.bold
   margin-top: 0
   line-height: 1.075em
   +below(tablet)

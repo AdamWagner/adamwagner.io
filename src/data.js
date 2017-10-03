@@ -14,7 +14,7 @@ const data = {
       name: "work",
       active: false,
       titleText: `Case studies \n ↳`,
-      copyText: `I'm passionate about what makes work work. I love building products that make small business life better and make marketplaces richer. My side-projects, on the other hand, have centered around music creation and the common DNA shared by many songs.`
+      copyText: `I'm passionate about what makes work work. I love building products that make small business life better and make marketplaces richer. For a different flavor, check out my side-projects, which focus on music creation and the common DNA shared by many songs.`
     },
     // {
     //   name: "experience",
