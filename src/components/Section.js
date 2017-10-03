@@ -41,6 +41,7 @@ class Section extends React.Component {
         className={[
           s.section,
           reverse,
+          flush,
           wrap,
           flex,
           chapter,

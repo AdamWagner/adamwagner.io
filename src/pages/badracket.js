@@ -5,11 +5,13 @@ import List from "../components/List";
 
 import Section from "../components/Section";
 import ProjectDetail from "../components/ProjectDetail";
+import Grid from "../components/Grid"
+import GridItem from "../components/GridItem"
 
 import { colors } from "../styles/vars.json";
 import s from "./badracket.module.styl"
 
-import wireframe from "./brv5-wireframe.png";
+import wireframe from "./brv5-wireframe.jpg";
 import v1 from "./badracket.com-v1.jpg";
 import v4 from "./badracket.com-v4.jpg";
 import possible from "./brv5-possible.gif";
@@ -35,17 +37,28 @@ class BadRacket extends React.Component {
         <div ref="content">
           <Section
             textColor={colors.concrete}
-            color={colors.red}
-            softTop="5em"
-            softBottom="4em"
-          >
-            <Box container>
-              <Box twoThird softRight="10p">
-                <div>
-                  <h1>
+            color={colors.red}>
+
+            <Grid>
+              <GridItem leftThree>
+                  <h1 style={{color:colors.white}}>
                     Redesigning the web experience for Cleveland's craft
                     recording space.
                   </h1>
+                </GridItem>
+
+                <div style={{gridColumn: '1 / span 2', height: '6.666px', background:'rgba(255,255,255,0.5)'}} />
+
+                <br/>
+                <br/>
+
+                <GridItem leftOne className="hideMobile">
+                  <p className="projectSectionMarker" style={{textAlign:'left'}}>Overview</p>
+                </GridItem>
+
+                <GridItem centerTwo>
+
+
                   <p>
                     As the founder of Bad Racket, I was responsible for much
                     more than its website, yet I had a v1 of badracket.com
@@ -56,15 +69,14 @@ class BadRacket extends React.Component {
                     studio at the forefront, enabling local music fans to
                     preview and purchase albums and videos.
                   </p>
-                </div>
-              </Box>
-              <Box third>
+                </GridItem>
+
+              <GridItem rightOne className="hideMobile">
                 <List title="Client" items={["Bad Racket Recording Studio"]} />
                 <List
                   title="Roles"
                   items={[
-                    "UX design",
-                    "UI design",
+                    "UX / UI design",
                     "Content strategy",
                     "Development"
                   ]}
@@ -94,18 +106,16 @@ class BadRacket extends React.Component {
                     },
                   ]}
                 />
-              </Box>
-            </Box>
+              </GridItem>
+
+
+            </Grid>
           </Section>
 
 
-          <Section softTop="5em" softBottom="5em" className={s.processContainer}>
-            <Box container>
-              <Box>
-                <h2>Redesign Process</h2>
-
-                <div className={s.process}>
-
+          <Section className={s.processContainer}>
+            <Grid>
+                {/* <h2>Redesign Process</h2> */}
                   <div className={s.processItem}>
                     <p>Discover</p>
                     <p className={s.textSecondary}>Evaluate previous versions</p>
@@ -131,66 +141,58 @@ class BadRacket extends React.Component {
                     <p className={s.textSecondary}>Monitor success metrics</p>
                     <p className={s.textSecondary}>Document performance for next iteration cycle</p>
                   </div>
-                </div>
-
-
-              </Box>
-            </Box>
+              </Grid>
           </Section>
 
 
-          <Section
-            softTop="5em"
-            softBottom="5em"
-            color={colors.white}
-            textColor={colors.asphalt}
-          >
-            <Box container softBottom="1em">
-              <Box full softRight="20p">
-                <h2 style={{color: colors.red}}>1. Discovery: Evaluating previous versions</h2>
-                <p>Every redesign begins with a serious of questions: Why? Is the current version underperforming? In what ways? What should be done to improve it?</p>
-              </Box>
-            </Box>
+          <Section color={colors.white}>
 
-            <Box container softBottom="05em">
-              <Box third>
+
+            <Grid style={{marginBottom: '1.5em'}}>
+              <GridItem leftOne className="hideMobile">
+                  <p className="projectSectionMarker">Discovery</p>
+              </GridItem>
+              <GridItem centerTwo>
+                <h3 style={{ color: colors.red }}>Evaluating previous versions</h3>
+                <p>Every redesign begins with a serious of questions: Why? Is the current version underperforming? In what ways? What should be done to improve it?</p>
+              </GridItem>
+            </Grid>
+
+
+            <Grid style={{marginBottom: '6em'}}>
+              <GridItem leftTwo>
                 <img className={s.grayscale} src={v1} alt="" />
                 <p className={s.textSecondaryBold}>Version 1 (2009)</p>
                 <p className={s.textSecondary}>
                   The color palette and visual aesthetic are established,
                   but structure, usability, and performance are lacking.
                 </p>
-              </Box>
+              </GridItem>
 
-              <Box third>
+              <GridItem>
                 <img className={s.grayscale}src={v4} alt="" />
                 <p className={s.textSecondaryBold}>Version 4 (2012)</p>
                 <p className={s.textSecondary}>
                   Hierarchy and layout are improved, but the site
                   is still text-heavy and performs poorly on mobile devices.
                 </p>
-              </Box>
-              <Box third>
-                <img className={s.grayscale}src={possible} alt="" />
-                <p className={s.textSecondaryBold}>The potential redesign</p>
-                <p className={s.textSecondary}>
-                  Bad Racket needs a mobile-first, content-first digital home
-                  that fosters community among the bands it works with and their fans.
-                </p>
-              </Box>
-            </Box>
+              </GridItem>
+
+            </Grid>
 
 
-
-            <Box container softTop="3em">
-              <Box full softRight="20p">
-                <h2 style={{color: colors.red}}>2. Discovery: Setting Redesign Goals</h2>
+            <Grid style={{marginBottom:'1.5em'}}>
+              <GridItem leftOne className="hideMobile">
+                  <p className="projectSectionMarker">Discovery</p>
+              </GridItem>
+              <GridItem centerTwo>
+                <h3 style={{ color: colors.red }}>Setting redesign goals</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, porro, dolores molestias vero quos assumenda blanditiis numquam laborum, asperiores enim doloremque! Similique ipsum repudiandae ex porro? Rerum non ducimus soluta.</p>
-              </Box>
-            </Box>
+              </GridItem>
+            </Grid>
 
-            <Box container softTop="2em">
-              <Box half>
+            <Grid>
+              <GridItem leftTwo>
                 <List
                   title="Foster community"
                   items={[
@@ -200,9 +202,9 @@ class BadRacket extends React.Component {
                     "Local show listings"
                   ]}
                 />
-              </Box>
+              </GridItem>
 
-              <Box half>
+              <GridItem>
                 <List
                   title="Increase interactivity"
                   items={[
@@ -211,135 +213,117 @@ class BadRacket extends React.Component {
                     "Strong mobile experience"
                   ]}
                 />
-              </Box>
-            </Box>
+              </GridItem>
+            </Grid>
           </Section>
 
-          <Section
-            softTop="5em"
-            softBottom="2em"
-            textColor={colors.asphalt}
-            color={colors.offWhite}
-          >
 
-            <Box container>
-              <Box twoThird>
-                <h2 style={{color: colors.red}}>3. Wireframing</h2>
+          <Section color={colors.offWhite}>
+
+            <Grid style={{marginBottom:'1.5em'}}>
+              <GridItem leftOne className="hideMobile">
+                  <p className="projectSectionMarker">Wireframing</p>
+              </GridItem>
+              <GridItem centerTwo>
+                <h3 style={{ color: colors.red }}>Wireframing UX</h3>
                 <p>
                   Initial wireframes took a page from Spotify by putting content
                   consumption front and center.
                 </p>
-              </Box>
-            </Box>
+              </GridItem>
+            </Grid>
 
             <img src={wireframe} alt="" />
-          </Section>
 
-          <Section
-            softBottom="3em"
-            textColor={colors.asphalt}
-            color={colors.offWhite}
-          >
-            <Box container>
-              <Box half center textCenter hard>
+            <Grid>
+              <GridItem centerTwo>
                 <p>
                   Bad Racket needed a vastly superior mobile experience compared
                   to previous versions of the site, so this was a focus early
                   on.
                 </p>
-              </Box>
-            </Box>
+              </GridItem>
+            </Grid>
             <img src={mobileWireframe} alt="" />
           </Section>
 
 
-          <Section
-            softTop="3em"
-            textColor={colors.asphalt}
-            color={colors.offWhite}
-          >
-            <Box container softBottom="2em">
-              <Box twoThird>
-                <h2 style={{color: colors.red}}>4. Visual design</h2>
+
+
+          <Section flush color={colors.offWhite}>
+
+            <Grid>
+              <GridItem leftOne className="hideMobile">
+                  <p className="projectSectionMarker">Visual design</p>
+              </GridItem>
+              <GridItem centerTwo>
+                <h3 style={{ color: colors.red }}>Finding the visual style</h3>
                 <p>
                   With wireframes as a guideline, visual styles are defined and
                   microinterations are tweaked. In a content-heavy design such as this, it's important
                   to develop visuals alongside real content.
                 </p>
-              </Box>
-            </Box>
+              </GridItem>
+            </Grid>
+
             <img src={visuals2} alt="" />
 
           </Section>
 
-          <Section
-            softTop="5em"
-            softBottom="5em"
-            textColor={colors.white}
-            color={colors.red}
-          >
-            <Box container>
-              <Box half center textCenter hard>
+
+
+          <Section textColor={colors.white} color={colors.red} style={{paddingBottom:0}}>
+
+            <Grid>
+              <GridItem centerTwo>
                 <p>
                   Interviews were accompanied by custom illustrations done by
                   the talented <a target="_blank" href="https://dribbble.com/andrewkuhar">Andrew Kuhar</a>.
                 </p>
-              </Box>
-            </Box>
-            <img src={interview} alt="" />
-          </Section>
+              </GridItem>
+            </Grid>
 
-          <Section>
+            <img src={interview} alt="" />
             <img src={phone} alt="" />
           </Section>
 
-          <Section
-            softTop="5em"
-            softBottom="5em"
-            textColor={colors.asphalt}
-            color={colors.concrete}
-          >
-            <Box container>
-              <Box half center textCenter hard>
+
+          <Section color={colors.concrete}>
+
+            <Grid>
+              <GridItem centerTwo>
                 <p>
                   Facebook integration identified loyal fans for outreach
                   and generated social momentum around events hosted by Bad Racket.
                 </p>
-              </Box>
-            </Box>
+              </GridItem>
+            </Grid>
+
             <img src={shows} alt="" />
           </Section>
 
-          <Section
-            softTop="5em"
-            softBottom="5em"
-            textColor={colors.white}
-            color={colors.red}
-          >
-            <Box container>
-              <Box half center textCenter hard>
+          <Section textColor={colors.white} color={colors.red}>
+
+            <Grid>
+              <GridItem centerTwo>
                 <p>
                   Stripe integration enabled fans to purchase albums directly from Bad
                   Racket and encouraged bands to distribute their music through Bad Racket.
                 </p>
-              </Box>
-            </Box>
+              </GridItem>
+            </Grid>
+
             <img src={buy} alt="" />
           </Section>
 
-          <Section
-            color={colors.white}
-            textColor={colors.asphalt}
-            softTop="5em"
-            softBottom="4em"
-          >
-            <Box container>
-              <Box full>
-                <h2>Key Results</h2>
-              </Box>
-            </Box>
-            <Box container>
-              <Box half>
+          <Section color={colors.white}>
+
+            <Grid style={{marginBottom:'4.5em'}}>
+              <GridItem leftOne className="hideMobile">
+                  <p className="projectSectionMarker">Results</p>
+              </GridItem>
+              <GridItem centerTwo>
+                <h3 style={{ color: colors.red }}>Key results</h3>
                 <p>
                   The redesigned badracket.com was faster, content forward, and
                   engaging.
@@ -353,16 +337,9 @@ class BadRacket extends React.Component {
                   Attendance at Bad Racket's hosted shows grew, as did the
                   post-show social media engagement.
                 </p>
-              </Box>
-              <Box third>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo
-                  neque, repellat quaerat illum, sapiente at harum placeat
-                  aliquam odit voluptatibus maiores repellendus praesentium
-                  officia ex perspiciatis eveniet laudantium odio inventore?
-                </p>
-              </Box>
-            </Box>
+              </GridItem>
+            </Grid>
+
           </Section>
         </div>
       </ProjectDetail>

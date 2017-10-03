@@ -1,6 +1,8 @@
 @require '../styles/text'
 @require '../styles/breakpoints'
 vars = json('./vars.json', {hash:true})
+tablet = vars.screens.tablet
+mobile = vars.screens.mobile
 
 
 
@@ -45,29 +47,29 @@ vars = json('./vars.json', {hash:true})
   flex-flow: row wrap
   align-content: space-around
 
-  .processItem
-    margin-top: 2em
-    padding-top: 2em
-    padding-right: 1em
-    border-top: solid 2px lighten(vars.colors.asphalt, 8%)
-    flex: 1 0 0
-    position: relative
-    min-width: 150px
+.processItem
+  padding-top: 2em
+  padding-right: 1em
+  border-top: solid 2px lighten(vars.colors.asphalt, 8%)
+  position: relative
+  min-width: 150px
 
-    +below(vars.screens.desk)
-      flex: 50% 0 0
+  +below(tablet)
+    padding-bottom:3em
 
-    +below(vars.screens.mobile)
-      flex: 100% 0 0
+  p
+    margin-bottom: 0.375em
 
-    p
-      margin-bottom: 0.4em
+    &:first-child
+      text-transform: uppercase
+      font-family: vars.fonts.bold
+      color: vars.colors.concrete
 
-    &:before
-      content: ''
-      position: absolute;
-      width: 1em
-      height: 1em
-      background: white
-      transform: rotate(45deg)
-      top: -0.5em
+  &:before
+    content: ''
+    position: absolute;
+    width: 1em
+    height: 1em
+    background: white
+    transform: rotate(45deg)
+    top: -0.5em

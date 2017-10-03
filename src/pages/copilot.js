@@ -25,7 +25,8 @@ class Copilot extends React.Component {
     return (
       <ProjectDetail projectName="copilot">
         <div ref="content">
-{/*
+          
+        {/*
           <Grid style={{position:'fixed', opacity: 0.1, top: 0, left:'10vw', height:'100vh', right:'10vw'}}>
             <div style={{height:'100vh', background: 'blue'}}></div>
             <div style={{height:'100vh', background: 'yellow'}}></div>
