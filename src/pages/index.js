@@ -146,6 +146,9 @@ class IndexPage extends React.Component {
 
     return (
       <div>
+
+
+        {/* ** CHAPTER TITLE */}
         <Section chapter color={colors.red}>
           <div ref="chapterContent" className={s.flexInherit}>
 
@@ -174,11 +177,15 @@ class IndexPage extends React.Component {
           </div>
         </Section>
 
+
+        {/* ** CHAPTER CONTENT */}
+
         <Waypoint
           topOffset="-50%"
           onEnter={o => debounced_updateNav("about", o)}
         />
 
+        {/* ** CHAPTER 1: HEADSHOT */}
         <Section id="about" chapterContent>
           <div className={s.headshotWrapper}>
             <div className={s.headshot} />
@@ -191,6 +198,8 @@ class IndexPage extends React.Component {
             debounced_updateNav("work", o);
           }}
         >
+
+          {/* ** CHAPTER 2: WORK */}
           <Section id="work" chapterContent>
             {data.projects.map((p, idx) => (
               <ProjectImage
@@ -208,6 +217,7 @@ class IndexPage extends React.Component {
           onEnter={o => debounced_updateNav("contact", o)}
           onLeave={o => debounced_updateNav("work", o)}
         >
+          {/* ** CHAPTER 3: CONTACT */}
           <Section id="contact" chapterContent style={{ height: "100vh" }}>
             <div style={{ padding: "2em 4vw" }}>
               <p>

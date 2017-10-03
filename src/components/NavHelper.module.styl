@@ -1,4 +1,5 @@
 vars = json('../styles/vars.json', {hash:true})
+@require '../styles/breakpoints'
 
 
 .navHelper
@@ -8,6 +9,9 @@ vars = json('../styles/vars.json', {hash:true})
   padding: 0.5em 0
   transition: color .2s
   font-size: 85%
+
+  +below(vars.screens.mobile)
+    display:none
 
   > span
     font-size: 1em

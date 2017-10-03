@@ -35,11 +35,12 @@ mobile = vars.screens.mobile
     flex-flow: row wrap
     align-content: space-between
 
-    +below(vars.screens.mobile)
+    +below(mobile)
       width: auto
       position: relative
       text-align: left
       height: auto
+      padding: 1.5em
 
 
   &.chapterContent

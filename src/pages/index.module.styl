@@ -1,6 +1,7 @@
 vars = json('../styles/vars.json', {hash:true})
 @require '../styles/breakpoints'
-
+mobile = vars.screens.mobile
+tablet = vars.screens.tablet
 
 
 .flexInherit
@@ -14,50 +15,22 @@ vars = json('../styles/vars.json', {hash:true})
 
   height: 92vh // needed for mobile safari on iPad
 
-
+  +below(mobile)
+    height: auto
 
 .headshotWrapper
   height: 100vh
+  +below(mobile)
+    height: 30vh
 
 .headshot
-  // background-image: url('../../static/images/headshot-2-gray.jpg')
-  // background-image: url('../../static/images/headshot-2.jpg')
-  // background-image: url('../../static/images/headshot-4.jpg')
-  // background-image: url('../../static/images/headshot-3.jpg')
   background-image: url('../../static/images/headshot-5.jpg')
   background-size: cover
   background-position: right
-
   height: 100vh
-
-  // transform: scaleX(-1)
-  // width: 450px
-  // height: 450px
-  // border-radius: 100%
-  // margin: auto
-  // position: relative
-  // top: 15%
-  // overflow: hidden
-  // height: 68vh
-  // filter: grayscale()
-  // opacity: 0.7
 
   +below(vars.screens.mobile)
     height: 30vh
-
-
-video
-  // position: absolute
-  // top: 0
-  // left: 0
-  // bottom: 0
-  // z-index: 999
-  // transform: scale(1.4)
-  // mix-blend-mode: screen
-  // object-fit: cover
-  // // filter: invert();
-  // opacity: 0.3
-
 
 .inverted
   position: absolute
@@ -75,6 +48,9 @@ video
   will-change: transform, opacity
   margin-top: -5vh
 
+  +below(mobile)
+    margin-top:0
+
 
 .title // h1
   font-size: 6vw
@@ -83,13 +59,10 @@ video
   text-align: right
   margin-bottom:8vh
 
-  +below(vars.screens.mobile)
+  +below(mobile)
     text-align: left
+    font-size: 3.157em
+    line-height: 1.2
 
-
-.name
-  position: fixed
-  top: 2vw
-  left: 2vw
-  z-index: 900
-  color: white
+    margin-top: 1.5em
+    margin-bottom: 0.75em

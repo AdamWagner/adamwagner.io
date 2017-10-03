@@ -1,5 +1,7 @@
 vars = json('../styles/vars.json', {hash:true})
 @require '../styles/breakpoints'
+mobile = vars.screens.mobile
+tablet = vars.screens.tablet
 
 
 .imageWrapper
@@ -7,7 +9,7 @@ vars = json('../styles/vars.json', {hash:true})
   position: relative
   flex: 100% 0 0
 
-  +below(vars.screens.mobile)
+  +below(mobile)
     box-shadow: 0 1px 8px rgba(0,0,0,0.2)
     border-radius: 5px
     margin-bottom: 1.4em
@@ -23,7 +25,7 @@ vars = json('../styles/vars.json', {hash:true})
       &:hover
         transform: scale(2)
 
-      +below(vars.screens.mobile)
+      +below(mobile)
         height: 200px
 
       &:after
@@ -44,7 +46,7 @@ vars = json('../styles/vars.json', {hash:true})
     +above(vars.screens.big)
       flex: 33% 0 0
 
-    +below(vars.screens.mobile)
+    +below(mobile)
       flex: 100% 0 0
       height: 68vh
 
@@ -52,7 +54,7 @@ vars = json('../styles/vars.json', {hash:true})
       height: 30vw
       max-height: 500px
 
-      +below(vars.screens.mobile)
+      +below(mobile)
         height: 200px
 
     // dark tint at top for legibility
@@ -84,13 +86,11 @@ vars = json('../styles/vars.json', {hash:true})
       mix-blend-mode: multiply;
 
     &:hover
-      +above(vars.screens.mobile)
+      +above(mobile)
         transition: transform 10s linear
         transform: scale(1.2)
         &:before
           opacity: 0.5
-
-
 
   .metaWrapper
     padding: 3vw
@@ -100,6 +100,9 @@ vars = json('../styles/vars.json', {hash:true})
     left: 0
     z-index: 500
     pointer-events: none;
+
+    +below(mobile)
+      padding: 1.5em
 
     .endNote &
       display: none
@@ -112,12 +115,16 @@ vars = json('../styles/vars.json', {hash:true})
 
   .title
     font-size: calc(0.75em + 2vw)
-    // letter-spacing: 3px
-    // font-weight: 700
     font-family: 'Lora', serif
     text-shadow: 0 1px 4px hsla(211,30,30,0.5)
     margin-bottom: 0.75rem
-    // text-transform: uppercase;
+
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+    +below(mobile)
+      font-size: 2.369em
+      line-height: 1.5
 
   .description
     opacity: 1
@@ -126,5 +133,6 @@ vars = json('../styles/vars.json', {hash:true})
     -webkit-font-smoothing: antialiased
     text-shadow: 0 1px 4px hsla(211,30,30,0.3)
 
-    +below(vars.screens.mobile)
+    +below(mobile)
       opacity: 1
+      font-size: (1em / 0.70)
