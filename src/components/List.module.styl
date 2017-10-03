@@ -1,18 +1,27 @@
+@require '../styles/breakpoints'
 vars = json('../styles/vars.json', {hash:true})
+tablet = vars.screens.tablet
+mobile = vars.screens.mobile
 
 
 .unstyledList
-  margin: 0 0 1.4em 0
+  margin: 0 0 1.5em 0
   padding: 0
 
   li
     list-style: none
     opacity: 0.7
+    font-size: 85%
+    line-height: (1.5 / 0.85) // to keep on baseline
+    white-space: nowrap;
+
+    +below(tablet)
+      font-size: (85% / 0.75)
 
 .title
   font-weight: 800
   opacity: 1!important
   text-transform: uppercase
   letter-spacing: 2px
-  font-size: 85%
-  margin-bottom: 0.5em
+  font-size: 75%
+  line-height: (1.5 / 0.75) // to keep on baseline with lower font size

@@ -5,6 +5,13 @@ mobile = vars.screens.mobile
 
 .section
   z-index: 100
+  padding: 8vw 0
+
+  +above(1500px)
+    padding: 5em 0
+
+  &.reverse
+    color: white
 
   &.flex
     display: flex
@@ -12,12 +19,17 @@ mobile = vars.screens.mobile
   &.wrap
     flex-flow: wrap
 
+  &.flush
+    padding: 0
+
   &.chapter
     position: fixed
     width: 50%
     text-align: right
     padding: 3vh 3vw
     height: 100vh
+
+    color: white
 
     display: flex
     flex-flow: row wrap
@@ -34,6 +46,7 @@ mobile = vars.screens.mobile
     position: relative
     width: 50%
     left: 50%
+    padding: 0
 
     +below(vars.screens.mobile)
       width: auto

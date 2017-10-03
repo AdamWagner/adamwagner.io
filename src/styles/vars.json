@@ -1,7 +1,7 @@
 {
   "colors": {
     "concrete": "#D7D9E0",
-    "offWhite": "#ECECEC",
+    "offWhite": "#F5F5F5",
     "cloud": "#F0F1F5",
     "asphalt": "#3b4046",
     "white": "#fff",
@@ -23,5 +23,10 @@
   "space": {
     "baseSpace": 1,
     "room": "1em"
+  },
+  "fonts" : {
+    "normal": "'Fakt Pro Nor', sans-serif",
+    "italic": "'Fakt Pro Nor Ita', sans-serif",
+    "bold": "'Fakt Pro SmBd', sans-serif"
   }
 }

@@ -80,7 +80,7 @@ class ProjectDetail extends React.Component {
             inTransition={this.state.inTransition}
           />
           <Back onClick={this.back} />
-          <div ref="content">
+          <div ref="content" className="project">
             {this.props.children}
             <MoreProjects projects={this.state.otherProjects.slice(0,2)}/>
           </div>

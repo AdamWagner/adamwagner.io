@@ -1,0 +1,42 @@
+vars = json('../styles/vars.json', {hash:true})
+mobile = vars.screens.mobile
+tablet = vars.screens.tablet
+@require '../styles/breakpoints'
+
+
+.grid
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-gap: 1.5em 2.5em
+  width: 80vw
+  max-width: 1440px
+  margin:auto
+
+
+  // as screen gets smaller...
+  +below(1400px)
+    grid-template-columns: 1fr 1.25fr 1.25fr 1fr // give center 2 more room
+
+  +below(1200px)
+    width: 90vw // widen content width
+
+  +below(960px)
+    grid-template-columns: repeat(4, 1fr) // go back to even columns
+    grid-gap: 0.75em 1.5em // tighten gutter
+    width: 80vw // go back to normal tube width
+
+  +below(tablet)
+    grid-template-columns: repeat(2, 1fr) // go to two column
+    width: 90vw // tighten tube width again
+
+  +below(mobile)
+    grid-template-columns: 1fr
+    grid-gap: 0.375em 2.5em
+
+
+  // for large sizes
+  +above(1600px)
+    width: 70vw // tighten content tub
+
+  +above(2000px)
+    width: 60vw // tighten more

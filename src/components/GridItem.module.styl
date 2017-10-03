@@ -1,0 +1,37 @@
+vars = json('../styles/vars.json', {hash:true})
+mobile = vars.screens.mobile
+tablet = vars.screens.tablet
+@require '../styles/breakpoints'
+
+
+
+
+.full
+  grid-column: 1 / span 4
+
+
+.centerTwo
+  grid-column: 2 / span 2
+
+  +below(960px)
+    grid-column: 1 / span 3
+
+  +below(tablet)
+    grid-column: 1 / span 4
+
+
+.leftOne
+  grid-column: 1 / span 1
+
+
+.leftThree
+  grid-column: 1 / span 3
+
+  +below(1160px)
+    grid-column: 1 / span 4
+
+.rightOne
+  grid-column: 4 / span 1
+
+  +below(960px)
+    grid-column: auto

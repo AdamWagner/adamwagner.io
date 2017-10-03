@@ -4,15 +4,17 @@ import Link from "gatsby-link";
 import s from "./Section.module.styl";
 
 class Section extends React.Component {
-  
+
   render() {
     let p = this.props;
-
-    let narrow = p.narrow ? s.narrow : "";
     let wrap = p.wrap ? s.wrap : "";
     let flex = p.flex ? s.flex : "";
+    let flush = p.flush ? s.flush : "";
+
     let chapter = p.chapter ? s.chapter : "";
     let chapterContent = p.chapterContent ? s.chapterContent : "";
+
+    let reverse = p.reverse ? s.reverse : "";
 
     let softClasses = []
     Object.entries(p).map((kv) => {
@@ -38,7 +40,7 @@ class Section extends React.Component {
       <div
         className={[
           s.section,
-          narrow,
+          reverse,
           wrap,
           flex,
           chapter,

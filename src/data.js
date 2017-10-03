@@ -14,7 +14,7 @@ const data = {
       name: "work",
       active: false,
       titleText: `Case studies \n ↳`,
-      copyText: `Although I've built some consumer-focsed side projects, I'm most passionate about improving the nature of work. You'll find a healthy selection of products aimed at small business owners, designers, and musicians.`
+      copyText: `I'm passionate about what makes work work. I love building products that make small business life better and make marketplaces richer. My side-projects, on the other hand, have centered around music creation and the common DNA shared by many songs.`
     },
     // {
     //   name: "experience",

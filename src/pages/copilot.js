@@ -5,72 +5,81 @@ import Box from "../components/Box";
 import List from "../components/List";
 import Section from "../components/Section";
 import ProjectDetail from "../components/ProjectDetail";
+import Grid from "../components/Grid"
+import GridItem from "../components/GridItem"
 
 import { colors } from "../styles/vars.json";
 import s from "./copilot.module.styl";
 
-import v1 from "./badracket.com-v1.jpg";
-import v4 from "./badracket.com-v4.jpg";
-import possible from "./brv5-possible.gif";
-import mobileWireframe from "./brv5-mobile-wireframe.jpg";
-import visuals1 from "./brv5-visual-draft-0.jpg";
-import visuals2 from "./brv5-final-desktop-mockup.jpg";
-import phone from "./brv5-iphone.jpg";
-import interview from "./brv5-final-interview.png";
-import shows from "./brv5-final-shows.png";
-import buy from "./brv5-final-buy.png";
-
-import focusSketch from "./copilot-sketch-focus-table.jpg";
-import interviewSketch from "./copilot-sketch-interview.jpg";
+import focusSketch from "./copilot-sketch-focus2.jpg";
+import interviewSketch from "./copilot-sketch-interview2.jpg";
+import cardSort from "./copilot-card-sort.jpg";
 import wireframe from "./copilot-web-wireframe.jpg";
 import webMac01 from "./copilot-web-macbook.png";
 import mobileExplorations from "./copilot-mobile-explorations-2.jpg";
 import mobileDemo from "./copilot-video-mockup.mp4";
+import mobileFnl from "./copilot-mobile-fnl.jpg";
 
 class Copilot extends React.Component {
   render() {
     return (
       <ProjectDetail projectName="copilot">
         <div ref="content">
-          <Section
-            textColor={colors.white}
-            color={colors.copilotBlue}
-            softTop="5em"
-            softBottom="4em"
-          >
-            <Box container>
-              <Box twoThird softRight="10p">
-                <div>
-                  <h1>
-                    Finding product/market fit for restaurant revenue management
-                    software.
-                  </h1>
+{/*
+          <Grid style={{position:'fixed', opacity: 0.1, top: 0, left:'10vw', height:'100vh', right:'10vw'}}>
+            <div style={{height:'100vh', background: 'blue'}}></div>
+            <div style={{height:'100vh', background: 'yellow'}}></div>
+            <div style={{height:'100vh', background: 'red'}}></div>
+            <div style={{height:'100vh', background: 'orange'}}></div>
+          </Grid> */}
 
-                  <p>
-                    I led product design at Copilot as we strove to find and
-                    then leverage product/market fit. Our proprietary ability to
-                    access, process, and distribute data from leading Point of
-                    Sale systems gave Copilot a unique ability to provide
-                    enterprise level business insight to independent
-                    restaurants.
-                  </p>
 
-                  <p>
-                    We dramatically simplified the delivery of actionable
-                    insights, focusing on timely push content rather a power
-                    dashboard.
-                  </p>
+          <Section reverse>
+            <Grid>
 
-                  <p>
-                    After much iteration,{" "}
-                    <strong>
-                      80% of our customers engaged with Copilot insights every
-                      day
-                    </strong>.
-                  </p>
-                </div>
-              </Box>
-              <Box third>
+              <GridItem leftThree>
+                <h1>
+                  Finding product/market fit for restaurant revenue management
+                  software.
+                </h1>
+              </GridItem>
+
+              <div style={{gridColumn: '1 / span 3', height: '6.666px', background:'rgba(255,255,255,0.5)'}} />
+
+              <br/>
+              <br/>
+
+
+              <GridItem leftOne className="hideMobile">
+                <p><strong>Overview</strong></p>
+              </GridItem>
+
+              <GridItem centerTwo>
+                <p>
+                  I led product design at Copilot as we strove to find product/market fit.
+                  Our proprietary ability to
+                  process and distribute data from leading Point of
+                  Sale systems gave Copilot the unique ability to provide
+                  enterprise-level business insight to independent
+                  restaurants.
+                </p>
+
+                <p>
+                  We dramatically simplified the delivery of actionable
+                  insights, focusing on timely push content rather a power
+                  dashboard.
+                </p>
+
+                <p>
+                  After several iterations,{" "}
+                  <strong>
+                    80% of our customers engaged with Copilot insights every
+                    day
+                  </strong>.
+                </p>
+              </GridItem>
+
+              <GridItem rightOne className="hideMobile">
                 <List title="Company" items={["Copilot"]} />
                 <List title="Role" items={["Product designer"]} />
                 <List
@@ -83,228 +92,180 @@ class Copilot extends React.Component {
                     "Adam Wagner, Designer"
                   ]}
                 />
-              </Box>
-            </Box>
+              </GridItem>
+
+
+            </Grid>
           </Section>
 
 
-
-          <Section softTop="5em" softBottom="5em" className={s.processContainer}>
-            <Box container>
-              <Box>
-                <h2 className="test-class">Product Development Timeline</h2>
-
-                <div className={s.process}>
-
-                  <div className={s.processItem}>
-                    <p>Discovery & analysis</p>
-                    <p className={s.textSecondary}>User research</p>
-                    <p className={s.textSecondary}>Focusing on an opportunity</p>
-                  </div>
-                  <div className={s.processItem}>
-                    <p>Define the product</p>
-                    <p className={s.textSecondary}>Feature prioritization</p>
-                    <p className={s.textSecondary}>Wireframe IA & UX</p>
-                    <p className={s.textSecondary}>Simplify during visual design</p>
-                    <p className={s.textSecondary}>Learn from failure</p>
-                  </div>
-                  <div className={s.processItem}>
-                    <p>Redesign to fit existing workflows</p>
-                    <p className={s.textSecondary}>Simplify further for mobile</p>
-                    <p className={s.textSecondary}>Establish habit</p>
-                  </div>
-                  <div className={s.processItem}>
-                    <p>Results</p>
-                    <p className={s.textSecondary}>80% of users engage daily</p>
-                    <p className={s.textSecondary}>74% consider Copilot essential</p>
-                  </div>
+          <Section contain className={s.processContainer}>
+            <Grid>
+                <div className={s.processItem} date="Fall 2012">
+                  <p>Discovery & analysis</p>
+                  <p>User research</p>
+                  <p>Focus on an approach</p>
                 </div>
+                <div className={s.processItem} date="Winter 2013">
+                  <p>Define the product</p>
+                  <p>Prioritize features</p>
+                  <p>Wireframe IA & UX</p>
+                  <p>Simplify visuals</p>
+                  <p>Learn from failure</p>
+                </div>
+                <div className={s.processItem} date="Spring 2013">
+                  <p>Redesign to fit existing workflows</p>
+                  <p>Simplify more for mobile </p>
+                  <p>Establish habit</p>
+                </div>
+                <div className={s.processItem} date="Fall 2013">
+                  <p>Results</p>
+                  <p>80% daily engagement</p>
+                  <p>74% consider it essential</p>
+                </div>
+            </Grid>
 
-
-              </Box>
-            </Box>
           </Section>
 
+          <Section color={colors.white} style={{paddingBottom:0}}>
 
+            <Grid style={{marginBottom: '4.5em'}}>
+              <GridItem leftOne className="hideMobile">
+                  <p className="projectSectionMarker">Background</p>
+              </GridItem>
 
-
-
-
-
-
-          {/* <Section
-            softTop="5em"
-            color={colors.white}
-            textColor={colors.asphalt}
-          >
-            <Box container>
-              <Box full softRight="20p">
-                <h2 style={{ color: colors.copilotBlue }}>Restaurant lingo</h2>
-                <p style={{ marginBottom: "0" }}>
-                  Let’s just get this out of the way now 😊
-                </p>
+              <GridItem centerTwo>
+                <h3 style={{ color: colors.copilotBlue }}>My involvement</h3>
                 <p>
-                  Restaurant-speak is a bit foreign sounding to the uninitiated.
+                  As Copilot's only designer, I did <em>many</em>{" "}
+                  things, including product marketing, front-end development,
+                  and product analysis. Within the scope of this case
+                  study I handled:
                 </p>
-              </Box>
-            </Box>
-
-            <Box container softBottom="1em">
-              <Box half softRight="10p">
-                <dl>
-                  <dt>Covers</dt>
-                  <dd>
-                    People. “We had 221 covers last night!” simply means 221
-                    guests were served during dinner.
-                  </dd>
-                  <dt>Guest Average</dt>
-                  <dd>
-                    The amount spent by each person. Usually averaged by shift.
-                  </dd>
-                </dl>
-              </Box>
-              <Box half softRight="10p">
-                <dl>
-                  <dt>
-                    <em>n</em>-Top
-                  </dt>
-                  <dd>
-                    Can refer to a party of n size or a table of n size. E.g.,
-                    “Why did you seat that two-top [party] at our only five-top
-                    [table]?”
-                  </dd>
-                  <dt>Turn time</dt>
-                  <dd>
-                    The time a party spends at a table. Usually averaged by
-                    shift and party size.
-                  </dd>
-                </dl>
-              </Box>
-            </Box>
-          </Section>
- */}
-
-          <Section
-            softTop="5em"
-            softBottom="5em"
-            color={colors.white}
-            textColor={colors.asphalt}
-          >
-            <Box container softBottom="1em">
-              <Box half>
-                <h2 style={{ color: colors.copilotBlue }}>Target market</h2>
-                <p>
-                  Copilot’s target user was the decision-maker - typically the{" "}
-                  <strong>owner </strong>or <strong>general manager</strong> -
-                  at an independent restaurant or small restaurant group.
-                </p>
-                <p>
-                  Restaurant decision-makers want to put as many “butts in
-                  seats” as possible while maintaining smooth operations, high
-                  staff morale, and delivering the desired level of hospitality.
-                </p>
-                <p>
-                  They juggle many areas of concern. They’re
-                  distracted. Often focused on the problem that’s most pressing{" "}
-                  <em>right now</em>, there’s little time left to carefully consider
-                  decisions affecting the bottom line of their business.
-                </p>
-              </Box>
-
-              <Box half>
-                <h2 style={{color: colors.copilotBlue}}>My involvement</h2>
-                <p>As Copilot's only product designer, I did <em>many</em> things, including
-                product marketing, front-end development, and product analysis. However, in the scope of this case study, I handled:</p>
-                <ul>
+                <ul className="arrow-list">
                   <li>Workflows & product mapping</li>
                   <li>User testing</li>
                   <li>Wireframing</li>
                   <li>Visual design</li>
                   <li>Frontend development</li>
                 </ul>
-              </Box>
-            </Box>
+              </GridItem>
+            </Grid>
+
+            <Grid>
+
+              <GridItem leftOne className="hideMobile">
+                <p className="projectSectionMarker">Background</p>
+              </GridItem>
+
+              <GridItem centerTwo>
+                <h3 style={{ color: colors.copilotBlue }}>Audience</h3>
+                <p>
+                  Copilot’s target user is the decision-maker - typically the{" "}
+                  <strong>owner </strong>or <strong>general manager</strong> -
+                  at an independent restaurant or small restaurant group.
+                </p>
+                <p>
+                  Restaurant decision-makers want to put as many “butts in
+                  seats” as possible while maintaining smooth operations, high
+                  staff morale, and delivering great hospitality.
+                </p>
+                <p>
+                  They juggle many areas of concern. They’re distracted, often
+                  focused on the problem that’s most pressing <em>right now</em>.
+                  There’s little time left to carefully consider decisions
+                  affecting the bottom line of their business.
+                </p>
+              </GridItem>
+            </Grid>
+
+
           </Section>
 
-          <Section
-            softTop="5em"
-            softBottom="5em"
-            color={colors.offWhite}
-            textColor={colors.asphalt}
-          >
-            <Box container softBottom="1em">
-              <Box full softRight="20p">
-                <h2 style={{ color: colors.copilotBlue }}>
-                  Discovering opportunities
-                </h2>
-                <p style={{ fontWeight: "bold" }}>User research</p>
+          <Section color={colors.white} style={{paddingBottom:0}}>
+
+
+            {/* Horizontal rule */}
+            <div style={{
+              width: '66vw',
+              height: '0.1875em',
+              margin: '0 auto 4.5em',
+              background: colors.concrete,
+              opacity: 0.66
+            }}>
+
+            </div>
+
+            <Grid style={{marginBottom:'3em'}}>
+
+              <GridItem leftOne className="hideMobile">
+                <p className="projectSectionMarker">Discovery</p>
+              </GridItem>
+
+              <GridItem centerTwo>
+                <h3 style={{ color: colors.copilotBlue }}>
+                  Customer insights
+                </h3>
                 <p>
                   I spoke with dozens of restaurant owners and general managers
                   to learn how they think about their business, how they spend
                   their day, and what keeps them up at night.
                 </p>
-                <img
-                  src={interviewSketch}
-                  style={{ mixBlendMode: "multiply" }}
-                  alt=""
-                />
-                <p>
-                  <strong>Takeaways</strong>
-                </p>
-                <ul className={s.textList}>
-                  <li>
-                    Restaurant owners <em>want</em> to put more effort into
+              </GridItem>
+            </Grid>
+
+            <img src={interviewSketch} alt="" style={{marginBottom: '3em'}}/>
+
+
+            <Grid style={{marginBottom:'6em'}}>
+
+              <GridItem centerTwo>
+                <p> <strong>Takeaways</strong> </p>
+                <ul className="arrow-list">
+                  <li className="multi-line">
+                    1. Restaurant owners <em>want</em> to put more effort into
                     analyzing business performance data, but don’t. It’s like
                     working out - everybody wants to, few actually do it, and
                     the majority that don't have a good excuse.
                   </li>
-                  <li>
-                    Restaurant owners don’t have time to dig into the details.
+                  <li className="multi-line">
+                    2. Restaurant owners don’t have time to dig into the details.
                     They need simple, actionable answers.
                   </li>
-                  <li>
-                    However, they’re skeptical of data that conflicts with their
-                    instincts (which is often the case). How can Copilot
-                    generate trust in the data without overbearing detail?
+                  <li className="multi-line">
+                    3. Also, they’re skeptical of data that conflicts with their
+                    instincts (which is often the case). Copilot must
+                    generate trust without overbearing detail.
                   </li>
                 </ul>
-                <p style={{ marginTop: "2em" }}>
-                  When a restaurant owner finds a moment to think about changing
-                  up the menu, running a deal, changing operating hours, or
-                  reducing turn times - decisions are often made based on gut
-                  feeling or instinct. This dearth of hard, actionable data is
-                  dangerous in a business with{" "}
-                  <a
-                    href="http://www.businessinsider.com/why-restaurants-fail-so-often-2014-2"
-                    target="_blank"
-                  >
-                    a 60% chance of failure in the first year.
-                  </a>
-                </p>
-              </Box>
-            </Box>
-          </Section>
+            </GridItem>
+            </Grid>
 
-          <Section
-            softTop="5em"
-            softBottom="5em"
-            color={colors.white}
-            textColor={colors.asphalt}
-          >
-            <Box container>
-              <Box full softRight="20p">
-                <h2 style={{ color: colors.copilotBlue }}>
-                  Focusing on an opportunity
-                </h2>
+            <Grid style={{marginBottom:'3em'}}>
+
+              <GridItem leftOne className="hideMobile">
+                <p className="projectSectionMarker">Discovery</p>
+              </GridItem>
+
+              <GridItem centerTwo>
+                <h3 style={{ color: colors.copilotBlue }}>
+                  Focusing on an approach
+                </h3>
                 <p>
                   Copilot existed to fascilitate quality decision-making for
                   high-impact activities that our users were neglecting.
                 </p>
-                <img
-                  src={focusSketch}
-                  style={{ mixBlendMode: "multiply" }}
-                  alt=""
-                />
+              </GridItem>
+            </Grid>
+
+            <img
+              src={focusSketch}
+              style={{ mixBlendMode: "multiply", marginBottom: '3em' }}
+              alt=""
+            />
+
+            <Grid>
+              <GridItem centerTwo>
                 <p>
                   Together, these activities constitute{" "}
                   <strong>Revenue Management</strong> — the application of
@@ -312,196 +273,208 @@ class Copilot extends React.Component {
                   micro-market level and optimize business levers to maximize
                   revenue growth.
                 </p>
-              </Box>
-            </Box>
+              </GridItem>
+            </Grid>
+
           </Section>
 
-          <Section
-            softTop="5em"
-            softBottom="2em"
-            textColor={colors.asphalt}
-            color={colors.offWhite}
-          >
-            <Box container>
-              <Box softRight="20p">
-                <h2 style={{ color: colors.copilotBlue }}>
-                  Defining the product experience
-                </h2>
-                <p>
-                  During discovery I learned that, in the rare cases users
-                  engaged with data, they did so on the big screen — the POS. I found keen interest
-                  in powerful data analysis features such as forecasting and
-                  cohort analysis. Navigating through dates seemed like a must.
-                </p>
-                <p>
-                  All of this functionality required the space and power of the
-                  web, and we already had a design and development framework for
-                  web apps.
-                </p>
-                <p>So, I started there.</p>
-              </Box>
-            </Box>
+
+          <Section color={colors.white}>
+            {/* Horizontal rule */}
+            <div style={{
+              width: '66vw',
+              height: '0.1875em',
+              margin: '0 auto 4.5em',
+              background: colors.concrete,
+              opacity: 0.66
+            }}/>
+            <Grid>
+              {/* <GridItem leftOne className="hideMobile">
+                <p className="projectSectionMarker">Defining the product</p>
+              </GridItem> */}
+                <GridItem centerTwo>
+                  <h3 style={{ color: colors.copilotBlue }}>
+                    Prioritizing functionality
+                  </h3>
+                  <p>Beta users helped prioritize features via card sorting —
+                  a research activity in which users categorize features and
+                  make tough prioritization decisions. </p>
+                </GridItem>
+                <GridItem full>
+                  <img style={{gridColumn: "1 / span 4"}} src={cardSort} alt=""/>
+                </GridItem>
+            </Grid>
+          </Section>
+
+
+
+          <Section color={colors.offWhite}>
+            <Grid>
+                <div style={{gridColumn: '1 / span 1'}}>
+                  <p className="projectSectionMarker">Defining the product</p>
+                </div>
+                <GridItem centerTwo>
+                  <h3 style={{ color: colors.copilotBlue }}>
+                    Wireframing IA & UX
+                  </h3>
+                  <p>
+                    In the rare cases users
+                    engaged with data, they did so on the big screen — the POS. Card sorting
+                    revealed keen interest in powerful data analysis features such as
+                    forecasting, benchmarks, and filtering.
+                  </p>
+                  <p>
+                    Power functionality desired the space and form-factor of the
+                    web, so I started there.
+                  </p>
+                </GridItem>
+            </Grid>
 
             <img src={wireframe} alt="" m />
 
-            <Box container>
-              <Box softRight="20p">
-                <p>Testing revealed that user's were uncomfortable with the ambiguity
-                  of how forecasts were calculated. They typically relied on historical benchmarks
-                  to forecast.</p>
-              </Box>
-            </Box>
+            <Grid>
+              <div style={{gridColumn: '2 / span 2'}}>
+                <p>
+                  While testing the wireframes, users were uncomfortable with the
+                  ambiguity of how forecasts were calculated. They typically
+                  relied on historical benchmarks to forecast.
+                </p>
+              </div>
+            </Grid>
+
           </Section>
 
-          <Section
-            softTop="3em"
-            textColor={colors.white}
-            color={colors.copilotBlue}
-          >
-            <Box container softBottom="1em" softTop="2em">
-              <Box textCenter twoThird center>
-                <h2>Simplifying the dashboard</h2>
-                <p>While designing visuals, I removed the sidebar and
-                evolved the forecast model into a flexible
-                benchmark model that was more familiar to users.</p>
-              </Box>
-            </Box>
+          <Section reverse color={colors.copilotBlue}>
+            <Grid>
+              <div style={{gridColumn: '1 / span 1'}}>
+                <p className="projectSectionMarker">Defining the product</p>
+              </div>
+              <GridItem centerTwo>
+                <h3>Simplifying the UX</h3>
+                <p>
+                  During visual design I simplified the layout and evolved the
+                  forecast model into a flexible benchmark model. Benchmarks were
+                  familiar to users and retained most of the value of a forecast.
+                </p>
+              </GridItem>
+            </Grid>
+
             <img src={webMac01} alt="" />
+
           </Section>
 
-          <Section
-            color={colors.white}
-            textColor={colors.asphalt}
-            softTop="5em"
-            softBottom="4em"
-          >
-            <Box container>
-              <Box full>
-                <h2 style={{ color: colors.copilotBlue }}>The launch & failure of Copilot's web dashboard</h2>
-              </Box>
-            </Box>
-            <Box container>
-              <Box softRight="20p">
-
-              <p>
+          <Section color={colors.white}>
+            <Grid>
+              <div style={{gridColumn: '1 / span 1'}}>
+                <p className="projectSectionMarker">Defining the product</p>
+              </div>
+              <GridItem centerTwo>
+                <h3 style={{ color: colors.copilotBlue }}>
+                  Launch & failure
+                </h3>
+                <p>
                   Once launched, <strong>not a single user</strong> logged in.
-                  We designed and built Copilot's web product hand-in-hand with a loyal,
-                  enthusiastic base of beta customers.
-                  And yet, none of them actually wanted to use
-                  what their feedback had helped shape.
+                  We designed and built Copilot's web product hand-in-hand with
+                  a loyal, enthusiastic base of beta customers. And yet, none of
+                  them actually wanted to use what their feedback had helped
+                  shape.
                 </p>
 
                 <p>
-                  But the problem wasn't the feature set. <strong>It was the delivery mechanism. </strong>
+                  But the problem wasn't the feature set.{" "}
+                  <strong>It was the delivery mechanism. </strong>
                 </p>
 
                 <p>
-                  Recall that our target users have neither the
-                  time nor the impulse to log into a web app. They're not even
-                  in front of a computer for much of the day. Copilot needed to fit
-                  seemlessly into their existing workflow.
+                  Recall that our target users have neither the time nor the
+                  impulse to log into a web app. They're not even in front of a
+                  computer for much of the day. Copilot needed to fit seemlessly
+                  into their existing workflow.
                 </p>
-              </Box>
-            </Box>
+              </GridItem>
+            </Grid>
           </Section>
 
-          <Section
-            color={colors.offWhite}
-            textColor={colors.asphalt}
-            softTop="5em"
-            softBottom="4em"
-          >
-            <Box container>
-              <Box full>
-                <h2 style={{ color: colors.copilotBlue }}>
+          <Section color={colors.offWhite} style={{paddingBottom:'2em'}}>
+            <Grid style={{marginBottom: '3em'}}>
+              <div style={{gridColumn: '1 / span 1'}}>
+                <p className="projectSectionMarker">Redesign</p>
+              </div>
+              <GridItem centerTwo>
+                <h3 style={{ color: colors.copilotBlue }}>
                   Redesigning Copilot to fit seemlessly into existing workflows
-                </h2>
-              </Box>
-            </Box>
-            <Box container>
-              <Box softRight="20p">
-                <p>We wanted Copilot to be another of our user's essential haibts - akin to
-                their morning cup of coffee or pre-shift staff meeting.</p>
-                <p>To establish this habit, Copilot needed to:</p>
-                <ul>
-                  <li>Remind our users to review Copilot's benchmarks and insights</li>
-                  <li>Be accessible despite our users' chaotic environments</li>
-                </ul>
-                <p>So as is so often the case in product design, I needed to simplify further.</p>
-              </Box>
-            </Box>
-
-            <Box container softTop="1em">
-              <Box>
-                <img src={mobileExplorations} alt="" />
-              </Box>
-            </Box>
-            <Box container softTop="3em">
-              <Box softRight="20p">
+                </h3>
                 <p>
-                  In parallel, we continued to discover the power of
+                  We wanted Copilot to be another of our user's essential haibts
+                  - akin to their morning cup of coffee or pre-shift staff
+                  meeting.
+                </p>
+                <p>To establish this habit, Copilot needed to:</p>
+                <ul className="arrow-list" style={{marginBottom:'1.5em'}}>
+                  <li className="multi-line">
+                    Remind users that a fresh version of Copilot's Daily Report was ready
+                  </li>
+                  <li>Be easily accessible in our users' chaotic environments</li>
+                </ul>
+                <p> I needed to simplify further.</p>
+              </GridItem>
+            </Grid>
+
+            <img src={mobileExplorations} alt="" style={{maxWidth: '1200px', margin:'auto', marginBottom:'3em'}}/>
+
+            <Grid>
+              <GridItem centerTwo>
+                <p>
+                  In parallel, I continued to discover the compelling power of
                   benchmarking. Comparing current performance to the past was
-                  useful, but it was even <em>more</em> useful to compare the
+                  interesting, but it was even <em>more</em> interesting to compare the
                   daily performance of a single location to that of a{" "}
                   <em>group of its peers</em>.
                 </p>
-              </Box>
-            </Box>
+                <p>Another key change was focusing on push; At 10am sharp, Copilot would notify
+                users that their daily report was ready to review.</p>
+              </GridItem>
+            </Grid>
           </Section>
 
-          <Section>
-                <video
-                  autoPlay
-                  loop
-                  style={{
-                    position: "static",
-                    opacity: 1,
-                    display: "block",
-                    width: '100%',
-                    objectFit: 'fill'
-                  }}
-                >
-                  <source src={mobileDemo} type="video/mp4"/>
-                </video>
-          </Section>
+          <img src={mobileFnl} alt=""/>
 
-          <Section
-            color={colors.white}
-            textColor={colors.asphalt}
-            softTop="5em"
-            softBottom="4em"
+          <video
+            autoPlay
+            loop
+            style={{
+              position: "static",
+              opacity: 1,
+              display: "block",
+              width: "100%",
+              objectFit: "fill"
+            }}
           >
-            <Box container>
-              <Box full>
-                <h2>Key Results</h2>
-              </Box>
-            </Box>
-            <Box container>
-              <Box half>
+            <source src={mobileDemo} type="video/mp4" />
+          </video>
+
+          <Section color={colors.white}>
+            <Grid>
+              <div style={{gridColumn: '1 / span 1'}}>
+                <p className="projectSectionMarker">Results</p>
+              </div>
+              <GridItem centerTwo>
+                <h3 style={{color:colors.copilotBlue}}>Key Results</h3>
+                <p>This time, the form factor and focus on notifications worked. Within a month, 80% of users
+                were engaging with the daily report <em>every day</em>.</p>
+
                 <p>
-                  The redesigned badracket.com was faster, content forward, and
-                  engaging.
+                  Peer group benchmarks proved especially compelling. Customers now considered
+                  Copilot an essential part of running their business.
                 </p>
-                <p>
-                  Facebook login plus Mixpanel allowed for a tailored experience
-                  and timely followup via drip email.
-                </p>
-                <p>Stripe integration helped fans support local bands.</p>
-                <p>
-                  Attendance at Bad Racket's hosted shows grew, as did the
-                  post-show social media engagement.
-                </p>
-              </Box>
-              <Box third>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo
-                  neque, repellat quaerat illum, sapiente at harum placeat
-                  aliquam odit voluptatibus maiores repellendus praesentium
-                  officia ex perspiciatis eveniet laudantium odio inventore?
-                </p>
-              </Box>
-            </Box>
+              </GridItem>
+            </Grid>
           </Section>
+
+
+
+
+
         </div>
       </ProjectDetail>
     );
