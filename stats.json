@@ -1,28 +1,32 @@
 {
   "assetsByChunkName": {
     "component---src-pages-badracket-js": [
-      "component---src-pages-badracket-js-bbe34be5c70609a5c45b.js",
-      "component---src-pages-badracket-js-bbe34be5c70609a5c45b.js.map"
+      "component---src-pages-badracket-js-ff3ffe13eb533968c4c4.js",
+      "component---src-pages-badracket-js-ff3ffe13eb533968c4c4.js.map"
     ],
     "path---copilot": [
       "path---copilot-a0e39f21c11f6a62c5ab.js",
       "path---copilot-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-7a58e1d89008eb7818be.js",
-      "component---src-pages-index-js-7a58e1d89008eb7818be.js.map"
+      "component---src-pages-index-js-d89ebff6e9931dc07e95.js",
+      "component---src-pages-index-js-d89ebff6e9931dc07e95.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
     ],
+    "component---node-modules-gatsby-plugin-offline-app-shell-js": [
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
+    ],
     "component---src-pages-copilot-js": [
-      "component---src-pages-copilot-js-6f14c436a12efced97bc.js",
-      "component---src-pages-copilot-js-6f14c436a12efced97bc.js.map"
+      "component---src-pages-copilot-js-1c30d8ab491ed3585e23.js",
+      "component---src-pages-copilot-js-1c30d8ab491ed3585e23.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-3c71854ea2d5ace6a9fc.js",
-      "component---src-layouts-index-js-3c71854ea2d5ace6a9fc.js.map"
+      "component---src-layouts-index-js-7e2213b65252b8e6fc3f.js",
+      "component---src-layouts-index-js-7e2213b65252b8e6fc3f.js.map"
     ],
     "path---sounds-just-like": [
       "path---sounds-just-like-a0e39f21c11f6a62c5ab.js",
@@ -45,9 +49,9 @@
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js.map"
     ],
     "commons": [
-      "commons-fafd21ddfbf3e7ce5424.js",
+      "commons-9c75f3eae9d9f6b99fd8.js",
       "build-js-styles.css",
-      "commons-fafd21ddfbf3e7ce5424.js.map",
+      "commons-9c75f3eae9d9f6b99fd8.js.map",
       "build-js-styles.css.map"
     ],
     "path---404-html": [
@@ -55,17 +59,21 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-opentable-js": [
-      "component---src-pages-opentable-js-26a4dca48725176a377c.js",
-      "component---src-pages-opentable-js-26a4dca48725176a377c.js.map"
+      "component---src-pages-opentable-js-806b938a77d4edf37ad2.js",
+      "component---src-pages-opentable-js-806b938a77d4edf37ad2.js.map"
+    ],
+    "path---offline-plugin-app-shell-fallback": [
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-page-2-js": [
       "component---src-pages-page-2-js-075954cd9c4544c7dcd8.js",
       "component---src-pages-page-2-js-075954cd9c4544c7dcd8.js.map"
     ],
     "app": [
-      "app-8abc1311c848ce1e96c5.js",
+      "app-f5d34f25b3a0b39564ea.js",
       "build-js-styles.css",
-      "app-8abc1311c848ce1e96c5.js.map",
+      "app-f5d34f25b3a0b39564ea.js.map",
       "build-js-styles.css.map"
     ],
     "path---badracket": [
