@@ -16,12 +16,19 @@ mobile = vars.screens.mobile
     white-space: nowrap;
 
     +below(tablet)
-      font-size: (85% / 0.75)
+      font-size: 1.3125em * .85
+    +below(mobile)
+      font-size: 1.5em *.85
 
-.title
-  font-weight: 800
-  opacity: 1!important
-  text-transform: uppercase
-  letter-spacing: 2px
-  font-size: 75%
-  line-height: (1.5 / 0.75) // to keep on baseline with lower font size
+  .title
+    font-family: vars.fonts.bold
+    opacity: 1!important
+    text-transform: uppercase
+    letter-spacing: 1px
+    font-size: 75%
+    line-height: (1.5 / 0.75) // to keep on baseline with lower font size
+
+    +below(tablet)
+      font-size: (1.3125em * .85)
+    +below(mobile)
+      font-size: (1.5em *.85)

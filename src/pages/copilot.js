@@ -18,14 +18,15 @@ import wireframe from "./copilot-web-wireframe.jpg";
 import webMac01 from "./copilot-web-macbook.png";
 import mobileExplorations from "./copilot-mobile-explorations-2.jpg";
 import mobileDemo from "./copilot-video-mockup.mp4";
-import mobileFnl from "./copilot-mobile-fnl.jpg";
+import mobileFnlMock from "./copilot-mobile-fnl-1.jpg";
+import mobileFnl from "./mobile-final-3-up-2.jpg";
 
 class Copilot extends React.Component {
   render() {
     return (
       <ProjectDetail projectName="copilot">
         <div ref="content">
-          
+
         {/*
           <Grid style={{position:'fixed', opacity: 0.1, top: 0, left:'10vw', height:'100vh', right:'10vw'}}>
             <div style={{height:'100vh', background: 'blue'}}></div>
@@ -51,11 +52,11 @@ class Copilot extends React.Component {
               <br/>
 
 
-              <GridItem leftOne className="hideMobile">
+              <GridItem leftOne className="hideMobile overview">
                 <p className="projectSectionMarker" style={{textAlign:'left'}}>Overview</p>
               </GridItem>
 
-              <GridItem centerTwo>
+              <GridItem centerTwo style={{marginBottom:'1.5em'}}>
                 <p>
                   I led product design at Copilot as we strove to find product/market fit.
                   Our proprietary ability to
@@ -80,7 +81,7 @@ class Copilot extends React.Component {
                 </p>
               </GridItem>
 
-              <GridItem rightOne className="hideMobile">
+              <GridItem rightOne className="hideMobile projectDetails">
                 <List title="Company" items={["Copilot"]} />
                 <List title="Role" items={["Product designer"]} />
                 <List
@@ -311,7 +312,7 @@ class Copilot extends React.Component {
 
           <Section color={colors.offWhite}>
             <Grid>
-                <div style={{gridColumn: '1 / span 1'}}>
+                <div leftOne className="hideMobile">
                   <p className="projectSectionMarker">Defining the product</p>
                 </div>
                 <GridItem centerTwo>
@@ -336,9 +337,8 @@ class Copilot extends React.Component {
             <Grid>
               <div style={{gridColumn: '2 / span 2'}}>
                 <p>
-                  While testing the wireframes, users were uncomfortable with the
-                  ambiguity of how forecasts were calculated. They typically
-                  relied on historical benchmarks to forecast.
+                  While testing the wireframes, users were confused by how forecasts were calculated. They were more comfortable using
+                  historical benchmarks for forecasting.
                 </p>
               </div>
             </Grid>
@@ -347,7 +347,7 @@ class Copilot extends React.Component {
 
           <Section reverse color={colors.copilotBlue}>
             <Grid>
-              <div style={{gridColumn: '1 / span 1'}}>
+              <div leftOne className="hideMobile">
                 <p className="projectSectionMarker">Defining the product</p>
               </div>
               <GridItem centerTwo>
@@ -355,7 +355,7 @@ class Copilot extends React.Component {
                 <p>
                   During visual design I simplified the layout and evolved the
                   forecast model into a flexible benchmark model. Benchmarks were
-                  familiar to users and retained most of the value of a forecast.
+                  more familiar to users and retained most of the value of a forecast.
                 </p>
               </GridItem>
             </Grid>
@@ -366,7 +366,7 @@ class Copilot extends React.Component {
 
           <Section color={colors.white}>
             <Grid>
-              <div style={{gridColumn: '1 / span 1'}}>
+              <div leftOne className="hideMobile">
                 <p className="projectSectionMarker">Defining the product</p>
               </div>
               <GridItem centerTwo>
@@ -398,7 +398,7 @@ class Copilot extends React.Component {
 
           <Section color={colors.offWhite} style={{paddingBottom:'2em'}}>
             <Grid style={{marginBottom: '3em'}}>
-              <div style={{gridColumn: '1 / span 1'}}>
+              <div leftOne className="hideMobile">
                 <p className="projectSectionMarker">Redesign</p>
               </div>
               <GridItem centerTwo>
@@ -432,12 +432,13 @@ class Copilot extends React.Component {
                   daily performance of a single location to that of a{" "}
                   <em>group of its peers</em>.
                 </p>
-                <p>Another key change was focusing on push; At 10am sharp, Copilot would notify
+                <p>Another key change the focus on push notifications. At 10am sharp, Copilot would notify
                 users that their daily report was ready to review.</p>
               </GridItem>
             </Grid>
           </Section>
 
+          <img src={mobileFnlMock} alt=""/>
           <img src={mobileFnl} alt=""/>
 
           <video
@@ -456,7 +457,7 @@ class Copilot extends React.Component {
 
           <Section color={colors.white}>
             <Grid>
-              <div style={{gridColumn: '1 / span 1'}}>
+              <div leftOne className="hideMobile">
                 <p className="projectSectionMarker">Results</p>
               </div>
               <GridItem centerTwo>

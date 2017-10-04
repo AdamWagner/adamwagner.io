@@ -52,8 +52,8 @@ x Copilot case study
 
 # STYLING
 x Typography styles. Try https://kyleamathews.github.io/typography.js/
-- Redesign "Process" graphic to avoid copying Peter Tait
-- Footer cleanup. Watch out for page link visibility breaking pre-loading.
+- Redesign "Process" graphic on Bad Racket to avoid copying Peter Tait.
+- Footer cleanup + home page styling. Watch out for page link visibility breaking pre-loading.
 
 # CONTENT
 - Contact section
@@ -61,7 +61,7 @@ x Typography styles. Try https://kyleamathews.github.io/typography.js/
 
 
 # RESPONSIVE
-- Mobile layout for home page **ACTIVE**
+x Mobile layout for home page
 
 
 # BEHAVIOR
@@ -70,6 +70,7 @@ x Typography styles. Try https://kyleamathews.github.io/typography.js/
 
 
 # PERFORMANCE
+- global styles are getting imported twice again. Fix.
 - Lazy load images https://github.com/sergiodxa/react-lazy-image
   also look at:
       https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/

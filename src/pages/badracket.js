@@ -52,13 +52,11 @@ class BadRacket extends React.Component {
                 <br/>
                 <br/>
 
-                <GridItem leftOne className="hideMobile">
+                <GridItem leftOne className="hideMobile overview">
                   <p className="projectSectionMarker" style={{textAlign:'left'}}>Overview</p>
                 </GridItem>
 
-                <GridItem centerTwo>
-
-
+                <GridItem centerTwo style={{marginBottom:'1.5em'}}>
                   <p>
                     As the founder of Bad Racket, I was responsible for much
                     more than its website, yet I had a v1 of badracket.com
@@ -71,7 +69,7 @@ class BadRacket extends React.Component {
                   </p>
                 </GridItem>
 
-              <GridItem rightOne className="hideMobile">
+              <GridItem rightOne className="hideMobile projectDetails">
                 <List title="Client" items={["Bad Racket Recording Studio"]} />
                 <List
                   title="Roles"
@@ -118,28 +116,28 @@ class BadRacket extends React.Component {
                 {/* <h2>Redesign Process</h2> */}
                   <div className={s.processItem}>
                     <p>Discover</p>
-                    <p className={s.textSecondary}>Evaluate previous versions</p>
-                    <p className={s.textSecondary}>Understand user needs</p>
-                    <p className={s.textSecondary}>Set redesign goals</p>
-                    <p className={s.textSecondary}>Determine success criteria</p>
+                    <p>Evaluate previous versions</p>
+                    <p>Understand user needs</p>
+                    <p>Set redesign goals</p>
+                    <p>Determine success criteria</p>
                   </div>
                   <div className={s.processItem}>
                     <p>Design</p>
-                    <p className={s.textSecondary}>Wireframe structure</p>
-                    <p className={s.textSecondary}>Wireframe UX patterns</p>
-                    <p className={s.textSecondary}>Design visual aesthetic alongside real content</p>
-                    <p className={s.textSecondary}>Fine tune interactions</p>
+                    <p>Wireframe structure</p>
+                    <p>Wireframe UX patterns</p>
+                    <p>Design visual aesthetic alongside real content</p>
+                    <p>Fine tune interactions</p>
                   </div>
                   <div className={s.processItem}>
                     <p>Develop</p>
-                    <p className={s.textSecondary}>Implement vision in code</p>
-                    <p className={s.textSecondary}>Address unforeseen design challenges</p>
-                    <p className={s.textSecondary}>Tune for performance</p>
+                    <p>Implement vision in code</p>
+                    <p>Address unforeseen design challenges</p>
+                    <p>Tune for performance</p>
                   </div>
                   <div className={s.processItem}>
                     <p>Measure</p>
-                    <p className={s.textSecondary}>Monitor success metrics</p>
-                    <p className={s.textSecondary}>Document performance for next iteration cycle</p>
+                    <p>Monitor success metrics</p>
+                    <p>Document performance for next iteration cycle</p>
                   </div>
               </Grid>
           </Section>

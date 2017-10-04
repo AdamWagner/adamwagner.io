@@ -2,11 +2,19 @@
 @require '../styles/breakpoints'
 vars = json('./vars.json', {hash:true})
 mobile = vars.screens.mobile
+tablet = vars.screens.tablet
 
 .textSecondary
-  font-size: 85%
-  line-height: (1.5 / 0.85)
+  font-size: 85% 
+  // line-height: (1.5 / 0.85)
   color: lighten(vars.colors.asphalt, 20%)
+
+
+  +below(tablet)
+    font-size: 1.3125em * .85
+
+  +below(mobile)
+    font-size: 1.5em * .85
 
 
 .textSecondaryBold

@@ -70,6 +70,9 @@ h3
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  +below(mobile)
+    font-size: (1.33em / (1 / 1.3)) // adjust for html font size decrease
+
 dt
   font-weight: bold
 
@@ -143,8 +146,25 @@ ul, li
 
     font-family: vars.fonts.bold
     text-align: right
+
     +below(960px)
       text-align:left
+      margin-bottom: -0.75em
+
+      &.overview
+        margin-bottom: 0
+
+    +below(tablet)
+      font-size: (1.3125em * .85)
+
+    +below(mobile)
+      font-size: (1.5em *.85)
+
+  // this pulls the project detail list up to the first row
+  // in line with "overview"
+  .projectDetails
+    +below(960px)
+      margin-top: -1.5em
 
   .flush
     margin: 0

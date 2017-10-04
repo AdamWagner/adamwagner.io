@@ -247,7 +247,9 @@ class IndexPage extends React.Component {
             </div>
           </Section>
         </Waypoint>
-        <Footer/>
+        <Section chapterContent>
+          <Footer />
+        </Section>
       </div>
     );
   }

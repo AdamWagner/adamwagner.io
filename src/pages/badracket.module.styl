@@ -6,23 +6,12 @@ mobile = vars.screens.mobile
 
 
 
-.grayscale
-  filter: grayscale(100%);
-  opacity: 0.5
-  transition: filter .2s, opacity .2s
-
-  &:hover
-    filter: none
-    opacity: 1
-
-  +below(vars.screens.tablet)
-    filter: none
-    opacity: 1
-
 .processContainer
   position: relative
   overflow: hidden
   background-color: darken(vars.colors.asphalt, 30%)
+
+  @extend .textSecondary
 
   &:before
     content: ''
@@ -56,6 +45,7 @@ mobile = vars.screens.mobile
 
   +below(tablet)
     padding-bottom:3em
+    font-size: 75%
 
   p
     margin-bottom: 0.375em
@@ -68,8 +58,12 @@ mobile = vars.screens.mobile
   &:before
     content: ''
     position: absolute;
+    pointer-events: none
     width: 1em
     height: 1em
     background: white
     transform: rotate(45deg)
     top: -0.5em
+
+    +below(mobile)
+      font-size: (1em / 0.75)

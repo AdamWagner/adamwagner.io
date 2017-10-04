@@ -26,7 +26,7 @@ export default class Footer extends React.Component {
               <li>Dribbble</li>
             </ul>
 
-            <ul className={s.listHorizontal}>
+            <ul className={s.listHorizontal} style={{visibility:'hidden'}}>
               <li>
                 <Link to="/opentable/">OpenTable</Link>
               </li>

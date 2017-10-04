@@ -4,21 +4,6 @@ vars = json('./vars.json', {hash:true})
 tablet = vars.screens.tablet
 mobile = vars.screens.mobile
 
-
-
-.grayscale
-  filter: grayscale(100%);
-  opacity: 0.5
-  transition: filter .2s, opacity .2s
-
-  &:hover
-    filter: none
-    opacity: 1
-
-  +below(vars.screens.tablet)
-    filter: none
-    opacity: 1
-
 bgColor = darken(vars.colors.asphalt, 15%)
 
 .processContainer
@@ -54,6 +39,7 @@ bgColor = darken(vars.colors.asphalt, 15%)
 
   +below(tablet)
     padding-bottom:3em
+    font-size: 75%
 
   p
     margin-bottom: 0.375em
@@ -70,3 +56,5 @@ bgColor = darken(vars.colors.asphalt, 15%)
     padding-right: 0.75em
     background: bgColor
     top: -1em
+    +below(mobile)
+      font-size: (1em / 0.75)
