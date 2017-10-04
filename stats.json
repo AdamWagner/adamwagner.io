@@ -1,16 +1,16 @@
 {
   "assetsByChunkName": {
     "component---src-pages-badracket-js": [
-      "component---src-pages-badracket-js-ff3ffe13eb533968c4c4.js",
-      "component---src-pages-badracket-js-ff3ffe13eb533968c4c4.js.map"
+      "component---src-pages-badracket-js-94d6c6825dd19c00b0fa.js",
+      "component---src-pages-badracket-js-94d6c6825dd19c00b0fa.js.map"
     ],
     "path---copilot": [
       "path---copilot-a0e39f21c11f6a62c5ab.js",
       "path---copilot-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-6ef05dcf05cf9dabbc6c.js",
-      "component---src-pages-index-js-6ef05dcf05cf9dabbc6c.js.map"
+      "component---src-pages-index-js-031c196103f269329850.js",
+      "component---src-pages-index-js-031c196103f269329850.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -21,8 +21,8 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "component---src-pages-copilot-js": [
-      "component---src-pages-copilot-js-1c30d8ab491ed3585e23.js",
-      "component---src-pages-copilot-js-1c30d8ab491ed3585e23.js.map"
+      "component---src-pages-copilot-js-9dd22d59591cdc3c2e23.js",
+      "component---src-pages-copilot-js-9dd22d59591cdc3c2e23.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-7e2213b65252b8e6fc3f.js",
@@ -49,9 +49,9 @@
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js.map"
     ],
     "commons": [
-      "commons-1617b1d8f753e7a20ffd.js",
+      "commons-7acb093fc0bd9e8afbf0.js",
       "build-js-styles.css",
-      "commons-1617b1d8f753e7a20ffd.js.map",
+      "commons-7acb093fc0bd9e8afbf0.js.map",
       "build-js-styles.css.map"
     ],
     "path---404-html": [
@@ -59,8 +59,8 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-opentable-js": [
-      "component---src-pages-opentable-js-806b938a77d4edf37ad2.js",
-      "component---src-pages-opentable-js-806b938a77d4edf37ad2.js.map"
+      "component---src-pages-opentable-js-147d7a94331d8d6ddaad.js",
+      "component---src-pages-opentable-js-147d7a94331d8d6ddaad.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
