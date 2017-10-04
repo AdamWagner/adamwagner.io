@@ -19,7 +19,7 @@ import webMac01 from "./copilot-web-macbook.png";
 import mobileExplorations from "./copilot-mobile-explorations-2.jpg";
 import mobileDemo from "./copilot-video-mockup.mp4";
 import mobileFnlMock from "./copilot-mobile-fnl-1.jpg";
-import mobileFnl from "./mobile-final-3-up-2.jpg";
+import mobileFnl from "./mobile-final-3-up-3.jpg";
 
 class Copilot extends React.Component {
   render() {
