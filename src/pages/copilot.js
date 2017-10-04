@@ -145,8 +145,8 @@ class Copilot extends React.Component {
                   study I handled:
                 </p>
                 <ul className="arrow-list">
-                  <li>Workflows & product mapping</li>
-                  <li>User testing</li>
+                  <li>User research</li>
+                  <li>Workflow & product definition</li>
                   <li>Wireframing</li>
                   <li>Visual design</li>
                   <li>Frontend development</li>
@@ -403,7 +403,7 @@ class Copilot extends React.Component {
               </div>
               <GridItem centerTwo>
                 <h3 style={{ color: colors.copilotBlue }}>
-                  Redesigning Copilot to fit seemlessly into existing workflows
+                  Fitting seemlessly into existing workflows
                 </h3>
                 <p>
                   We wanted Copilot to be another of our user's essential haibts
@@ -461,7 +461,7 @@ class Copilot extends React.Component {
                 <p className="projectSectionMarker">Results</p>
               </div>
               <GridItem centerTwo>
-                <h3 style={{color:colors.copilotBlue}}>Key Results</h3>
+                <h3 style={{color:colors.copilotBlue}}>Engagement skyrocketed</h3>
                 <p>This time, the form factor and focus on notifications worked. Within a month, 80% of users
                 were engaging with the daily report <em>every day</em>.</p>
 
