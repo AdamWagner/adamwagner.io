@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-pages-badracket-js": [
-      "component---src-pages-badracket-js-94d6c6825dd19c00b0fa.js",
-      "component---src-pages-badracket-js-94d6c6825dd19c00b0fa.js.map"
+      "component---src-pages-badracket-js-8508f281a23161593b52.js",
+      "component---src-pages-badracket-js-8508f281a23161593b52.js.map"
     ],
     "path---copilot": [
       "path---copilot-a0e39f21c11f6a62c5ab.js",
@@ -21,8 +21,8 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "component---src-pages-copilot-js": [
-      "component---src-pages-copilot-js-9dd22d59591cdc3c2e23.js",
-      "component---src-pages-copilot-js-9dd22d59591cdc3c2e23.js.map"
+      "component---src-pages-copilot-js-9c257c566b2e9b41b8a2.js",
+      "component---src-pages-copilot-js-9c257c566b2e9b41b8a2.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-7e2213b65252b8e6fc3f.js",
@@ -49,9 +49,9 @@
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js.map"
     ],
     "commons": [
-      "commons-7acb093fc0bd9e8afbf0.js",
+      "commons-c4e08a749058b1cf423b.js",
       "build-js-styles.css",
-      "commons-7acb093fc0bd9e8afbf0.js.map",
+      "commons-c4e08a749058b1cf423b.js.map",
       "build-js-styles.css.map"
     ],
     "path---404-html": [
@@ -59,8 +59,8 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-opentable-js": [
-      "component---src-pages-opentable-js-147d7a94331d8d6ddaad.js",
-      "component---src-pages-opentable-js-147d7a94331d8d6ddaad.js.map"
+      "component---src-pages-opentable-js-6c96bd81b08c5caf7106.js",
+      "component---src-pages-opentable-js-6c96bd81b08c5caf7106.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
