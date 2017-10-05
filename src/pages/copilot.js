@@ -207,8 +207,7 @@ class Copilot extends React.Component {
             <Grid style={{ marginBottom: "6em" }}>
               <GridItem centerTwo>
                 <p>
-                  {" "}
-                  <strong>Takeaways</strong>{" "}
+                  <strong>Takeaways</strong>
                 </p>
                 <ol>
                   <li className="multi-line">
@@ -392,17 +391,16 @@ class Copilot extends React.Component {
                 <h3 style={{ color: colors.copilotBlue }}>
                   Fitting seamlessly into existing workflows
                 </h3>
+                <p>The best way to get embedded in our users' chaotic workflows was by being <strong>in their pockets.</strong> The redesign would be mobile-first.</p>
                 <p>
-                  ##TODO: reference mobile here
-                  We wanted Copilot to be another of our user's essential habits
-                  - akin to their morning cup of coffee or pre-shift staff
+                  We wanted Copilot to become an essential habit
+                  - akin to the morning cup of coffee or pre-shift staff
                   meeting. To establish this habit, Copilot needed to:
                 </p>
 
                 <ul className="arrow-list" style={{ marginBottom: "1.5em" }}>
-                  <li className="multi-line">
-                    Remind users that a fresh version of Copilot's Daily Report
-                    was ready
+                  <li>
+                    Notify users that a fresh Copilot Daily Report was ready
                   </li>
                   <li>
                     Be easily accessible in our users' chaotic environments
