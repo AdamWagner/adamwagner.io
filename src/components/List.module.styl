@@ -7,13 +7,17 @@ mobile = vars.screens.mobile
 .unstyledList
   margin: 0 0 1.5em 0
   padding: 0
+  white-space: nowrap;
+
+  &.multiline li
+    margin-bottom: 0.75em
+
 
   li
     list-style: none
     opacity: 0.7
     font-size: 85%
     line-height: (1.5 / 0.85) // to keep on baseline
-    white-space: nowrap;
 
     +below(tablet)
       font-size: 1.3125em * .85

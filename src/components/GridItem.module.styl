@@ -23,6 +23,10 @@ tablet = vars.screens.tablet
 .leftOne
   grid-column: 1 / span 1
 
+.leftTwo
+  grid-column: 2 / span 1
+  +below(960px)
+    grid-column: 1 / span 1
 
 .leftThree
   grid-column: 1 / span 3
@@ -35,8 +39,3 @@ tablet = vars.screens.tablet
 
   +below(960px)
     grid-column: auto
-
-.leftTwo
-  grid-column: 2 / span 1
-  +below(960px)
-    grid-column: 1 / span 1

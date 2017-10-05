@@ -5,8 +5,8 @@ import Box from "../components/Box";
 import List from "../components/List";
 import Section from "../components/Section";
 import ProjectDetail from "../components/ProjectDetail";
-import Grid from "../components/Grid"
-import GridItem from "../components/GridItem"
+import Grid from "../components/Grid";
+import GridItem from "../components/GridItem";
 
 import { colors } from "../styles/vars.json";
 import s from "./copilot.module.styl";
@@ -26,19 +26,8 @@ class Copilot extends React.Component {
     return (
       <ProjectDetail projectName="copilot">
         <div ref="content">
-
-        {/*
-          <Grid style={{position:'fixed', opacity: 0.1, top: 0, left:'10vw', height:'100vh', right:'10vw'}}>
-            <div style={{height:'100vh', background: 'blue'}}></div>
-            <div style={{height:'100vh', background: 'yellow'}}></div>
-            <div style={{height:'100vh', background: 'red'}}></div>
-            <div style={{height:'100vh', background: 'orange'}}></div>
-          </Grid> */}
-
-
           <Section reverse>
             <Grid>
-
               <GridItem leftThree>
                 <h1>
                   Finding product/market fit for restaurant revenue management
@@ -46,24 +35,33 @@ class Copilot extends React.Component {
                 </h1>
               </GridItem>
 
-              <div style={{gridColumn: '1 / span 2', height: '6.666px', background:'rgba(255,255,255,0.5)'}} />
+              <div
+                style={{
+                  gridColumn: "1 / span 2",
+                  height: "6.666px",
+                  background: "rgba(255,255,255,0.5)"
+                }}
+              />
 
-              <br/>
-              <br/>
-
+              <br />
+              <br />
 
               <GridItem leftOne className="hideMobile overview">
-                <p className="projectSectionMarker" style={{textAlign:'left'}}>Overview</p>
+                <p
+                  className="projectSectionMarker"
+                  style={{ textAlign: "left" }}
+                >
+                  Overview
+                </p>
               </GridItem>
 
-              <GridItem centerTwo style={{marginBottom:'1.5em'}}>
+              <GridItem centerTwo style={{ marginBottom: "1.5em" }}>
                 <p>
-                  I led product design at Copilot as we strove to find product/market fit.
-                  Our proprietary ability to
-                  process and distribute data from leading Point of
-                  Sale systems gave Copilot the unique ability to provide
-                  enterprise-level business insight to independent
-                  restaurants.
+                  I led product design at Copilot as we strove to find
+                  product/market fit. Our proprietary ability to process and
+                  distribute data from leading Point of Sale systems gave
+                  Copilot the unique ability to provide enterprise-level
+                  business insight to independent restaurants.
                 </p>
 
                 <p>
@@ -75,8 +73,7 @@ class Copilot extends React.Component {
                 <p>
                   After several iterations,{" "}
                   <strong>
-                    80% of our customers engaged with Copilot insights every
-                    day
+                    80% of our customers engaged with Copilot insights every day
                   </strong>.
                 </p>
               </GridItem>
@@ -95,54 +92,49 @@ class Copilot extends React.Component {
                   ]}
                 />
               </GridItem>
-
-
             </Grid>
           </Section>
-
 
           <Section contain className={s.processContainer}>
             <Grid>
-                <div className={s.processItem} date="Fall 2012">
-                  <p>Discovery & analysis</p>
-                  <p>User research</p>
-                  <p>Focus on an approach</p>
-                </div>
-                <div className={s.processItem} date="Winter 2013">
-                  <p>Define the product</p>
-                  <p>Prioritize features</p>
-                  <p>Wireframe IA & UX</p>
-                  <p>Simplify visuals</p>
-                  <p>Learn from failure</p>
-                </div>
-                <div className={s.processItem} date="Spring 2013">
-                  <p>Redesign to fit existing workflows</p>
-                  <p>Simplify more for mobile </p>
-                  <p>Establish habit</p>
-                </div>
-                <div className={s.processItem} date="Fall 2013">
-                  <p>Results</p>
-                  <p>80% daily engagement</p>
-                  <p>74% consider it essential</p>
-                </div>
+              <div className={s.processItem} date="Fall 2012">
+                <p>Discovery & analysis</p>
+                <p>User research</p>
+                <p>Focus on an approach</p>
+              </div>
+              <div className={s.processItem} date="Winter 2013">
+                <p>Define the product</p>
+                <p>Prioritize features</p>
+                <p>Wireframe IA & UX</p>
+                <p>Simplify visuals</p>
+                <p>Learn from failure</p>
+              </div>
+              <div className={s.processItem} date="Spring 2013">
+                <p>Redesign to fit existing workflows</p>
+                <p>Simplify more for mobile </p>
+                <p>Establish habit</p>
+              </div>
+              <div className={s.processItem} date="Fall 2013">
+                <p>Results</p>
+                <p>80% daily engagement</p>
+                <p>74% consider it essential</p>
+              </div>
             </Grid>
-
           </Section>
 
-          <Section color={colors.white} style={{paddingBottom:0}}>
-
-            <Grid style={{marginBottom: '4.5em'}}>
+          <Section color={colors.white} style={{ paddingBottom: 0 }}>
+            <Grid style={{ marginBottom: "4.5em" }}>
               <GridItem leftOne className="hideMobile">
-                  <p className="projectSectionMarker">Background</p>
+                <p className="projectSectionMarker">Background</p>
               </GridItem>
 
               <GridItem centerTwo>
                 <h3 style={{ color: colors.copilotBlue }}>My involvement</h3>
                 <p>
-                  As Copilot's only designer, I did <em>many</em>{" "}
-                  things, including product marketing, front-end development,
-                  and product analysis. Within the scope of this case
-                  study I handled:
+                  As Copilot's only designer, I did <em>many</em> things,
+                  including product marketing, front-end development, and
+                  product analysis. Within the scope of this case study I
+                  handled:
                 </p>
                 <ul className="arrow-list">
                   <li>User research</li>
@@ -155,7 +147,6 @@ class Copilot extends React.Component {
             </Grid>
 
             <Grid>
-
               <GridItem leftOne className="hideMobile">
                 <p className="projectSectionMarker">Background</p>
               </GridItem>
@@ -180,34 +171,27 @@ class Copilot extends React.Component {
                 </p>
               </GridItem>
             </Grid>
-
-
           </Section>
 
-          <Section color={colors.white} style={{paddingBottom:0}}>
-
-
+          <Section color={colors.white} style={{ paddingBottom: 0 }}>
             {/* Horizontal rule */}
-            <div style={{
-              width: '66vw',
-              height: '0.1875em',
-              margin: '0 auto 4.5em',
-              background: colors.concrete,
-              opacity: 0.66
-            }}>
+            <div
+              style={{
+                width: "66vw",
+                height: "0.1875em",
+                margin: "0 auto 4.5em",
+                background: colors.concrete,
+                opacity: 0.66
+              }}
+            />
 
-            </div>
-
-            <Grid style={{marginBottom:'3em'}}>
-
+            <Grid style={{ marginBottom: "3em" }}>
               <GridItem leftOne className="hideMobile">
                 <p className="projectSectionMarker">Discovery</p>
               </GridItem>
 
               <GridItem centerTwo>
-                <h3 style={{ color: colors.copilotBlue }}>
-                  Customer insights
-                </h3>
+                <h3 style={{ color: colors.copilotBlue }}>Customer insights</h3>
                 <p>
                   I spoke with dozens of restaurant owners and general managers
                   to learn how they think about their business, how they spend
@@ -216,13 +200,14 @@ class Copilot extends React.Component {
               </GridItem>
             </Grid>
 
-            <img src={interviewSketch} alt="" style={{marginBottom: '3em'}}/>
+            <img src={interviewSketch} alt="" style={{ marginBottom: "3em" }} />
 
-
-            <Grid style={{marginBottom:'6em'}}>
-
+            <Grid style={{ marginBottom: "6em" }}>
               <GridItem centerTwo>
-                <p> <strong>Takeaways</strong> </p>
+                <p>
+                  {" "}
+                  <strong>Takeaways</strong>{" "}
+                </p>
                 <ul className="arrow-list">
                   <li className="multi-line">
                     1. Restaurant owners <em>want</em> to put more effort into
@@ -231,20 +216,19 @@ class Copilot extends React.Component {
                     the majority that don't have a good excuse.
                   </li>
                   <li className="multi-line">
-                    2. Restaurant owners don’t have time to dig into the details.
-                    They need simple, actionable answers.
+                    2. Restaurant owners don’t have time to dig into the
+                    details. They need simple, actionable answers.
                   </li>
                   <li className="multi-line">
                     3. Also, they’re skeptical of data that conflicts with their
-                    instincts (which is often the case). Copilot must
-                    generate trust without overbearing detail.
+                    instincts (which is often the case). Copilot must generate
+                    trust without overbearing detail.
                   </li>
                 </ul>
-            </GridItem>
+              </GridItem>
             </Grid>
 
-            <Grid style={{marginBottom:'3em'}}>
-
+            <Grid style={{ marginBottom: "3em" }}>
               <GridItem leftOne className="hideMobile">
                 <p className="projectSectionMarker">Discovery</p>
               </GridItem>
@@ -262,7 +246,7 @@ class Copilot extends React.Component {
 
             <img
               src={focusSketch}
-              style={{ mixBlendMode: "multiply", marginBottom: '3em' }}
+              style={{ mixBlendMode: "multiply", marginBottom: "3em" }}
               alt=""
             />
 
@@ -277,72 +261,76 @@ class Copilot extends React.Component {
                 </p>
               </GridItem>
             </Grid>
-
           </Section>
-
 
           <Section color={colors.white}>
             {/* Horizontal rule */}
-            <div style={{
-              width: '66vw',
-              height: '0.1875em',
-              margin: '0 auto 4.5em',
-              background: colors.concrete,
-              opacity: 0.66
-            }}/>
+            <div
+              style={{
+                width: "66vw",
+                height: "0.1875em",
+                margin: "0 auto 4.5em",
+                background: colors.concrete,
+                opacity: 0.66
+              }}
+            />
             <Grid>
               {/* <GridItem leftOne className="hideMobile">
                 <p className="projectSectionMarker">Defining the product</p>
               </GridItem> */}
-                <GridItem centerTwo>
-                  <h3 style={{ color: colors.copilotBlue }}>
-                    Prioritizing functionality
-                  </h3>
-                  <p>Beta users helped prioritize features via card sorting —
-                  a research activity in which users categorize features and
-                  make tough prioritization decisions. </p>
-                </GridItem>
-                <GridItem full>
-                  <img style={{gridColumn: "1 / span 4"}} src={cardSort} alt=""/>
-                </GridItem>
+              <GridItem centerTwo>
+                <h3 style={{ color: colors.copilotBlue }}>
+                  Prioritizing functionality
+                </h3>
+                <p>
+                  Beta users helped prioritize features via card sorting — a
+                  research activity in which users categorize features and make
+                  tough prioritization decisions.{" "}
+                </p>
+              </GridItem>
+              <GridItem full>
+                <img
+                  style={{ gridColumn: "1 / span 4" }}
+                  src={cardSort}
+                  alt=""
+                />
+              </GridItem>
             </Grid>
           </Section>
 
-
-
           <Section color={colors.offWhite}>
             <Grid>
-                <div leftOne className="hideMobile">
-                  <p className="projectSectionMarker">Defining the product</p>
-                </div>
-                <GridItem centerTwo>
-                  <h3 style={{ color: colors.copilotBlue }}>
-                    Wireframing IA & UX
-                  </h3>
-                  <p>
-                    In the rare cases users
-                    engaged with data, they did so on the big screen — the POS. Card sorting
-                    revealed keen interest in powerful data analysis features such as
-                    forecasting, benchmarks, and filtering.
-                  </p>
-                  <p>
-                    Power functionality desired the space and form-factor of the
-                    web, so I started there.
-                  </p>
-                </GridItem>
+              <div leftOne className="hideMobile">
+                <p className="projectSectionMarker">Defining the product</p>
+              </div>
+              <GridItem centerTwo>
+                <h3 style={{ color: colors.copilotBlue }}>
+                  Wireframing IA & UX
+                </h3>
+                <p>
+                  In the rare cases users engaged with data, they did so on the
+                  big screen — the POS. Card sorting revealed keen interest in
+                  powerful data analysis features such as forecasting,
+                  benchmarks, and filtering.
+                </p>
+                <p>
+                  Power functionality desired the space and form-factor of the
+                  web, so I started there.
+                </p>
+              </GridItem>
             </Grid>
 
             <img src={wireframe} alt="" m />
 
             <Grid>
-              <div style={{gridColumn: '2 / span 2'}}>
+              <div style={{ gridColumn: "2 / span 2" }}>
                 <p>
-                  While testing the wireframes, users were confused by how forecasts were calculated. They were more comfortable using
+                  While testing the wireframes, users were confused by how
+                  forecasts were calculated. They were more comfortable using
                   historical benchmarks for forecasting.
                 </p>
               </div>
             </Grid>
-
           </Section>
 
           <Section reverse color={colors.copilotBlue}>
@@ -354,14 +342,14 @@ class Copilot extends React.Component {
                 <h3>Simplifying the UX</h3>
                 <p>
                   During visual design I simplified the layout and evolved the
-                  forecast model into a flexible benchmark model. Benchmarks were
-                  more familiar to users and retained most of the value of a forecast.
+                  forecast model into a flexible benchmark model. Benchmarks
+                  were more familiar to users and retained most of the value of
+                  a forecast.
                 </p>
               </GridItem>
             </Grid>
 
             <img src={webMac01} alt="" />
-
           </Section>
 
           <Section color={colors.white}>
@@ -370,9 +358,7 @@ class Copilot extends React.Component {
                 <p className="projectSectionMarker">Defining the product</p>
               </div>
               <GridItem centerTwo>
-                <h3 style={{ color: colors.copilotBlue }}>
-                  Launch & failure
-                </h3>
+                <h3 style={{ color: colors.copilotBlue }}>Launch & failure</h3>
                 <p>
                   Once launched, <strong>not a single user</strong> logged in.
                   We designed and built Copilot's web product hand-in-hand with
@@ -396,8 +382,8 @@ class Copilot extends React.Component {
             </Grid>
           </Section>
 
-          <Section color={colors.offWhite} style={{paddingBottom:'2em'}}>
-            <Grid style={{marginBottom: '3em'}}>
+          <Section color={colors.offWhite} style={{ paddingBottom: "2em" }}>
+            <Grid style={{ marginBottom: "3em" }}>
               <div leftOne className="hideMobile">
                 <p className="projectSectionMarker">Redesign</p>
               </div>
@@ -408,38 +394,52 @@ class Copilot extends React.Component {
                 <p>
                   We wanted Copilot to be another of our user's essential haibts
                   - akin to their morning cup of coffee or pre-shift staff
-                  meeting.
+                  meeting. To establish this habit, Copilot needed to:
                 </p>
-                <p>To establish this habit, Copilot needed to:</p>
-                <ul className="arrow-list" style={{marginBottom:'1.5em'}}>
+
+                <ul className="arrow-list" style={{ marginBottom: "1.5em" }}>
                   <li className="multi-line">
-                    Remind users that a fresh version of Copilot's Daily Report was ready
+                    Remind users that a fresh version of Copilot's Daily Report
+                    was ready
                   </li>
-                  <li>Be easily accessible in our users' chaotic environments</li>
+                  <li>
+                    Be easily accessible in our users' chaotic environments
+                  </li>
                 </ul>
                 <p> I needed to simplify further.</p>
               </GridItem>
             </Grid>
 
-            <img src={mobileExplorations} alt="" style={{maxWidth: '1200px', margin:'auto', marginBottom:'3em'}}/>
+            <img
+              src={mobileExplorations}
+              alt=""
+              style={{
+                maxWidth: "1200px",
+                margin: "auto",
+                marginBottom: "3em"
+              }}
+            />
 
             <Grid>
               <GridItem centerTwo>
                 <p>
                   In parallel, I continued to discover the compelling power of
                   benchmarking. Comparing current performance to the past was
-                  interesting, but it was even <em>more</em> interesting to compare the
-                  daily performance of a single location to that of a{" "}
-                  <em>group of its peers</em>.
+                  interesting, but it was even <em>more</em> interesting to
+                  compare the daily performance of a single location to that of
+                  a <em>group of its peers</em>.
                 </p>
-                <p>Another key change the focus on push notifications. At 10am sharp, Copilot would notify
-                users that their daily report was ready to review.</p>
+                <p>
+                  Another key change the focus on push notifications. At 10am
+                  sharp, Copilot would notify users that their daily report was
+                  ready to review.
+                </p>
               </GridItem>
             </Grid>
           </Section>
 
-          <img src={mobileFnlMock} alt=""/>
-          <img src={mobileFnl} alt=""/>
+          <img src={mobileFnlMock} alt="" />
+          <img src={mobileFnl} alt="" />
 
           <video
             autoPlay
@@ -461,22 +461,23 @@ class Copilot extends React.Component {
                 <p className="projectSectionMarker">Results</p>
               </div>
               <GridItem centerTwo>
-                <h3 style={{color:colors.copilotBlue}}>Engagement skyrocketed</h3>
-                <p>This time, the form factor and focus on notifications worked. Within a month, 80% of users
-                were engaging with the daily report <em>every day</em>.</p>
+                <h3 style={{ color: colors.copilotBlue }}>
+                  Engagement skyrocketed
+                </h3>
+                <p>
+                  This time, the form factor and focus on notifications worked.
+                  Within a month, 80% of users were engaging with the daily
+                  report <em>every day</em>.
+                </p>
 
                 <p>
-                  Peer group benchmarks proved especially compelling. Customers now considered
-                  Copilot an essential part of running their business.
+                  Peer group benchmarks proved especially compelling. Customers
+                  now considered Copilot an essential part of running their
+                  business.
                 </p>
               </GridItem>
             </Grid>
           </Section>
-
-
-
-
-
         </div>
       </ProjectDetail>
     );

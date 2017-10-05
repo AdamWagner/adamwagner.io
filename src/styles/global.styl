@@ -73,6 +73,13 @@ h3
   +below(mobile)
     font-size: (1.33em / (1 / 1.3)) // adjust for html font size decrease
 
+h4
+  font-size: 1em
+  margin-bottom: 0.75em
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
 dt
   font-weight: bold
 
@@ -133,6 +140,26 @@ ul, li
 
 
 
+ol
+  margin: 0 0 0.75em 0
+  padding: 0
+  counter-reset: counter
+
+  +below(tablet)
+    padding-left: 3em
+
+  li:before
+    content: counter(counter)
+    counter-increment: counter
+    font-size: 85%
+    display: inline-block
+    position: relative
+    width: 0
+    left: -1.5em
+    color: vars.colors.copilotBlue
+
+
+
 :global
   .smallCaps
     font-size: 75%
@@ -173,6 +200,10 @@ ul, li
     +below(mobile)
       display:none
 
+  ul, ol
+    &.multi-line li
+      margin-bottom:0.75em
+
   .arrow-list
     +below(tablet)
       padding-left: 3em
@@ -185,6 +216,3 @@ ul, li
         width: 0
         left: -1.5em
         color: vars.colors.copilotBlue
-
-      &.multi-line
-        margin-bottom:0.75em

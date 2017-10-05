@@ -1,0 +1,103 @@
+@require '../styles/text'
+@require '../styles/breakpoints'
+vars = json('./vars.json', {hash:true})
+tablet = vars.screens.tablet
+mobile = vars.screens.mobile
+
+bgColor = darken(vars.colors.asphalt, 15%)
+
+.processContainer
+  position: relative
+  overflow: hidden
+  background-color: bgColor
+  color:lighten(vars.colors.asphalt, 25%)
+
+  @extend .textSecondary
+
+  &:before
+    content: ''
+    // background-image: url('./brv5-final-desktop-mockup.jpg')
+    filter: grayscale()
+    opacity: 0.05
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background-position: center
+    transform: rotate(10deg) scale(2)
+
+    +below(vars.screens.tablet)
+      filter: none // don't grayscale images
+
+.processItem
+  padding-top: 2em
+  padding-right: 1em
+  min-width: 150px
+  border-top: solid 0.1875em lighten(vars.colors.asphalt, 8%)
+  position:relative;
+
+  +below(tablet)
+    padding-bottom:3em
+    font-size: 75%
+
+  p
+    margin-bottom: 0.375em
+
+    &:first-child
+      text-transform: uppercase
+      font-family: vars.fonts.bold
+      color: vars.colors.concrete
+
+  &:before
+    content: attr(date)
+    position: absolute;
+    pointer-events: none
+    padding-right: 0.75em
+    background: bgColor
+    top: -1em
+    +below(mobile)
+      font-size: (1em / 0.75)
+
+
+.researchQuote
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  height: 50vw
+  padding: 0 5vw 0
+
+  margin-bottom: 3em
+
+  background-image: url('./opentable-research-bg.jpg')
+  background-size: cover
+  background-position: center
+
+  &:after, &:before
+    content: ''
+    display: block
+    padding-bottom: 50%
+    background: hsla(211,40,20, 0.7)
+    z-index: 10
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+
+  &:after
+    opacity: 0.2
+    mix-blend-mode: multiply
+
+  p
+    z-index: 200
+    text-align: center
+    font-size: 3.5vw
+    color: white
+
+    +below(mobile)
+      font-size: 4vw
+
+    font-family: Lora, serif
+    font-style: italic

@@ -9,7 +9,7 @@ an array of objects containing a name and an href
 
 export default class List extends React.Component {
   render() {
-    let {title, items} = this.props
+    let {title, items, style, multiline} = this.props
 
     let listItems = items.map((i, idx) => {
       if (typeof i == 'string') {
@@ -19,8 +19,10 @@ export default class List extends React.Component {
       }
     })
 
+    let mlClass = multiline ? s.multiline : ''
+
     return (
-      <ul className={s.unstyledList}>
+      <ul className={[s.unstyledList, mlClass].join(' ')} style={style}>
         <li className={s.title}>{title}</li>
         {listItems}
       </ul>
