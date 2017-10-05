@@ -276,7 +276,7 @@ class Copilot extends React.Component {
             />
             <Grid>
               {/* <GridItem leftOne className="hideMobile">
-                <p className="projectSectionMarker">Defining the product</p>
+                <p className="projectSectionMarker">Product design</p>
               </GridItem> */}
               <GridItem centerTwo>
                 <h3 style={{ color: colors.copilotBlue }}>
@@ -301,7 +301,7 @@ class Copilot extends React.Component {
           <Section color={colors.offWhite}>
             <Grid>
               <div leftOne className="hideMobile">
-                <p className="projectSectionMarker">Defining the product</p>
+                <p className="projectSectionMarker">Product design</p>
               </div>
               <GridItem centerTwo>
                 <h3 style={{ color: colors.copilotBlue }}>
@@ -336,7 +336,7 @@ class Copilot extends React.Component {
           <Section reverse color={colors.copilotBlue}>
             <Grid>
               <div leftOne className="hideMobile">
-                <p className="projectSectionMarker">Defining the product</p>
+                <p className="projectSectionMarker">Product design</p>
               </div>
               <GridItem centerTwo>
                 <h3>Simplifying the UX</h3>
@@ -355,7 +355,7 @@ class Copilot extends React.Component {
           <Section color={colors.white}>
             <Grid>
               <div leftOne className="hideMobile">
-                <p className="projectSectionMarker">Defining the product</p>
+                <p className="projectSectionMarker">Product design</p>
               </div>
               <GridItem centerTwo>
                 <h3 style={{ color: colors.copilotBlue }}>Launch & failure</h3>
