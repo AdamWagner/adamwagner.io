@@ -97,24 +97,26 @@ class Copilot extends React.Component {
 
           <Section contain className={s.processContainer}>
             <Grid>
-              <div className={s.processItem} date="Fall 2012">
+              <div className={s.processItem} date="Q4 2012">
                 <p>Discovery & analysis</p>
                 <p>User research</p>
                 <p>Focus on an approach</p>
               </div>
-              <div className={s.processItem} date="Winter 2013">
+            <div className={s.processItem} date="Q1 2013">
                 <p>Define the product</p>
                 <p>Prioritize features</p>
                 <p>Wireframe IA & UX</p>
                 <p>Simplify visuals</p>
                 <p>Learn from failure</p>
               </div>
-              <div className={s.processItem} date="Spring 2013">
+              <div className={s.processItem} date="Q2 2013">
                 <p>Redesign to fit existing workflows</p>
                 <p>Simplify more for mobile </p>
                 <p>Establish habit</p>
               </div>
-              <div className={s.processItem} date="Fall 2013">
+
+              {/* Find a way to make results stand out more */}
+              <div className={s.processItem} date="Q3 2013">
                 <p>Results</p>
                 <p>80% daily engagement</p>
                 <p>74% consider it essential</p>
@@ -141,7 +143,7 @@ class Copilot extends React.Component {
                   <li>Workflow & product definition</li>
                   <li>Wireframing</li>
                   <li>Visual design</li>
-                  <li>Frontend development</li>
+                  <li>Front-end development</li>
                 </ul>
               </GridItem>
             </Grid>
@@ -208,23 +210,22 @@ class Copilot extends React.Component {
                   {" "}
                   <strong>Takeaways</strong>{" "}
                 </p>
-                <ul className="arrow-list">
+                <ol>
                   <li className="multi-line">
-                    1. Restaurant owners <em>want</em> to put more effort into
-                    analyzing business performance data, but don’t. It’s like
-                    working out - everybody wants to, few actually do it, and
-                    the majority that don't have a good excuse.
+                    Restaurant owners <em>want</em> to put more effort into
+                    analyzing business performance data, but aren't able due to distractions and time constraints.
+                    It’s like going to the gym - despite good intentions, it's rare.
                   </li>
                   <li className="multi-line">
-                    2. Restaurant owners don’t have time to dig into the
+                    When users do engage with data, they don't want to dig into the
                     details. They need simple, actionable answers.
                   </li>
                   <li className="multi-line">
-                    3. Also, they’re skeptical of data that conflicts with their
+                    Also, they’re skeptical of data that conflicts with their
                     instincts (which is often the case). Copilot must generate
                     trust without overbearing detail.
                   </li>
-                </ul>
+                </ol>
               </GridItem>
             </Grid>
 
@@ -238,7 +239,7 @@ class Copilot extends React.Component {
                   Focusing on an approach
                 </h3>
                 <p>
-                  Copilot existed to fascilitate quality decision-making for
+                  Copilot existed to facilitate quality decision-making for
                   high-impact activities that our users were neglecting.
                 </p>
               </GridItem>
@@ -323,13 +324,13 @@ class Copilot extends React.Component {
             <img src={wireframe} alt="" m />
 
             <Grid>
-              <div style={{ gridColumn: "2 / span 2" }}>
+              <GridItem centerTwo>
                 <p>
                   While testing the wireframes, users were confused by how
                   forecasts were calculated. They were more comfortable using
                   historical benchmarks for forecasting.
                 </p>
-              </div>
+            </GridItem>
             </Grid>
           </Section>
 
@@ -375,7 +376,7 @@ class Copilot extends React.Component {
                 <p>
                   Recall that our target users have neither the time nor the
                   impulse to log into a web app. They're not even in front of a
-                  computer for much of the day. Copilot needed to fit seemlessly
+                  computer for much of the day. Copilot needed to fit seamlessly
                   into their existing workflow.
                 </p>
               </GridItem>
@@ -389,10 +390,11 @@ class Copilot extends React.Component {
               </div>
               <GridItem centerTwo>
                 <h3 style={{ color: colors.copilotBlue }}>
-                  Fitting seemlessly into existing workflows
+                  Fitting seamlessly into existing workflows
                 </h3>
                 <p>
-                  We wanted Copilot to be another of our user's essential haibts
+                  ##TODO: reference mobile here
+                  We wanted Copilot to be another of our user's essential habits
                   - akin to their morning cup of coffee or pre-shift staff
                   meeting. To establish this habit, Copilot needed to:
                 </p>

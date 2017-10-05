@@ -4,6 +4,11 @@
 - Should be able to read the case study by reading the headers *only*
 - Put SJL hero image on a laptop. Otherwise feels too repetitive.
 
+# Amy's notes after redesign
+- Most notes are included in Copilot case study
+- Be sure to paste everything into google docs to spell-check
+- Change footer text links to icons
+
 
 
 # Detail Page
@@ -41,6 +46,10 @@ x Copilot case study
 
 # CASE STUDIES
 - OpenTable case study
+  - Background sections
+  - Launch section
+
+
 - Sounds Just Like case study
 - Customer360 case study
 
@@ -54,6 +63,7 @@ x Copilot case study
 x Typography styles. Try https://kyleamathews.github.io/typography.js/
 - Redesign "Process" graphic on Bad Racket to avoid copying Peter Tait.
 - Footer cleanup + home page styling. Watch out for page link visibility breaking pre-loading.
+- Favicon
 
 # CONTENT
 - Contact section

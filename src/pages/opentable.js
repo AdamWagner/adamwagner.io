@@ -18,6 +18,8 @@ import heroAlt from "./opentable-hero-alt.jpg";
 import tcSetup from "./opentable-tc-setup.png";
 import tcHost from "./opentable-tc-host.png";
 
+import reporting01 from "./opentable-reporting-1.jpg";
+
 import focusSketch from "./copilot-sketch-focus2.jpg";
 import cardSort from "./copilot-card-sort.jpg";
 import wireframe from "./copilot-web-wireframe.jpg";
@@ -61,26 +63,9 @@ class OpenTable extends React.Component {
               </GridItem>
 
               <GridItem centerTwo style={{ marginBottom: "1.5em" }}>
-                <p>
-                  I led product design at Copilot as we strove to find
-                  product/market fit. Our proprietary ability to process and
-                  distribute data from leading Point of Sale systems gave
-                  Copilot the unique ability to provide enterprise-level
-                  business insight to independent restaurants.
-                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam soluta sit consequatur. Ullam quisquam ipsum, aliquam soluta consequuntur, error commodi quae, ipsam at repellendus, dolorum ut dolores eaque impedit saepe?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam soluta sit consequatur. Ullam quisquam ipsum, aliquam soluta consequuntur, error commodi quae, ipsam at repellendus, dolorum ut dolores eaque impedit saepe?</p>
 
-                <p>
-                  We dramatically simplified the delivery of actionable
-                  insights, focusing on timely push content rather a power
-                  dashboard.
-                </p>
-
-                <p>
-                  After several iterations,{" "}
-                  <strong>
-                    80% of our customers engaged with Copilot insights every day
-                  </strong>.
-                </p>
               </GridItem>
 
               <GridItem rightOne className="hideMobile projectDetails">
@@ -92,26 +77,26 @@ class OpenTable extends React.Component {
 
           <Section contain className={s.processContainer}>
             <Grid>
-              <div className={s.processItem} date="Fall 2015">
+              <div className={s.processItem} date="Q4 2015">
                 <p>Discovery & analysis</p>
                 <p>User research</p>
                 <p>Analysis</p>
               </div>
-              <div className={s.processItem} date="Winter 2016">
+              <div className={s.processItem} date="Q1 2016">
                 <p>Product design</p>
                 <p>Determine table types</p>
                 <p>The 'outdoor' debate</p>
                 <p>Guest experience</p>
                 <p>Restaurant experience</p>
               </div>
-              <div className={s.processItem} date="Spring 2016">
+              <div className={s.processItem} date="Q2 2016">
                 <p>Launch</p>
                 <p>Strategy</p>
                 <p>Featured collections</p>
                 <p>Internal reporting dashboard</p>
                 <p>Press</p>
               </div>
-              <div className={s.processItem} date="Fall 2016">
+              <div className={s.processItem} date="Q3 2016">
                 <p>Results</p>
                 <p>Qualitative</p>
                 <p>Quantitative</p>
@@ -127,7 +112,8 @@ class OpenTable extends React.Component {
 
               <GridItem centerTwo>
                 <h3 style={{ color: colors.red }}>My involvement</h3>
-                <p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ipsum facere consectetur aliquid nihil consequuntur impedit eaque earum quis, odit sapiente cupiditate atque perferendis explicabo iusto iste beatae expedita ex?</p>
+                {/* <p>
                   As Copilot's only designer, I did <em>many</em> things,
                   including product marketing, front-end development, and
                   product analysis. Within the scope of this case study I
@@ -139,7 +125,7 @@ class OpenTable extends React.Component {
                   <li>Wireframing</li>
                   <li>Visual design</li>
                   <li>Frontend development</li>
-                </ul>
+                </ul> */}
               </GridItem>
             </Grid>
 
@@ -149,23 +135,8 @@ class OpenTable extends React.Component {
               </GridItem>
 
               <GridItem centerTwo>
-                <h3 style={{ color: colors.red }}>Audience</h3>
-                <p>
-                  Copilot’s target user is the decision-maker - typically the{" "}
-                  <strong>owner </strong>or <strong>general manager</strong> -
-                  at an independent restaurant or small restaurant group.
-                </p>
-                <p>
-                  Restaurant decision-makers want to put as many “butts in
-                  seats” as possible while maintaining smooth operations, high
-                  staff morale, and delivering great hospitality.
-                </p>
-                <p>
-                  They juggle many areas of concern. They’re distracted, often
-                  focused on the problem that’s most pressing <em>right now</em>.
-                  There’s little time left to carefully consider decisions
-                  affecting the bottom line of their business.
-                </p>
+                <h3 style={{ color: colors.red }}>Problem & Opportunity</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam tempora dolorum voluptas. Necessitatibus officia dolorum error dolorem laborum id, incidunt culpa, dicta nostrum placeat a consequatur, vitae consequuntur quidem pariatur.</p>
               </GridItem>
             </Grid>
           </Section>
@@ -348,16 +319,8 @@ class OpenTable extends React.Component {
                 <h3 style={{ color: colors.red }}>
                   The guest experience
                 </h3>
-                <p>
-                  In the rare cases users engaged with data, they did so on the
-                  big screen — the POS. Card sorting revealed keen interest in
-                  powerful data analysis features such as forecasting,
-                  benchmarks, and filtering.
-                </p>
-                <p>
-                  Power functionality desired the space and form-factor of the
-                  web, so I started there.
-                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quo, nihil hic consectetur ab at magni voluptate explicabo reiciendis est perferendis consequatur, similique molestiae ipsa sapiente fugit unde. Praesentium, commodi!</p>
+
               </GridItem>
             </Grid>
 
@@ -373,12 +336,7 @@ class OpenTable extends React.Component {
               </div>
               <GridItem centerTwo>
                 <h3>The restaurant experience</h3>
-                <p>
-                  During visual design I simplified the layout and evolved the
-                  forecast model into a flexible benchmark model. Benchmarks
-                  were more familiar to users and retained most of the value of
-                  a forecast.
-                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quo porro fugiat provident. Sunt tempora, optio, pariatur incidunt et quod assumenda, odio ut voluptatum quisquam dolores quis, dolore cumque! Quia.</p>
               </GridItem>
             </Grid>
 
@@ -389,129 +347,97 @@ class OpenTable extends React.Component {
           <Section color={colors.white}>
             <Grid>
               <div leftOne className="hideMobile">
-                <p className="projectSectionMarker">Defining the product</p>
+                <p className="projectSectionMarker">Launch</p>
               </div>
               <GridItem centerTwo>
-                <h3 style={{ color: colors.red }}>Launch & failure</h3>
+                <h3 style={{ color: colors.red }}>Launch strategy</h3>
                 <p>
-                  Once launched, <strong>not a single user</strong> logged in.
-                  We designed and built Copilot's web product hand-in-hand with
-                  a loyal, enthusiastic base of beta customers. And yet, none of
-                  them actually wanted to use what their feedback had helped
-                  shape.
+                  In a sales-driven two-sided marketplace such as OpenTable, a
+                  solid launch strategy is key to scaling adoption and engagement of a new feature.
                 </p>
 
                 <p>
-                  But the problem wasn't the feature set.{" "}
-                  <strong>It was the delivery mechanism. </strong>
+                  The supply side needed to come first. Restaurants needed to be onboard with
+                  accepting reservations on their bar, high-top, patio, and counter seats in order
+                  for guests to have the opportunity to engage.
                 </p>
 
-                <p>
-                  Recall that our target users have neither the time nor the
-                  impulse to log into a web app. They're not even in front of a
-                  computer for much of the day. Copilot needed to fit seemlessly
-                  into their existing workflow.
-                </p>
-              </GridItem>
-            </Grid>
-          </Section>
-
-          <Section color={colors.offWhite} style={{ paddingBottom: "2em" }}>
-            <Grid style={{ marginBottom: "3em" }}>
-              <div leftOne className="hideMobile">
-                <p className="projectSectionMarker">Redesign</p>
-              </div>
-              <GridItem centerTwo>
-                <h3 style={{ color: colors.red }}>
-                  Fitting seemlessly into existing workflows
-                </h3>
-                <p>
-                  We wanted Copilot to be another of our user's essential haibts
-                  - akin to their morning cup of coffee or pre-shift staff
-                  meeting.
-                </p>
-                <p>To establish this habit, Copilot needed to:</p>
+                <p><strong>Approach to supply side launch</strong></p>
                 <ul className="arrow-list" style={{ marginBottom: "1.5em" }}>
-                  <li className="multi-line">
-                    Remind users that a fresh version of Copilot's Daily Report
-                    was ready
+                  <li>
+                    Engage the sales team in a test market <em>early</em> in the development
+                    process to gather feedback and engender support.
                   </li>
                   <li>
-                    Be easily accessible in our users' chaotic environments
+                    Ensure all supporting collateral is ready for launch in test market
                   </li>
+                  <li>Work with sales leadership to determine sales strategy. In this case,
+                    position the feature not as an optional enhancement, but a fundamental update
+                    to how OpenTable functions. Include setup as part of regular meetings with
+                    restaurants.
+                  </li>
+
+                  <li>Work with sales leadership to define incentive plan linked to adoption.</li>
+                  <li>Be on-site for initial setup meetings with restaurants in test market.</li>
                 </ul>
-                <p> I needed to simplify further.</p>
-              </GridItem>
+
+
+                </GridItem>
+              </Grid>
+            </Section>
+
+            <Section color={colors.white}>
+              <Grid>
+                <div leftOne className="hideMobile">
+                  <p className="projectSectionMarker">Launch</p>
+                </div>
+                <GridItem centerTwo style={{marginBottom:'1.5em'}}>
+                  <h3 style={{ color: colors.red }}>Tracking progress</h3>
+
+                  <p>Tracking progress is an important part of any launch. At the time, data on
+                    supply-side and demand-side adoption and engagement lived in disparate systems.
+                    On nights and weekends, <strong>I designed & built a custom KPI tracking dashboard</strong>
+                   that enabled the product
+                    team to track progress and powered the sales incentive program with a built-in leaderboard.
+                  </p>
+
+                  <p>The dashboard integrated with MongoDB, Salesforce, Mixpanel, and OpenTable's data
+                    warehouse to provide a 360° overview of the launch.</p>
+
+                  <p>
+                    <em>Note: actual numbers, names, and locations have been obfuscated or altered.</em>
+                  </p>
+
+                </GridItem>
             </Grid>
 
-            <img
-              src={mobileExplorations}
-              alt=""
-              style={{
-                maxWidth: "1200px",
-                margin: "auto",
-                marginBottom: "3em"
-              }}
-            />
-
-            <Grid>
-              <GridItem centerTwo>
-                <p>
-                  In parallel, I continued to discover the compelling power of
-                  benchmarking. Comparing current performance to the past was
-                  interesting, but it was even <em>more</em> interesting to
-                  compare the daily performance of a single location to that of
-                  a <em>group of its peers</em>.
-                </p>
-                <p>
-                  Another key change the focus on push notifications. At 10am
-                  sharp, Copilot would notify users that their daily report was
-                  ready to review.
-                </p>
-              </GridItem>
-            </Grid>
+            <img src={reporting01} alt=""/>
           </Section>
-
-          <img src={mobileFnlMock} alt="" />
-          <img src={mobileFnl} alt="" />
-
-          <video
-            autoPlay
-            loop
-            style={{
-              position: "static",
-              opacity: 1,
-              display: "block",
-              width: "100%",
-              objectFit: "fill"
-            }}
-          >
-            <source src={mobileDemo} type="video/mp4" />
-          </video>
 
           <Section color={colors.white}>
             <Grid>
               <div leftOne className="hideMobile">
-                <p className="projectSectionMarker">Results</p>
+                <p className="projectSectionMarker">Launch</p>
               </div>
-              <GridItem centerTwo>
-                <h3 style={{ color: colors.red }}>
-                  Engagement skyrocketed
-                </h3>
-                <p>
-                  This time, the form factor and focus on notifications worked.
-                  Within a month, 80% of users were engaging with the daily
-                  report <em>every day</em>.
-                </p>
-
-                <p>
-                  Peer group benchmarks proved especially compelling. Customers
-                  now considered Copilot an essential part of running their
-                  business.
-                </p>
+              <GridItem centerTwo style={{marginBottom:'1.5em'}}>
+                <h3 style={{ color: colors.red }}>Public relations</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, at expedita temporibus esse, aperiam doloremque similique maiores atque minus. Possimus odit adipisci numquam blanditiis eaque incidunt ullam, quibusdam omnis amet.</p>
               </GridItem>
-            </Grid>
-          </Section>
+          </Grid>
+        </Section>
+
+        <Section color={colors.white}>
+          <Grid>
+            <div leftOne className="hideMobile">
+              <p className="projectSectionMarker">Results</p>
+            </div>
+            <GridItem centerTwo style={{marginBottom:'1.5em'}}>
+              <h3 style={{ color: colors.red }}>2% in incremental revenue</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, at expedita temporibus esse, aperiam doloremque similique maiores atque minus. Possimus odit adipisci numquam blanditiis eaque incidunt ullam, quibusdam omnis amet.</p>
+            </GridItem>
+        </Grid>
+      </Section>
+
         </div>
       </ProjectDetail>
     );
