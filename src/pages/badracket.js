@@ -35,9 +35,7 @@ class BadRacket extends React.Component {
     return (
       <ProjectDetail projectName="badracket">
         <div ref="content">
-          <Section
-            textColor={colors.concrete}
-            color={colors.red}>
+          <Section reverse>
 
             <Grid>
               <GridItem leftThree>

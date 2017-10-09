@@ -58,7 +58,7 @@ const data = {
       title: "Bad Racket",
       description: `Invites musicians to produce their best work in a natural performance and recording space.`,
       hero: "/images/badracket-hero2.jpg",
-      bgColor: "#E05952",
+      bgColor: colors.red,
       // bgColor: "white",
       path: "/badracket/"
     },
