@@ -34,8 +34,13 @@ export default class ProjectImage extends React.Component {
       height
     } = this.refs.image_container.getBoundingClientRect();
 
+
     // save original image coords for "going back" transition
-    store.set("lastClickedProject", { top, left, width, height });
+    let prevHeroLocation = store.get("prevHeroLocation") || [];
+    prevHeroLocation.push({top, left, width, height})
+    store.set("prevHeroLocation", prevHeroLocation);
+
+    console.log('prev location in project image',store.get('prevHeroLocation'));
 
     // start the transition animation
     this.state.transition.toggleAnimation();

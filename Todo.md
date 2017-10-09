@@ -45,9 +45,7 @@ x Copilot case study
 
 
 # CASE STUDIES
-- OpenTable case study
-  - Background sections
-  - Launch section
+x OpenTable case study
 
 
 - Sounds Just Like case study
@@ -77,6 +75,7 @@ x Mobile layout for home page
 # BEHAVIOR
 - change "last clicked item" to become an array that pushes & pops for multiple "back" animations
 - if no "last clicked item", back button should go to home, not "new tab"
+- Add "back to top" control in lower right corner of page
 
 
 # PERFORMANCE

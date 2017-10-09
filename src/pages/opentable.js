@@ -29,7 +29,7 @@ class OpenTable extends React.Component {
           <Section reverse>
             <Grid>
               <GridItem leftThree>
-                <h1 style={{'-webkit-font-smoothing': 'antialiased'}}>
+                <h1 style={{WebkitFontSmoothing: 'antialiased'}}>
                   Balancing the marketplace by enabling guests to book the bar.
                 </h1>
               </GridItem>
@@ -262,7 +262,7 @@ class OpenTable extends React.Component {
 
           <Section color={colors.white} flush>
             <Grid>
-              <div leftOne className="hideMobile">
+              <div className="hideMobile">
                 <p className="projectSectionMarker">Product design</p>
               </div>
               <GridItem centerTwo style={{marginBottom:'1.5em'}}>
@@ -284,7 +284,7 @@ class OpenTable extends React.Component {
 
           <Section reverse color={colors.asphalt}>
             <Grid>
-              <div leftOne className="hideMobile">
+              <div className="hideMobile">
                 <p className="projectSectionMarker">Product design</p>
               </div>
               <GridItem centerTwo>
@@ -300,7 +300,7 @@ class OpenTable extends React.Component {
 
           <Section color={colors.white}>
             <Grid>
-              <div leftOne className="hideMobile">
+              <div className="hideMobile">
                 <p className="projectSectionMarker">Launch</p>
               </div>
               <GridItem centerTwo>
@@ -342,7 +342,7 @@ class OpenTable extends React.Component {
 
             <Section color={colors.white}>
               <Grid>
-                <div leftOne className="hideMobile">
+                <div className="hideMobile">
                   <p className="projectSectionMarker">Launch</p>
                 </div>
                 <GridItem centerTwo style={{marginBottom:'1.5em'}}>
@@ -382,7 +382,7 @@ class OpenTable extends React.Component {
 
           <Section color={colors.white}>
             <Grid>
-              <div leftOne className="hideMobile">
+              <div className="hideMobile">
                 <p className="projectSectionMarker">Launch</p>
               </div>
               <GridItem centerTwo style={{marginBottom:'1.5em'}}>
@@ -398,7 +398,7 @@ class OpenTable extends React.Component {
 
         <Section color={colors.white}>
           <Grid>
-            <div leftOne className="hideMobile">
+            <div className="hideMobile">
               <p className="projectSectionMarker">Results</p>
             </div>
             <GridItem centerTwo style={{marginBottom:'1.5em'}}>
@@ -408,7 +408,7 @@ class OpenTable extends React.Component {
 
               <p>This feature also made restaurants effectively bigger. Restaurants were able to better utilize their large tables by seating more two-tops at the bar. Eric Kirkenmeier of the James Beard Award-winning restaurant <em>Cherry Circle Room</em> said “…it’s allowed us to <strong>fit more people in the room, period.</strong>”</p>
 
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/-aLQ8qR8MI4" frameborder="0" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/-aLQ8qR8MI4" frameBorder="0" allowFullScreen></iframe>
 
               <blockquote style={{padding:0, margin:'1.5em 0'}}>“We noticed a change in our revenue immediately; we noticed a change also in the spirits of the bartenders. It’s nice that we know for sure certain seats will always be full every single night.”
               <p><em>—Lien Ta, Here's Looking at You</em></p>
@@ -417,10 +417,6 @@ class OpenTable extends React.Component {
               <p>Because of the increased availability, guests were now more likely to find a spot at hot restaurants. As a bonus, many guests were excited by the option to <em>choose the bar</em>, which often offers a higher-energy dining experience.</p>
 
               <p>The feature added more incremental availability than some of OpenTable's smaller geographic regions. As expected, incremental bookings quickly followed the increase in availability, adding directly to OpenTable's bottom line.</p>
-
-
-
-
             </GridItem>
         </Grid>
       </Section>

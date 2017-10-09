@@ -2,6 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import store from "store";
 import smoothScroll from "smoothscroll";
+import _ from 'lodash'
 
 import { transition } from "../utils/transitionAnimation";
 import getDuration from "../utils/getDuration";
@@ -26,7 +27,10 @@ class ProjectDetail extends React.Component {
 
   componentDidMount = () => {
     let content = this.refs.content;
-    let origBoundingBox = store.get("lastClickedProject");
+
+    let defaultOrigBoundingBox = {"top":34,"left":670,"width":670,"height":756}
+    let prevHeroLocation = store.get("prevHeroLocation") || [];
+    let origBoundingBox = _.takeRight(prevHeroLocation)[0] || defaultOrigBoundingBox
 
     // fade in content
     TweenMax.fromTo(
@@ -40,12 +44,12 @@ class ProjectDetail extends React.Component {
     // create transition instance
     this.setState({
       transition: new transition(
-        undefined,
-        undefined,
-        this.state.project.hero,
-        undefined,
-        origBoundingBox,
-        true
+        undefined,                // path
+        undefined,                // pageColor
+        this.state.project.hero,  // imgURL
+        undefined,                // imageContainer
+        origBoundingBox,          // boundingBox
+        true                      // reversed?
       )
     });
   };
@@ -55,15 +59,21 @@ class ProjectDetail extends React.Component {
   };
 
   animateBack = () => {
+    // pop this location off stack
+    let prevHeroLocation = store.get("prevHeroLocation") || []
+    prevHeroLocation.pop()
+    store.set("prevHeroLocation", prevHeroLocation);
+
     this.setState({ inTransition: true });
     this.state.transition.toggleAnimation();
   };
 
   back = () => {
     let s = window.scrollY;
+    let globalScrollSpeed = 0.5
     if (s > 0) {
-      let scrollDuration = getDuration(0, s);
-      smoothScroll(0, scrollDuration * 1000, () => {
+      let scrollDuration = getDuration(0, s, false) * (1000 * globalScrollSpeed);
+      smoothScroll(0, scrollDuration, () => {
         this.animateBack();
       });
     } else {

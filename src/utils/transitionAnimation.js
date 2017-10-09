@@ -215,7 +215,12 @@ export function transition (path='/', pageColor='#222', imageUrl=null, imageCont
 
   function preComplete(){
     // history.scrollRestoration = 'auto';
-    reversed ? window.history.back() : navigateTo(path)
+
+    function back() {
+      window.history.length > 2 ? window.history.back() : navigateTo('/')
+    }
+
+    reversed ? back() : navigateTo(path)
   }
 
   function onComplete() {
