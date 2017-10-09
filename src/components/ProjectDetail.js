@@ -34,13 +34,13 @@ class ProjectDetail extends React.Component {
     let origBoundingBox = _.takeRight(prevHeroLocation)[0] || defaultOrigBoundingBox
 
     // fade in content
-    TweenMax.fromTo(
-      content,
-      0.4,
-      { opacity: 0 },
-      { opacity: 1, delay: 0.1 },
-      Sine.easeIn
-    );
+    // TweenMax.fromTo(
+    //   content,
+    //   0.4,
+    //   { opacity: 0 },
+    //   { opacity: 1, delay: 0.1 },
+    //   Sine.easeIn
+    // );
 
     // create transition instance
     this.setState({

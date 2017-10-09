@@ -406,7 +406,7 @@ class OpenTable extends React.Component {
 
               <p>Restaurants that accepted parties at their bar, counter, high-top and outdoor seats saw an <strong>increase in the average order amount</strong> — especially at seats that are traditionally glorified waiting areas. </p>
 
-              <p>This feature also made restaurants effectively bigger. Restaurants were able to better utilize their large tables by seating more two-tops at the bar. Eric Kirkenmeier of the James Beard Award-winning restaurant <em>Cherry Circle Room</em> said “…it’s allowed us to <strong>fit more people in the room, period.</strong>”</p>
+              <p style={{marginBottom:'3em'}}>This feature also made restaurants effectively bigger. Restaurants were able to better utilize their large tables by seating more two-tops at the bar. Eric Kirkenmeier of the James Beard Award-winning restaurant <em>Cherry Circle Room</em> said “…it’s allowed us to <strong>fit more people in the room, period.</strong>”</p>
 
               <iframe width="560" height="315" src="https://www.youtube.com/embed/-aLQ8qR8MI4" frameBorder="0" allowFullScreen></iframe>
 
