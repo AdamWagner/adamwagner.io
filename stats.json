@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-pages-badracket-js": [
-      "component---src-pages-badracket-js-8508f281a23161593b52.js",
-      "component---src-pages-badracket-js-8508f281a23161593b52.js.map"
+      "component---src-pages-badracket-js-ee5a90d3d07a9d17f0a1.js",
+      "component---src-pages-badracket-js-ee5a90d3d07a9d17f0a1.js.map"
     ],
     "path---copilot": [
       "path---copilot-a0e39f21c11f6a62c5ab.js",
@@ -49,9 +49,9 @@
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js.map"
     ],
     "commons": [
-      "commons-3ebc4c75944c9a5434ba.js",
+      "commons-1ed0bbb91b22d70a8ab7.js",
       "build-js-styles.css",
-      "commons-3ebc4c75944c9a5434ba.js.map",
+      "commons-1ed0bbb91b22d70a8ab7.js.map",
       "build-js-styles.css.map"
     ],
     "path---404-html": [
