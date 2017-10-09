@@ -18,16 +18,7 @@ import heroAlt from "./opentable-hero-alt.jpg";
 import tcSetup from "./opentable-tc-setup.png";
 import tcHost from "./opentable-tc-host.png";
 
-import reporting01 from "./opentable-reporting-1.jpg";
-
-import focusSketch from "./copilot-sketch-focus2.jpg";
-import cardSort from "./copilot-card-sort.jpg";
-import wireframe from "./copilot-web-wireframe.jpg";
-import webMac01 from "./copilot-web-macbook.png";
-import mobileExplorations from "./copilot-mobile-explorations-2.jpg";
-import mobileDemo from "./copilot-video-mockup.mp4";
-import mobileFnlMock from "./copilot-mobile-fnl-1.jpg";
-import mobileFnl from "./mobile-final-3-up-3.jpg";
+import reportingDemo from "./gc-inventory-reporting-demo-cropped.mp4";
 
 class OpenTable extends React.Component {
   render() {
@@ -411,7 +402,19 @@ class OpenTable extends React.Component {
                 </GridItem>
             </Grid>
 
-            <img src={reporting01} alt=""/>
+            <video
+              autoPlay
+              loop
+              style={{
+                position: "static",
+                opacity: 1,
+                display: "block",
+                width: "100%",
+                objectFit: "fill"
+              }}
+            >
+              <source src={reportingDemo} type="video/mp4" />
+            </video>
           </Section>
 
           <Section color={colors.white}>
