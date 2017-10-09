@@ -11,7 +11,7 @@ export default class MoreProjects extends React.Component {
     return (
       <Section flex wrap className={s.moreProjects} color={colors.white} textColor={colors.asphalt} softTop='6em'>
           <Box full textCenter softBottom={'3em'}>
-            <p>More Projects</p>
+            <p>More Case Studies</p>
           </Box>
 
           {this.props.projects.map((p, idx) => (

@@ -19,6 +19,7 @@ import tcSetup from "./opentable-tc-setup.png";
 import tcHost from "./opentable-tc-host.png";
 
 import reportingDemo from "./gc-inventory-reporting-demo-cropped.mp4";
+import opentablePR from "./opentable-pr.jpg";
 
 class OpenTable extends React.Component {
   render() {
@@ -54,8 +55,12 @@ class OpenTable extends React.Component {
               </GridItem>
 
               <GridItem centerTwo style={{ marginBottom: "1.5em" }}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam soluta sit consequatur. Ullam quisquam ipsum, aliquam soluta consequuntur, error commodi quae, ipsam at repellendus, dolorum ut dolores eaque impedit saepe?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam soluta sit consequatur. Ullam quisquam ipsum, aliquam soluta consequuntur, error commodi quae, ipsam at repellendus, dolorum ut dolores eaque impedit saepe?</p>
+                <p>As a restaurant product manager at OpenTable, I worked on the availability system that connects restaurants and diners. In OpenTable's supply-constrained marketplace, incremental availability has a direct, positive impact for the business, guests, and restaurants.</p>
+
+
+                <p>User research validated that the primary path to increasing availability was to enable restaurants to merchandise previously unutilized seats. And to do <em>that</em>, the product needed to enable restaurants to set guest expectations about their non-traditional dining experiences.</p>
+
+                <p>The results were fantastic. The initiative has added more incremental availability than existed in some smaller geographic markets and is still growing. Beyond bottom-line benefit, it layed the groundwork for OpenTable to power more memorable, unique dining experiences for guests.</p>
 
               </GridItem>
 
@@ -96,53 +101,6 @@ class OpenTable extends React.Component {
           </Section>
 
           <Section color={colors.white} style={{ paddingBottom: 0 }}>
-            <Grid style={{ marginBottom: "4.5em" }}>
-              <GridItem leftOne className="hideMobile">
-                <p className="projectSectionMarker">Background</p>
-              </GridItem>
-
-              <GridItem centerTwo>
-                <h3 style={{ color: colors.red }}>My involvement</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ipsum facere consectetur aliquid nihil consequuntur impedit eaque earum quis, odit sapiente cupiditate atque perferendis explicabo iusto iste beatae expedita ex?</p>
-                {/* <p>
-                  As Copilot's only designer, I did <em>many</em> things,
-                  including product marketing, front-end development, and
-                  product analysis. Within the scope of this case study I
-                  handled:
-                </p>
-                <ul className="arrow-list">
-                  <li>User research</li>
-                  <li>Workflow & product definition</li>
-                  <li>Wireframing</li>
-                  <li>Visual design</li>
-                  <li>Frontend development</li>
-                </ul> */}
-              </GridItem>
-            </Grid>
-
-            <Grid>
-              <GridItem leftOne className="hideMobile">
-                <p className="projectSectionMarker">Background</p>
-              </GridItem>
-
-              <GridItem centerTwo>
-                <h3 style={{ color: colors.red }}>Problem & Opportunity</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam tempora dolorum voluptas. Necessitatibus officia dolorum error dolorem laborum id, incidunt culpa, dicta nostrum placeat a consequatur, vitae consequuntur quidem pariatur.</p>
-              </GridItem>
-            </Grid>
-          </Section>
-
-          <Section color={colors.white} style={{ paddingBottom: 0 }}>
-            {/* Horizontal rule */}
-            <div
-              style={{
-                width: "66vw",
-                height: "0.1875em",
-                margin: "0 auto 4.5em",
-                background: colors.concrete,
-                opacity: 0.66
-              }}
-            />
 
             <Grid style={{ marginBottom: "3em" }}>
               <GridItem leftOne className="hideMobile">
@@ -275,12 +233,13 @@ class OpenTable extends React.Component {
 
 
                 <p style={{marginBottom:'1.5em'}}>
-                  Technical constraints prohibited the simple solution of modeling
+                  Technical constraints prohibited the obvious approach of modeling
                   availability area attributes (indoor / outdoor)
                   in addition to availability seating types (bar, high-top, counter, etc).
 
                   This approach would more than double implementation time
                   and require a significant redesign of search services powering OpenTable's diner apps.
+                  It would also explode the complexity of how OpenTable buckets availability types.
                 </p>
 
                 <h4 style={{color:colors.red}}>Deferring dedicated area modeling</h4>
@@ -310,7 +269,10 @@ class OpenTable extends React.Component {
                 <h3 style={{ color: colors.red }}>
                   The guest experience
                 </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quo, nihil hic consectetur ab at magni voluptate explicabo reiciendis est perferendis consequatur, similique molestiae ipsa sapiente fugit unde. Praesentium, commodi!</p>
+                <p>Although I was technically only responsible for the restaurant experience,
+                I worked closely with guest product and design teams to push the initiative forward.</p>
+                <p>Speed was favored over perfection. Personally, I wasn't thrilled with the design of the
+                guest experience, but it was enough to launch and validate the concept.</p>
 
               </GridItem>
             </Grid>
@@ -327,7 +289,8 @@ class OpenTable extends React.Component {
               </div>
               <GridItem centerTwo>
                 <h3>The restaurant experience</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quo porro fugiat provident. Sunt tempora, optio, pariatur incidunt et quod assumenda, odio ut voluptatum quisquam dolores quis, dolore cumque! Quia.</p>
+                <p>The restaurant experience was unusually simple: select a table or lasso a group of tables, and adjust the table type in the sidebar.</p>
+                <p>Capturing a table's type had benefits beyond this initiative — it added logical structure for grouping tables together in future availability configuration features.</p>
               </GridItem>
             </Grid>
 
@@ -423,8 +386,12 @@ class OpenTable extends React.Component {
                 <p className="projectSectionMarker">Launch</p>
               </div>
               <GridItem centerTwo style={{marginBottom:'1.5em'}}>
-                <h3 style={{ color: colors.red }}>Public relations</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, at expedita temporibus esse, aperiam doloremque similique maiores atque minus. Possimus odit adipisci numquam blanditiis eaque incidunt ullam, quibusdam omnis amet.</p>
+                <h3 style={{ color: colors.red }}>Public relations, training, and support</h3>
+                <p>The public relations team did a fantastic job getting press in Eater and major metro news channels. </p>
+
+                <img src={opentablePR} alt=""style={{marginBottom:'1.5em'}}/>
+
+                <p>The training team created walk-through video tutorials and wrote documentation for OpenTable's community support site. Support leads helped train the support team to field questions from restaurants and guests about the new feature.</p>
               </GridItem>
           </Grid>
         </Section>
@@ -435,8 +402,25 @@ class OpenTable extends React.Component {
               <p className="projectSectionMarker">Results</p>
             </div>
             <GridItem centerTwo style={{marginBottom:'1.5em'}}>
-              <h3 style={{ color: colors.red }}>2% in incremental revenue</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, at expedita temporibus esse, aperiam doloremque similique maiores atque minus. Possimus odit adipisci numquam blanditiis eaque incidunt ullam, quibusdam omnis amet.</p>
+              <h3 style={{ color: colors.red }}>Happy restaurants, happy guets, and incremental revenue</h3>
+
+              <p>Restaurants that accepted parties at their bar, counter, high-top and outdoor seats saw an <strong>increase in the average order amount</strong> — especially at seats that are traditionally glorified waiting areas. </p>
+
+              <p>This feature also made restaurants effectively bigger. Restaurants were able to better utilize their large tables by seating more two-tops at the bar. Eric Kirkenmeier of the James Beard Award-winning restaurant <em>Cherry Circle Room</em> said “…it’s allowed us to <strong>fit more people in the room, period.</strong>”</p>
+
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/-aLQ8qR8MI4" frameborder="0" allowfullscreen></iframe>
+
+              <blockquote style={{padding:0, margin:'1.5em 0'}}>“We noticed a change in our revenue immediately; we noticed a change also in the spirits of the bartenders. It’s nice that we know for sure certain seats will always be full every single night.”
+              <p><em>—Lien Ta, Here's Looking at You</em></p>
+              </blockquote>
+
+              <p>Because of the increased availability, guests were now more likely to find a spot at hot restaurants. As a bonus, many guests were excited by the option to <em>choose the bar</em>, which often offers a higher-energy dining experience.</p>
+
+              <p>The feature added more incremental availability than some of OpenTable's smaller geographic regions. As expected, incremental bookings quickly followed the increase in availability, adding directly to OpenTable's bottom line.</p>
+
+
+
+
             </GridItem>
         </Grid>
       </Section>
