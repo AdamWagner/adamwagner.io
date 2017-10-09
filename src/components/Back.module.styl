@@ -4,7 +4,6 @@ mobile = vars.screens.mobile
 
 
 size = 50px
-thickness = 0.5vw
 
 .backButton
   position: fixed
@@ -12,38 +11,31 @@ thickness = 0.5vw
 
   top: 2vw
   right: 4vw
-
   +below(mobile)
     top:1em
     right: 2em
 
-
-
-  width: 2vw
-  height: 2vw
+  width: calc(1em + 2vw)
+  height: calc(1em + 2vw)
 
   cursor: pointer
-  height: size
-  width: size
-  line-height: size
+  // height: size
+  // width: size
+  line-height: calc(1em + 2vw)
   box-sizing: border-box
-  display: inline-block
+  font-size: calc(1em + 1vw)
+  text-align: center
+  vertical-align: center
+  background: darken(white, 5%)
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.09);
+  border-radius: 50%
 
-  &:before, &:after
-      width = size
-      height = thickness
-      transform: rotate(-45deg)
-      content: ''
-      position: absolute
-      top: 50%
-      left: 50%
-      margin-top: -height/2
-      margin-left: -width/2
-      display: block
-      height: height
-      width: width
-      background-color: #fff
-      transition: all 0.25s ease-out
+  transition: all .2s
 
-  &:after
-      transform: rotate(-135deg)
+  &:hover
+    background: white
+    color: vars.colors.asphalt
+    box-shadow: 0 19px 38px rgba(0,0,0,0.15), 0 15px 12px rgba(0,0,0,0.09);
+
+  &.clicked
+    transform: scale(0)

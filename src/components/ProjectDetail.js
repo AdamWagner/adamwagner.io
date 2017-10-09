@@ -18,6 +18,7 @@ class ProjectDetail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      backClicked: false,
       inTransition: false,
       transition: null,
       otherProjects: projectsExcept(this.props.projectName),
@@ -69,8 +70,9 @@ class ProjectDetail extends React.Component {
   };
 
   back = () => {
+    this.setState({backClicked: true})
     let s = window.scrollY;
-    let globalScrollSpeed = 0.5
+    let globalScrollSpeed = 0.25
     if (s > 0) {
       let scrollDuration = getDuration(0, s, false) * (1000 * globalScrollSpeed);
       smoothScroll(0, scrollDuration, () => {
@@ -89,7 +91,7 @@ class ProjectDetail extends React.Component {
             src={this.state.project.hero}
             inTransition={this.state.inTransition}
           />
-          <Back onClick={this.back} />
+          <Back onClick={this.back} backClicked={this.state.backClicked}/>
           <div ref="content" className="project">
             {this.props.children}
             <MoreProjects projects={this.state.otherProjects.slice(0,2)}/>
