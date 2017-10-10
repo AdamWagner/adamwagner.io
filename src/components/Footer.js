@@ -14,7 +14,7 @@ export default class Footer extends React.Component {
       <Section flex wrap color={colors.white} textColor={colors.asphalt} softTop={'5em'} softBottom={'3em'} style={{alignItems:'flex-end'}}>
             <Box half style={{paddingLeft:'2em'}}>
               <p>Let's chat.</p>
-              <p style={{marginBottom:0}}><a href="mailto:hello@adamwagner.io" target="_blank"></a>hello@adamwagner.io</p>
+              <p style={{marginBottom:0}}><a href="mailto:hello@adamwagner.io" target="_blank">hello@adamwagner.io</a></p>
             </Box>
             <Box half textRight>
               <ul className={s.listHorizontal} style={{visibility:'hidden'}}>
