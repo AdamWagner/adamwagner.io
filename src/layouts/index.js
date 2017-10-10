@@ -5,6 +5,25 @@ import Helmet from 'react-helmet'
 import _ from 'lodash'
 import s from './index.module.styl'
 
+import fav57 from './apple-icon-57x57.png'
+import fav60 from './apple-icon-60x60.png'
+import fav72 from './apple-icon-72x72.png'
+import fav76 from './apple-icon-76x76.png'
+import fav114 from './apple-icon-114x114.png'
+import fav120 from './apple-icon-120x120.png'
+import fav144 from './apple-icon-144x144.png'
+import fav152 from './apple-icon-152x152.png'
+import fav180 from './apple-icon-180x180.png'
+
+import fav16 from './favicon-16x16.png'
+import fav32 from './favicon-32x32.png'
+import fav96 from './favicon-96x96.png'
+
+import fav192 from './android-icon-192x192.png'
+
+
+
+
 const titleText = "Adam Wagner"
 const metadata = [
         { name: 'description', content: 'Sample' },
@@ -27,19 +46,19 @@ class TemplateWrapper extends React.Component {
           <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css?family=Lora:700" rel="stylesheet" />
 
-          <link rel="apple-touch-icon" sizes="57x57" href="/static/images/favicons/apple-icon-57x57.png"/>
-          <link rel="apple-touch-icon" sizes="60x60" href="/static/images/favicons/apple-icon-60x60.png"/>
-          <link rel="apple-touch-icon" sizes="72x72" href="/static/images/favicons/apple-icon-72x72.png"/>
-          <link rel="apple-touch-icon" sizes="76x76" href="/static/images/favicons/apple-icon-76x76.png"/>
-          <link rel="apple-touch-icon" sizes="114x114" href="/static/images/favicons/apple-icon-114x114.png"/>
-          <link rel="apple-touch-icon" sizes="120x120" href="/static/images/favicons/apple-icon-120x120.png"/>
-          <link rel="apple-touch-icon" sizes="144x144" href="/static/images/favicons/apple-icon-144x144.png"/>
-          <link rel="apple-touch-icon" sizes="152x152" href="/static/images/favicons/apple-icon-152x152.png"/>
-          <link rel="apple-touch-icon" sizes="180x180" href="/static/images/favicons/apple-icon-180x180.png"/>
-          <link rel="icon" type="image/png" sizes="192x192"  href="/static/images/favicons/android-icon-192x192.png"/>
-          <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicons/favicon-32x32.png"/>
-          <link rel="icon" type="image/png" sizes="96x96" href="/static/images/favicons/favicon-96x96.png"/>
-          <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicons/favicon-16x16.png"/>
+          <link rel="apple-touch-icon" sizes="57x57" href={fav57} />
+          <link rel="apple-touch-icon" sizes="60x60" href={fav60} />
+          <link rel="apple-touch-icon" sizes="72x72" href={fav72} />
+          <link rel="apple-touch-icon" sizes="76x76" href={fav76} />
+          <link rel="apple-touch-icon" sizes="114x114" href={fav114} />
+          <link rel="apple-touch-icon" sizes="120x120" href={fav120} />
+          <link rel="apple-touch-icon" sizes="144x144" href={fav144} />
+          <link rel="apple-touch-icon" sizes="152x152" href={fav152} />
+          <link rel="apple-touch-icon" sizes="180x180" href={fav180} />
+          <link rel="icon" type="image/png" sizes="192x192"  href={fav192} />
+          <link rel="icon" type="image/png" sizes="32x32" href={fav32} />
+          <link rel="icon" type="image/png" sizes="96x96" href={fav96} />
+          <link rel="icon" type="image/png" sizes="16x16" href={fav16} />
 
 
 
