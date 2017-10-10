@@ -183,7 +183,8 @@ class BadRacket extends React.Component {
               </GridItem>
               <GridItem centerTwo>
                 <h3 style={{ color: colors.red }}>Setting redesign goals</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, porro, dolores molestias vero quos assumenda blanditiis numquam laborum, asperiores enim doloremque! Similique ipsum repudiandae ex porro? Rerum non ducimus soluta.</p>
+                <p>By 2013, Bad Racket had produced more than thirty music videos and dozens of albums, and we wanted to show them off. </p>
+                <p>Our aim with the new site was to focus on content in order to <strong>foster community</strong> and <strong>increase interactivity</strong> with the brand.</p>
               </GridItem>
             </Grid>
 

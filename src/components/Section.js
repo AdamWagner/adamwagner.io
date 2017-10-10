@@ -15,6 +15,7 @@ class Section extends React.Component {
     let chapterContent = p.chapterContent ? s.chapterContent : "";
 
     let reverse = p.reverse ? s.reverse : "";
+    let reverseDark = p.reverseDark ? s.reverseDark : "";
 
     let softClasses = []
     Object.entries(p).map((kv) => {
@@ -41,6 +42,7 @@ class Section extends React.Component {
         className={[
           s.section,
           reverse,
+          reverseDark,
           flush,
           wrap,
           flex,

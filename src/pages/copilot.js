@@ -300,7 +300,7 @@ class Copilot extends React.Component {
 
           <Section color={colors.offWhite}>
             <Grid>
-              <div leftOne className="hideMobile">
+              <div className="hideMobile">
                 <p className="projectSectionMarker">Product design</p>
               </div>
               <GridItem centerTwo>
@@ -320,7 +320,7 @@ class Copilot extends React.Component {
               </GridItem>
             </Grid>
 
-            <img src={wireframe} alt="" m />
+            <img src={wireframe} alt=""/>
 
             <Grid>
               <GridItem centerTwo>
@@ -335,7 +335,7 @@ class Copilot extends React.Component {
 
           <Section reverse color={colors.copilotBlue}>
             <Grid>
-              <div leftOne className="hideMobile">
+              <div className="hideMobile">
                 <p className="projectSectionMarker">Product design</p>
               </div>
               <GridItem centerTwo>
@@ -354,7 +354,7 @@ class Copilot extends React.Component {
 
           <Section color={colors.white}>
             <Grid>
-              <div leftOne className="hideMobile">
+              <div className="hideMobile">
                 <p className="projectSectionMarker">Product design</p>
               </div>
               <GridItem centerTwo>
@@ -384,7 +384,7 @@ class Copilot extends React.Component {
 
           <Section color={colors.offWhite} style={{ paddingBottom: "2em" }}>
             <Grid style={{ marginBottom: "3em" }}>
-              <div leftOne className="hideMobile">
+              <div className="hideMobile">
                 <p className="projectSectionMarker">Redesign</p>
               </div>
               <GridItem centerTwo>
@@ -457,7 +457,7 @@ class Copilot extends React.Component {
 
           <Section color={colors.white}>
             <Grid>
-              <div leftOne className="hideMobile">
+              <div className="hideMobile">
                 <p className="projectSectionMarker">Results</p>
               </div>
               <GridItem centerTwo>

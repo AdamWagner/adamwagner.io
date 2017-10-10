@@ -2,6 +2,7 @@ import React from "react";
 import NavItem from "../components/NavItem";
 import Waypoint from "react-waypoint";
 import { injectGlobal, styled } from "styled-components";
+import Link from "gatsby-link";
 import _ from "lodash";
 import { TweenMax, Sine } from "gsap";
 import smoothScroll from "smoothscroll";
@@ -218,38 +219,32 @@ class IndexPage extends React.Component {
           onLeave={o => debounced_updateNav("work", o)}
         >
           {/* ** CHAPTER 3: CONTACT */}
-          <Section id="contact" chapterContent style={{ height: "100vh" }}>
-            <div style={{ padding: "2em 4vw" }}>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos
-                dolores corrupti sint ab maiores, ipsam optio ipsum magnam eius
-                assumenda perferendis, facere sed corporis, dignissimos
-                doloribus officiis. Doloremque, impedit ratione.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos
-                dolores corrupti sint ab maiores, ipsam optio ipsum magnam eius
-                assumenda perferendis, facere sed corporis, dignissimos
-                doloribus officiis. Doloremque, impedit ratione.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos
-                dolores corrupti sint ab maiores, ipsam optio ipsum magnam eius
-                assumenda perferendis, facere sed corporis, dignissimos
-                doloribus officiis. Doloremque, impedit ratione.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos
-                dolores corrupti sint ab maiores, ipsam optio ipsum magnam eius
-                assumenda perferendis, facere sed corporis, dignissimos
-                doloribus officiis. Doloremque, impedit ratione.
-              </p>
+          <Section id="contact" chapterContent style={{ height: "80vh" }}>
+            <div className={s.contactCopy} style={{ padding: "2em 4vw" }}>
+              <p>I’m available for new projects through December 2017.</p>
+              <p>Although I’m based in San Francisco, remote teams in Cleveland and NYC have loved working with me. Modern tools have reduced most of the pain points of remote work, and I promise you’ll feel like I’m the office with you.</p>
+              <p>I thrive as the member of a focused task force charged with rapidly producing effective product experiences. My experience with complex B2B products at large organizations enables me to work fast to cut the clutter while keeping stakeholders in the loop. </p>
+              <p>Hit me up via <strong><a target="_blank" href="mailto:awagnerjcu08@gmail.com">awagnerjcu08@gmail.com</a></strong>. We’ll schedule time to chat about your business and the opportunities you want to start tackling. </p>
+            </div>
+
+            <div>
+              <ul className={s.listHorizontal} style={{visibility:'hidden'}}>
+                <li>
+                  <Link to="/opentable/">OpenTable</Link>
+                </li>
+                <li>
+                  <Link to="/copilot/">Copilot</Link>
+                </li>
+                <li>
+                  <Link to="sounds-just-like/">Sounds Just Like</Link>
+                </li>
+                <li>
+                  <Link to="/badracket/">Bad Racket</Link>
+                </li>
+              </ul>
             </div>
           </Section>
         </Waypoint>
-        <Section chapterContent>
-          <Footer />
-        </Section>
       </div>
     );
   }

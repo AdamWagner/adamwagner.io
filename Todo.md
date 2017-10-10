@@ -7,8 +7,6 @@
 # Amy's notes after redesign
 - Most notes are included in Copilot case study
 - Be sure to paste everything into google docs to spell-check
-- Change footer text links to icons
-
 
 
 # Detail Page
@@ -29,6 +27,9 @@ x keyboard controls
 x Alt design for my photo
 x Flexible box component for layout
 x factor out components in pages > index.js
+
+
+# CASE STUDIES
 x Case study components
 x Case study images
 
@@ -43,29 +44,19 @@ x Copilot case study
   x Update movie
   x add cardsort
 
-
-# CASE STUDIES
 x OpenTable case study
-
-
-- Sounds Just Like case study
-- Customer360 case study
-
-- Add "more projects" section indicating some can't be shared due to NDA.
-  Basically another "contact" section.
-
-- Add "passion projects" section. Include Bad Racket, SJL, Customer360
-
 
 # STYLING
 x Typography styles. Try https://kyleamathews.github.io/typography.js/
 - Redesign "Process" graphic on Bad Racket to avoid copying Peter Tait.
 - Footer cleanup + home page styling. Watch out for page link visibility breaking pre-loading.
-- Favicon
+- Change footer text links to icons
+x Favicon
 
 # CONTENT
 - Contact section
 - "Setting redesign goals" in Bad Racket case study
+- SJL "coming soon"
 
 
 # RESPONSIVE
@@ -73,8 +64,8 @@ x Mobile layout for home page
 
 
 # BEHAVIOR
-- change "last clicked item" to become an array that pushes & pops for multiple "back" animations
-- if no "last clicked item", back button should go to home, not "new tab"
+x change "last clicked item" to become an array that pushes & pops for multiple "back" animations
+x if no "last clicked item", back button should go to home, not "new tab"
 - Add "back to top" control in lower right corner of page
 
 
@@ -86,7 +77,17 @@ x Mobile layout for home page
       https://www.gatsbyjs.org/packages/gatsby-transformer-sharp/
 
 # MONITORING
-- Add Google Analytics Gatsby plugin https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-google-analytics
+x Add Google Analytics Gatsby plugin https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-google-analytics
+
+
+# Post-launch
+- Sounds Just Like case study
+- Customer360 case study
+
+- Add "more projects" section indicating some can't be shared due to NDA.
+  Basically another "contact" section.
+
+- Add "passion projects" section. Include Bad Racket, SJL, Customer360
 
 
 # Maybes

@@ -25,7 +25,7 @@ const data = {
       name: "contact",
       active: false,
       titleText: `Let's work together.`,
-      copyText: `Let's make your idea a reality. Let's see it move. See it function. It'll be beautiful.`
+      copyText: `I'll wager you have some critical user flows that keep getting pushed on to the backburner. \n I understand. But that’s where I come in. Let’s talk!`
     },
     // {
     //   name: "experiments",
