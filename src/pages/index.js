@@ -224,7 +224,7 @@ class IndexPage extends React.Component {
               <p>I’m available for new projects through December 2017.</p>
               <p>Although I’m based in San Francisco, remote teams in Cleveland and NYC have loved working with me. Modern tools have reduced most of the pain points of remote work, and I promise you’ll feel like I’m the office with you.</p>
               <p>I thrive as the member of a focused task force charged with rapidly producing effective product experiences. My experience with complex B2B products at large organizations enables me to work fast to cut the clutter while keeping stakeholders in the loop. </p>
-              <p>Hit me up via <strong><a target="_blank" href="mailto:awagnerjcu08@gmail.com">awagnerjcu08@gmail.com</a></strong>. We’ll schedule time to chat about your business and the opportunities you want to start tackling. </p>
+              <p>Hit me up via <strong><a target="_blank" href="mailto:hello@adamwagner.io">hello@adamwagner.io</a></strong>. We’ll schedule time to chat about your business and the opportunities you want to start tackling. </p>
             </div>
 
             <div>

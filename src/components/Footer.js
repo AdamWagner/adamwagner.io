@@ -14,7 +14,7 @@ export default class Footer extends React.Component {
       <Section flex wrap color={colors.white} textColor={colors.asphalt} softTop={'5em'} softBottom={'3em'} style={{alignItems:'flex-end'}}>
             <Box half style={{paddingLeft:'2em'}}>
               <p>Let's chat.</p>
-              <p style={{marginBottom:0}}>awagnerjcu08@gmail.com</p>
+              <p style={{marginBottom:0}}><a href="mailto:hello@adamwagner.io" target="_blank"></a>hello@adamwagner.io</p>
             </Box>
             <Box half textRight>
               <ul className={s.listHorizontal} style={{visibility:'hidden'}}>
@@ -32,9 +32,9 @@ export default class Footer extends React.Component {
                 </li>
               </ul>
               <ul className={s.listHorizontal}>
-                <li>LinkedIn</li>
-                <li>Github</li>
-                <li>Dribbble</li>
+                <li><a href="https://www.linkedin.com/in/adam-wagner-9093925/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/AdamWagner" target="_blank">Github</a></li>
+                <li><a href="https://dribbble.com/AdamWagner" target="_blank">Dribbble</a></li>
               </ul>
 
 
