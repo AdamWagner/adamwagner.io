@@ -149,10 +149,11 @@ export function transition (path='/', pageColor='#222', imageUrl=null, imageCont
       h = rect.height
     }
 
-    tl.to(sprite, duration, { bezier: bezier1, width: w, height: h, ease }, 0)
+    tl.to(canvas, 0, {alpha: 1})
+      .to(sprite, duration, { bezier: bezier1, width: w, height: h, ease }, 0)
       .to(ripple, duration, { bezier: bezier2, ease }, 0)
       .to(ripple, duration * 0.8, { alpha: 1, radius, ease }, 0)
-      .to(ripple, 0.4, { alpha: 0, radius, ease, delay:(duration * 1.1) }, 0)// fade out ripple after animatino complete
+      .to(canvas, 0.4, { alpha: 0, radius, ease, delay:(duration * 1.1) }, 0)// fade out ripple after animatino complete
       .progress(progress)
 
     // This changes route 90% into transition preventing flash.
