@@ -118,7 +118,7 @@ export function transition (path='/', pageColor='#222', imageUrl=null, imageCont
 
     tl.seek(0).clear();
 
-    const duration = 0.5;
+    const duration = reversed ? 0.8 : 0.6;
     const ease = Sine.easeOut;
     const rect = boundingBox || imageContainer.getBoundingClientRect();
 

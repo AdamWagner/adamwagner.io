@@ -76,7 +76,9 @@ class ProjectDetail extends React.Component {
     if (s > 0) {
       let scrollDuration = getDuration(0, s, false) * (1000 * globalScrollSpeed);
       smoothScroll(0, scrollDuration, () => {
-        this.animateBack();
+        setTimeout( () => {
+          this.animateBack();           
+        }, 100);
       });
     } else {
       this.animateBack();
