@@ -89,6 +89,8 @@ x Add Google Analytics Gatsby plugin https://github.com/gatsbyjs/gatsby/tree/mas
 
 - Add "passion projects" section. Include Bad Racket, SJL, Customer360
 
+-  Sync to new mac
+
 
 # Maybes
 - [maybe] custom 'in viewport' controller for displaying home page text
