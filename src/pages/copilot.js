@@ -7,6 +7,7 @@ import Section from "../components/Section";
 import ProjectDetail from "../components/ProjectDetail";
 import Grid from "../components/Grid";
 import GridItem from "../components/GridItem";
+import VideoWorkaround from "../components/VideoWorkaround";
 
 import { colors } from "../styles/vars.json";
 import s from "./copilot.module.styl";
@@ -441,9 +442,7 @@ class Copilot extends React.Component {
           <img src={mobileFnlMock} alt="" />
           <img src={mobileFnl} alt="" />
 
-          <video
-            autoPlay
-            loop
+          <VideoWorkaround
             style={{
               position: "static",
               opacity: 1,
@@ -451,9 +450,10 @@ class Copilot extends React.Component {
               width: "100%",
               objectFit: "fill"
             }}
-          >
-            <source src={mobileDemo} type="video/mp4" />
-          </video>
+            src={mobileDemo}
+            type="video/mp4"
+
+          />
 
           <Section color={colors.white}>
             <Grid>

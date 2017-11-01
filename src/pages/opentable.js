@@ -7,6 +7,7 @@ import Section from "../components/Section";
 import ProjectDetail from "../components/ProjectDetail";
 import Grid from "../components/Grid";
 import GridItem from "../components/GridItem";
+import VideoWorkaround from "../components/VideoWorkaround";
 
 import { colors } from "../styles/vars.json";
 import s from "./opentable.module.styl"
@@ -365,9 +366,12 @@ class OpenTable extends React.Component {
                 </GridItem>
             </Grid>
 
-            <video
+
+            <VideoWorkaround
               autoPlay
               loop
+              src={reportingDemo}
+              type="video/mp4"
               style={{
                 position: "static",
                 opacity: 1,
@@ -375,9 +379,8 @@ class OpenTable extends React.Component {
                 width: "100%",
                 objectFit: "fill"
               }}
-            >
-              <source src={reportingDemo} type="video/mp4" />
-            </video>
+            />
+
           </Section>
 
           <Section color={colors.white}>

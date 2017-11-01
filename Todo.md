@@ -81,6 +81,7 @@ x Add Google Analytics Gatsby plugin https://github.com/gatsbyjs/gatsby/tree/mas
 
 
 # Post-launch
+x Get videos to autoplay on Safari in High Sierra
 - Sounds Just Like case study
 - Customer360 case study
 
