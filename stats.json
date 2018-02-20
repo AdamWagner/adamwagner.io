@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-pages-badracket-js": [
-      "component---src-pages-badracket-js-5c14e7cacdbbfb097659.js",
-      "component---src-pages-badracket-js-5c14e7cacdbbfb097659.js.map"
+      "component---src-pages-badracket-js-683780d9c528b3ccfd41.js",
+      "component---src-pages-badracket-js-683780d9c528b3ccfd41.js.map"
     ],
     "path---copilot": [
       "path---copilot-a0e39f21c11f6a62c5ab.js",
@@ -21,8 +21,8 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "component---src-pages-copilot-js": [
-      "component---src-pages-copilot-js-4b94ae8d82deb306f447.js",
-      "component---src-pages-copilot-js-4b94ae8d82deb306f447.js.map"
+      "component---src-pages-copilot-js-3b010fbfa02fe672a982.js",
+      "component---src-pages-copilot-js-3b010fbfa02fe672a982.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-414c43b752ae81972280.js",
@@ -59,8 +59,8 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-opentable-js": [
-      "component---src-pages-opentable-js-c233fd36198e0490cc40.js",
-      "component---src-pages-opentable-js-c233fd36198e0490cc40.js.map"
+      "component---src-pages-opentable-js-7048d13058b78edeedcf.js",
+      "component---src-pages-opentable-js-7048d13058b78edeedcf.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
