@@ -150,7 +150,7 @@ class BadRacket extends React.Component {
               </GridItem>
               <GridItem centerTwo>
                 <h3 style={{ color: colors.red }}>Evaluating previous versions</h3>
-                <p>Every redesign begins with a serious of questions: Why? Is the current version underperforming? In what ways? What should be done to improve it?</p>
+                <p>Every redesign begins with a series of questions: Why? Is the current version underperforming? In what ways? What should be done to improve it?</p>
               </GridItem>
             </Grid>
 

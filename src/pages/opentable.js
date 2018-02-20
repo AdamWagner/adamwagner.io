@@ -56,7 +56,7 @@ class OpenTable extends React.Component {
               </GridItem>
 
               <GridItem centerTwo style={{ marginBottom: "1.5em" }}>
-                <p>As a restaurant product manager at OpenTable, I worked on the availability system that connects restaurants and diners. In OpenTable's supply-constrained marketplace, incremental availability has a direct, positive impact for the business, guests, and restaurants.</p>
+                <p>As a product manager at OpenTable, I worked on the availability system that connects restaurants and diners. In OpenTable's supply-constrained marketplace, incremental availability has a direct, positive impact for the business, guests, and restaurants.</p>
 
 
                 <p>User research validated that the primary path to increasing availability was to enable restaurants to merchandise previously unutilized seats. And to do <em>that</em>, the product needed to enable restaurants to set guest expectations about their non-traditional dining experiences.</p>
@@ -121,7 +121,7 @@ class OpenTable extends React.Component {
                 </p>
                 <p>
                   We began the research open-minded. But after three interviews, all of us
-                  began zeroing in an emerging opportunity: <strong>a way to set guest expectations
+                  began zeroing in on an emerging opportunity: <strong>a way to set guest expectations
                   around non-traditional seats such as the bar or counter</strong>.
                 </p>
               </GridItem>
@@ -149,7 +149,7 @@ class OpenTable extends React.Component {
                 <ul style={{marginBottom:'1.5em'}} className="multi-line">
                   <li><strong>Bar seating: </strong>Backless stools can be uncomfortable, the bar surface can be sticky, and parties larger than 3 will find conversation difficult.</li>
                   <li><strong>Patio seating: </strong>Sun, wind and rain can cause discomfort. At some restaurants, the patio may be a less energetic experience than the main dining room.</li>
-                  <li><strong>High-Top seating: </strong>A High-Top is a raised table with raised seats that are sometimes backless. For parties with elderly guests or guests that use a wheelchair, High-Tops can be inconvinient at best and a show-stopper at the worst.</li>
+                  <li><strong>High-Top seating: </strong>A High-Top is a raised table with raised seats that are sometimes backless. For parties with elderly guests or guests that use a wheelchair, High-Tops can be inconvinient at best and a show-stopper at worst.</li>
                 </ul>
 
                 <p>
@@ -159,7 +159,7 @@ class OpenTable extends React.Component {
                 </p>
 
                 <p>
-                  If OpenTable could simply give guests the choice, restaurateurs could
+                  If OpenTable could give guests the choice, restaurateurs could
                   open up an additional 30 - 60 percent of their tables for reservations.
                 </p>
 
@@ -244,12 +244,7 @@ class OpenTable extends React.Component {
                 </p>
 
                 <h4 style={{color:colors.red}}>Deferring dedicated area modeling</h4>
-                <p>
-                  Alongside core service engineering teams, I scoped the effort to migrate
-                  toward a cleaner data model <em>after</em> modeling outdoor seating as a table type {" "}
-                  in version 1.
-                </p>
-                <p>The phased effort to clean up the data model
+                <p>The effort to clean up the data model in a future iteration
                   was not significantly more than implementing it upfront. So, I descoped it —
                   opting to halve implementation time and take on the very real risk that phase 2 would never happen.
                 </p>
@@ -290,8 +285,8 @@ class OpenTable extends React.Component {
               </div>
               <GridItem centerTwo>
                 <h3>The restaurant experience</h3>
-                <p>The restaurant experience was unusually simple: select a table or lasso a group of tables, and adjust the table type in the sidebar.</p>
-                <p>Capturing a table's type had benefits beyond this initiative — it added logical structure for grouping tables together in future availability configuration features.</p>
+                <p>The restaurant user experience was straightforward: select a table or lasso a group of tables, and adjust the table type in the sidebar.</p>
+                <p>Capturing a table's type had benefits beyond this initiative — it added structure for grouping tables together for future features.</p>
               </GridItem>
             </Grid>
 
@@ -312,7 +307,7 @@ class OpenTable extends React.Component {
                 </p>
 
                 <p>
-                  The supply side needed to come first. Restaurants needed to be onboard with
+                  The supply side needed to come first. Restaurants needed to be on board with
                   accepting reservations on their bar, high-top, patio, and counter seats in order
                   for guests to have the opportunity to engage.
                 </p>
@@ -351,7 +346,7 @@ class OpenTable extends React.Component {
 
                   <p>Tracking progress is an important part of any launch. At the time, data on
                     supply-side and demand-side adoption and engagement lived in disparate systems.
-                    On nights and weekends, <strong>I designed & built a custom KPI tracking dashboard</strong>
+                    On nights and weekends, <strong>I designed & built a custom KPI tracking dashboard</strong> {" "}
                    that enabled the product
                     team to track progress and powered the sales incentive program with a built-in leaderboard.
                   </p>

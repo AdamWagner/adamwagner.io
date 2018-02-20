@@ -67,7 +67,7 @@ class Copilot extends React.Component {
 
                 <p>
                   We dramatically simplified the delivery of actionable
-                  insights, focusing on timely push content rather a power
+                  insights, focusing on timely push content rather than a power
                   dashboard.
                 </p>
 
